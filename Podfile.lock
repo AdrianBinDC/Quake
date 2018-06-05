@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.7.2)
+  - EmptyDataSet-Swift (4.0.4)
+  - FSCalendar (2.7.9)
+  - WARangeSlider (1.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - EmptyDataSet-Swift (~> 4.0.4)
+  - FSCalendar
+  - WARangeSlider
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  EmptyDataSet-Swift: 935ce169c6d4abe371bbc5dd92bcf9ee4dddb1bd
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  WARangeSlider: 54b3e0853b8d16c444fd539005901aecee86837d
+
+PODFILE CHECKSUM: e5faf582dc5f84fd8e11a315315dd44e18724f11
+
+COCOAPODS: 1.4.0

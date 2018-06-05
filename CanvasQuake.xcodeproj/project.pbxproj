@@ -1,0 +1,983 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		327AD0CB9ED5B1E451040E7B /* Pods_CanvasQuake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEBFBC97CC0145DD33AFD3C /* Pods_CanvasQuake.framework */; };
+		443C5C3572B3FFA1C0863890 /* Pods_CanvasQuakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B090BCB0BF8E22EAF5450E9 /* Pods_CanvasQuakeTests.framework */; };
+		552E78A920C07BCB002C4AE2 /* QuakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */; };
+		552E78AB20C07C01002C4AE2 /* QuakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E78AA20C07C01002C4AE2 /* QuakeViewController.swift */; };
+		554BE12F20C09BF900C07248 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554BE12E20C09BF900C07248 /* CalendarViewController.swift */; };
+		554BE13120C09C0900C07248 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554BE13020C09C0900C07248 /* MapViewController.swift */; };
+		554BE13320C0AA0700C07248 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554BE13220C0AA0700C07248 /* Date+Extension.swift */; };
+		554BE13520C0F4D000C07248 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554BE13420C0F4D000C07248 /* UIColor+Extension.swift */; };
+		554BE13820C0F91500C07248 /* UIViewCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554BE13720C0F91500C07248 /* UIViewCanvas.swift */; };
+		55562C5120C070C60016B718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55562C5020C070C60016B718 /* AppDelegate.swift */; };
+		55562C5620C070C60016B718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55562C5420C070C60016B718 /* Main.storyboard */; };
+		55562C5B20C070C70016B718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55562C5A20C070C70016B718 /* Assets.xcassets */; };
+		55562C5E20C070C70016B718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55562C5C20C070C70016B718 /* LaunchScreen.storyboard */; };
+		55562C6920C070C80016B718 /* CanvasQuakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55562C6820C070C80016B718 /* CanvasQuakeTests.swift */; };
+		55562C7420C070C80016B718 /* CanvasQuakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */; };
+		55783E0620C1BF91001C825E /* CanvasEmptySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55783E0520C1BF91001C825E /* CanvasEmptySet.swift */; };
+		5580D78420C30ED7004E692F /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580D78320C30ED7004E692F /* Double+Extension.swift */; };
+		55874D8B20C3A9DB00666793 /* Formatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */; };
+		558FA7F720C11970004A16C0 /* QuakeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7F620C11970004A16C0 /* QuakeDataManager.swift */; };
+		558FA7F920C119A5004A16C0 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7F820C119A5004A16C0 /* Structs.swift */; };
+		558FA7FD20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7FC20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift */; };
+		55AE125320C0752D00DB7F6C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE125220C0752D00DB7F6C /* Constants.swift */; };
+		55AE125820C0756100DB7F6C /* Complementary.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE125520C0756000DB7F6C /* Complementary.png */; };
+		55AE125920C0756100DB7F6C /* GradientShades.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE125620C0756000DB7F6C /* GradientShades.png */; };
+		55AE125A20C0756100DB7F6C /* Master.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE125720C0756100DB7F6C /* Master.png */; };
+		55AE125C20C0763800DB7F6C /* CanvasQuake.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 55AE125B20C0763800DB7F6C /* CanvasQuake.xcdatamodel */; };
+		55AE125F20C0767300DB7F6C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE125E20C0767300DB7F6C /* UIViewController+Extension.swift */; };
+		55B75BD220C1C081007B1602 /* CanvasEmptySet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B75BD120C1C081007B1602 /* CanvasEmptySet.xib */; };
+		55B75BD620C1C868007B1602 /* ABWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B75BD420C1C867007B1602 /* ABWebView.xib */; };
+		55B75BD720C1C868007B1602 /* ABWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B75BD520C1C868007B1602 /* ABWebView.swift */; };
+		55FFBCE520C2E01000A64B5A /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FFBCE420C2E01000A64B5A /* FilterView.xib */; };
+		55FFBCE720C2E02500A64B5A /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FFBCE620C2E02500A64B5A /* FilterView.swift */; };
+		9ABC520EF973C3B9C07ABAF5 /* Pods_CanvasQuakeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C536091BC35D8235C3BCD28 /* Pods_CanvasQuakeUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55562C6520C070C80016B718 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55562C4520C070C60016B718 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55562C4C20C070C60016B718;
+			remoteInfo = CanvasQuake;
+		};
+		55562C7020C070C80016B718 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55562C4520C070C60016B718 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55562C4C20C070C60016B718;
+			remoteInfo = CanvasQuake;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		029883B028C116A78B33BF15 /* Pods-CanvasQuake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuake.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuake/Pods-CanvasQuake.debug.xcconfig"; sourceTree = "<group>"; };
+		0D7DF4F1F0E6CD42D46510C5 /* Pods-CanvasQuakeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeTests/Pods-CanvasQuakeTests.release.xcconfig"; sourceTree = "<group>"; };
+		0E245B9B20E08DE2D0AF6D75 /* Pods-CanvasQuake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuake.release.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuake/Pods-CanvasQuake.release.xcconfig"; sourceTree = "<group>"; };
+		1C536091BC35D8235C3BCD28 /* Pods_CanvasQuakeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanvasQuakeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DEBFBC97CC0145DD33AFD3C /* Pods_CanvasQuake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanvasQuake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4731C9D708D90D9FFBEF0C35 /* Pods-CanvasQuakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeTests/Pods-CanvasQuakeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeTableViewCell.swift; sourceTree = "<group>"; };
+		552E78AA20C07C01002C4AE2 /* QuakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeViewController.swift; sourceTree = "<group>"; };
+		553CEBFC20C1B61F00980569 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		554BE12E20C09BF900C07248 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		554BE13020C09C0900C07248 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		554BE13220C0AA0700C07248 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		554BE13420C0F4D000C07248 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		554BE13720C0F91500C07248 /* UIViewCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCanvas.swift; sourceTree = "<group>"; };
+		55562C4D20C070C60016B718 /* CanvasQuake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasQuake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55562C5020C070C60016B718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55562C5520C070C60016B718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55562C5A20C070C70016B718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55562C5D20C070C70016B718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55562C5F20C070C70016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55562C6420C070C70016B718 /* CanvasQuakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanvasQuakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55562C6820C070C80016B718 /* CanvasQuakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasQuakeTests.swift; sourceTree = "<group>"; };
+		55562C6A20C070C80016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55562C6F20C070C80016B718 /* CanvasQuakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanvasQuakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasQuakeUITests.swift; sourceTree = "<group>"; };
+		55562C7520C070C80016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55783E0520C1BF91001C825E /* CanvasEmptySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasEmptySet.swift; sourceTree = "<group>"; };
+		5580D78320C30ED7004E692F /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extension.swift"; sourceTree = "<group>"; };
+		558FA7F620C11970004A16C0 /* QuakeDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeDataManager.swift; sourceTree = "<group>"; };
+		558FA7F820C119A5004A16C0 /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		558FA7FC20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EarthquakeEntity+Extension.swift"; sourceTree = "<group>"; };
+		55AE125220C0752D00DB7F6C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		55AE125520C0756000DB7F6C /* Complementary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Complementary.png; sourceTree = "<group>"; };
+		55AE125620C0756000DB7F6C /* GradientShades.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GradientShades.png; sourceTree = "<group>"; };
+		55AE125720C0756100DB7F6C /* Master.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Master.png; sourceTree = "<group>"; };
+		55AE125B20C0763800DB7F6C /* CanvasQuake.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CanvasQuake.xcdatamodel; sourceTree = "<group>"; };
+		55AE125E20C0767300DB7F6C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		55B75BD120C1C081007B1602 /* CanvasEmptySet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanvasEmptySet.xib; sourceTree = "<group>"; };
+		55B75BD420C1C867007B1602 /* ABWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ABWebView.xib; sourceTree = "<group>"; };
+		55B75BD520C1C868007B1602 /* ABWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABWebView.swift; sourceTree = "<group>"; };
+		55FFBCE420C2E01000A64B5A /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
+		55FFBCE620C2E02500A64B5A /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		5F2EE53817012E50BDC1511D /* Pods-CanvasQuakeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeUITests/Pods-CanvasQuakeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6A847F5A8FFA806D63672A7D /* Pods-CanvasQuakeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeUITests/Pods-CanvasQuakeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B090BCB0BF8E22EAF5450E9 /* Pods_CanvasQuakeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanvasQuakeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55562C4A20C070C60016B718 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				327AD0CB9ED5B1E451040E7B /* Pods_CanvasQuake.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55562C6120C070C70016B718 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443C5C3572B3FFA1C0863890 /* Pods_CanvasQuakeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55562C6C20C070C80016B718 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ABC520EF973C3B9C07ABAF5 /* Pods_CanvasQuakeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5500001920C3326D00BB8211 /* ABWebView */ = {
+			isa = PBXGroup;
+			children = (
+				55B75BD520C1C868007B1602 /* ABWebView.swift */,
+				55B75BD420C1C867007B1602 /* ABWebView.xib */,
+			);
+			name = ABWebView;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		553CEC0620C1BBA900980569 /* CanvasEmptySet */ = {
+			isa = PBXGroup;
+			children = (
+				55B75BD120C1C081007B1602 /* CanvasEmptySet.xib */,
+				55783E0520C1BF91001C825E /* CanvasEmptySet.swift */,
+			);
+			path = CanvasEmptySet;
+			sourceTree = "<group>";
+		};
+		554BE13620C0F8CA00C07248 /* IBDesignable Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				554BE13720C0F91500C07248 /* UIViewCanvas.swift */,
+			);
+			name = "IBDesignable Base Classes";
+			sourceTree = "<group>";
+		};
+		55562C4420C070C60016B718 = {
+			isa = PBXGroup;
+			children = (
+				553CEBFC20C1B61F00980569 /* README.md */,
+				55562C4F20C070C60016B718 /* CanvasQuake */,
+				55562C6720C070C80016B718 /* CanvasQuakeTests */,
+				55562C7220C070C80016B718 /* CanvasQuakeUITests */,
+				55562C4E20C070C60016B718 /* Products */,
+				A8A8DF4013B29D6AC2F3515B /* Pods */,
+				71A5A26AE86A78E7AD3C48FF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		55562C4E20C070C60016B718 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55562C4D20C070C60016B718 /* CanvasQuake.app */,
+				55562C6420C070C70016B718 /* CanvasQuakeTests.xctest */,
+				55562C6F20C070C80016B718 /* CanvasQuakeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55562C4F20C070C60016B718 /* CanvasQuake */ = {
+			isa = PBXGroup;
+			children = (
+				55562C5020C070C60016B718 /* AppDelegate.swift */,
+				55AE125220C0752D00DB7F6C /* Constants.swift */,
+				55AE124F20C074F100DB7F6C /* Model */,
+				55AE124E20C074EC00DB7F6C /* View */,
+				55AE124D20C074E300DB7F6C /* Controller */,
+				55AE125020C0750100DB7F6C /* Supporting Files */,
+				55562C5F20C070C70016B718 /* Info.plist */,
+			);
+			path = CanvasQuake;
+			sourceTree = "<group>";
+		};
+		55562C6720C070C80016B718 /* CanvasQuakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				55562C6820C070C80016B718 /* CanvasQuakeTests.swift */,
+				55562C6A20C070C80016B718 /* Info.plist */,
+			);
+			path = CanvasQuakeTests;
+			sourceTree = "<group>";
+		};
+		55562C7220C070C80016B718 /* CanvasQuakeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */,
+				55562C7520C070C80016B718 /* Info.plist */,
+			);
+			path = CanvasQuakeUITests;
+			sourceTree = "<group>";
+		};
+		55AE124D20C074E300DB7F6C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				552E78AA20C07C01002C4AE2 /* QuakeViewController.swift */,
+				554BE12E20C09BF900C07248 /* CalendarViewController.swift */,
+				554BE13020C09C0900C07248 /* MapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55AE124E20C074EC00DB7F6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55FFBCE320C2E00200A64B5A /* FilterView */,
+				5500001920C3326D00BB8211 /* ABWebView */,
+				553CEC0620C1BBA900980569 /* CanvasEmptySet */,
+				55562C5420C070C60016B718 /* Main.storyboard */,
+				55562C5C20C070C70016B718 /* LaunchScreen.storyboard */,
+				552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55AE124F20C074F100DB7F6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				558FA7F820C119A5004A16C0 /* Structs.swift */,
+				558FA7F620C11970004A16C0 /* QuakeDataManager.swift */,
+				554BE13620C0F8CA00C07248 /* IBDesignable Base Classes */,
+				55AE125D20C0765D00DB7F6C /* Extensions */,
+				55AE125120C0751C00DB7F6C /* Core Data */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		55AE125020C0750100DB7F6C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55AE125420C0753E00DB7F6C /* Color Scheme Files */,
+				55562C5A20C070C70016B718 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55AE125120C0751C00DB7F6C /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				558FA7FC20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift */,
+				55AE125B20C0763800DB7F6C /* CanvasQuake.xcdatamodel */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		55AE125420C0753E00DB7F6C /* Color Scheme Files */ = {
+			isa = PBXGroup;
+			children = (
+				55AE125720C0756100DB7F6C /* Master.png */,
+				55AE125620C0756000DB7F6C /* GradientShades.png */,
+				55AE125520C0756000DB7F6C /* Complementary.png */,
+			);
+			path = "Color Scheme Files";
+			sourceTree = "<group>";
+		};
+		55AE125D20C0765D00DB7F6C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55AE125E20C0767300DB7F6C /* UIViewController+Extension.swift */,
+				554BE13220C0AA0700C07248 /* Date+Extension.swift */,
+				554BE13420C0F4D000C07248 /* UIColor+Extension.swift */,
+				5580D78320C30ED7004E692F /* Double+Extension.swift */,
+				55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		55FFBCE320C2E00200A64B5A /* FilterView */ = {
+			isa = PBXGroup;
+			children = (
+				55FFBCE420C2E01000A64B5A /* FilterView.xib */,
+				55FFBCE620C2E02500A64B5A /* FilterView.swift */,
+			);
+			path = FilterView;
+			sourceTree = "<group>";
+		};
+		71A5A26AE86A78E7AD3C48FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DEBFBC97CC0145DD33AFD3C /* Pods_CanvasQuake.framework */,
+				9B090BCB0BF8E22EAF5450E9 /* Pods_CanvasQuakeTests.framework */,
+				1C536091BC35D8235C3BCD28 /* Pods_CanvasQuakeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8A8DF4013B29D6AC2F3515B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				029883B028C116A78B33BF15 /* Pods-CanvasQuake.debug.xcconfig */,
+				0E245B9B20E08DE2D0AF6D75 /* Pods-CanvasQuake.release.xcconfig */,
+				4731C9D708D90D9FFBEF0C35 /* Pods-CanvasQuakeTests.debug.xcconfig */,
+				0D7DF4F1F0E6CD42D46510C5 /* Pods-CanvasQuakeTests.release.xcconfig */,
+				6A847F5A8FFA806D63672A7D /* Pods-CanvasQuakeUITests.debug.xcconfig */,
+				5F2EE53817012E50BDC1511D /* Pods-CanvasQuakeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55562C4C20C070C60016B718 /* CanvasQuake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55562C7820C070C80016B718 /* Build configuration list for PBXNativeTarget "CanvasQuake" */;
+			buildPhases = (
+				5A66343AE78D0A828214ED82 /* [CP] Check Pods Manifest.lock */,
+				55562C4920C070C60016B718 /* Sources */,
+				55562C4A20C070C60016B718 /* Frameworks */,
+				55562C4B20C070C60016B718 /* Resources */,
+				23101CDA7C03E1A9AE929229 /* [CP] Embed Pods Frameworks */,
+				E2CDE18E4FB4E94EC01DE442 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CanvasQuake;
+			productName = CanvasQuake;
+			productReference = 55562C4D20C070C60016B718 /* CanvasQuake.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55562C6320C070C70016B718 /* CanvasQuakeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55562C7B20C070C80016B718 /* Build configuration list for PBXNativeTarget "CanvasQuakeTests" */;
+			buildPhases = (
+				185CD3F24368C0AE33F0B80F /* [CP] Check Pods Manifest.lock */,
+				55562C6020C070C70016B718 /* Sources */,
+				55562C6120C070C70016B718 /* Frameworks */,
+				55562C6220C070C70016B718 /* Resources */,
+				DDBE481DE9C3E5765E14DA1E /* [CP] Embed Pods Frameworks */,
+				8C8D9E53CC121152BDC6E0AA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55562C6620C070C80016B718 /* PBXTargetDependency */,
+			);
+			name = CanvasQuakeTests;
+			productName = CanvasQuakeTests;
+			productReference = 55562C6420C070C70016B718 /* CanvasQuakeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		55562C6E20C070C80016B718 /* CanvasQuakeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55562C7E20C070C80016B718 /* Build configuration list for PBXNativeTarget "CanvasQuakeUITests" */;
+			buildPhases = (
+				9EBB413B1145BB551B0EEF80 /* [CP] Check Pods Manifest.lock */,
+				55562C6B20C070C80016B718 /* Sources */,
+				55562C6C20C070C80016B718 /* Frameworks */,
+				55562C6D20C070C80016B718 /* Resources */,
+				81275C0464FF7ACFADE8B6CB /* [CP] Embed Pods Frameworks */,
+				D55894A5045FC726109D2DDA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55562C7120C070C80016B718 /* PBXTargetDependency */,
+			);
+			name = CanvasQuakeUITests;
+			productName = CanvasQuakeUITests;
+			productReference = 55562C6F20C070C80016B718 /* CanvasQuakeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55562C4520C070C60016B718 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Adrian Bolinger";
+				TargetAttributes = {
+					55562C4C20C070C60016B718 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					55562C6320C070C70016B718 = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = 55562C4C20C070C60016B718;
+					};
+					55562C6E20C070C80016B718 = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = 55562C4C20C070C60016B718;
+					};
+				};
+			};
+			buildConfigurationList = 55562C4820C070C60016B718 /* Build configuration list for PBXProject "CanvasQuake" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55562C4420C070C60016B718;
+			productRefGroup = 55562C4E20C070C60016B718 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55562C4C20C070C60016B718 /* CanvasQuake */,
+				55562C6320C070C70016B718 /* CanvasQuakeTests */,
+				55562C6E20C070C80016B718 /* CanvasQuakeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55562C4B20C070C60016B718 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AE125A20C0756100DB7F6C /* Master.png in Resources */,
+				55AE125820C0756100DB7F6C /* Complementary.png in Resources */,
+				55B75BD620C1C868007B1602 /* ABWebView.xib in Resources */,
+				55562C5E20C070C70016B718 /* LaunchScreen.storyboard in Resources */,
+				55562C5B20C070C70016B718 /* Assets.xcassets in Resources */,
+				55FFBCE520C2E01000A64B5A /* FilterView.xib in Resources */,
+				55562C5620C070C60016B718 /* Main.storyboard in Resources */,
+				55B75BD220C1C081007B1602 /* CanvasEmptySet.xib in Resources */,
+				55AE125920C0756100DB7F6C /* GradientShades.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55562C6220C070C70016B718 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55562C6D20C070C80016B718 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		185CD3F24368C0AE33F0B80F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CanvasQuakeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23101CDA7C03E1A9AE929229 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuake/Pods-CanvasQuake-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/WARangeSlider/WARangeSlider.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WARangeSlider.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuake/Pods-CanvasQuake-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A66343AE78D0A828214ED82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CanvasQuake-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81275C0464FF7ACFADE8B6CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuakeUITests/Pods-CanvasQuakeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C8D9E53CC121152BDC6E0AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuakeTests/Pods-CanvasQuakeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EBB413B1145BB551B0EEF80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CanvasQuakeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D55894A5045FC726109D2DDA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuakeUITests/Pods-CanvasQuakeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDBE481DE9C3E5765E14DA1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuakeTests/Pods-CanvasQuakeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2CDE18E4FB4E94EC01DE442 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuake/Pods-CanvasQuake-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55562C4920C070C60016B718 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AE125F20C0767300DB7F6C /* UIViewController+Extension.swift in Sources */,
+				558FA7F720C11970004A16C0 /* QuakeDataManager.swift in Sources */,
+				5580D78420C30ED7004E692F /* Double+Extension.swift in Sources */,
+				558FA7F920C119A5004A16C0 /* Structs.swift in Sources */,
+				552E78A920C07BCB002C4AE2 /* QuakeTableViewCell.swift in Sources */,
+				55562C5120C070C60016B718 /* AppDelegate.swift in Sources */,
+				55AE125C20C0763800DB7F6C /* CanvasQuake.xcdatamodel in Sources */,
+				55B75BD720C1C868007B1602 /* ABWebView.swift in Sources */,
+				55783E0620C1BF91001C825E /* CanvasEmptySet.swift in Sources */,
+				552E78AB20C07C01002C4AE2 /* QuakeViewController.swift in Sources */,
+				558FA7FD20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift in Sources */,
+				55FFBCE720C2E02500A64B5A /* FilterView.swift in Sources */,
+				554BE12F20C09BF900C07248 /* CalendarViewController.swift in Sources */,
+				55AE125320C0752D00DB7F6C /* Constants.swift in Sources */,
+				554BE13120C09C0900C07248 /* MapViewController.swift in Sources */,
+				55874D8B20C3A9DB00666793 /* Formatter+Extension.swift in Sources */,
+				554BE13820C0F91500C07248 /* UIViewCanvas.swift in Sources */,
+				554BE13320C0AA0700C07248 /* Date+Extension.swift in Sources */,
+				554BE13520C0F4D000C07248 /* UIColor+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55562C6020C070C70016B718 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55562C6920C070C80016B718 /* CanvasQuakeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55562C6B20C070C80016B718 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55562C7420C070C80016B718 /* CanvasQuakeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55562C6620C070C80016B718 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55562C4C20C070C60016B718 /* CanvasQuake */;
+			targetProxy = 55562C6520C070C80016B718 /* PBXContainerItemProxy */;
+		};
+		55562C7120C070C80016B718 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55562C4C20C070C60016B718 /* CanvasQuake */;
+			targetProxy = 55562C7020C070C80016B718 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55562C5420C070C60016B718 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55562C5520C070C60016B718 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55562C5C20C070C70016B718 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55562C5D20C070C70016B718 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55562C7620C070C80016B718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55562C7720C070C80016B718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55562C7920C070C80016B718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 029883B028C116A78B33BF15 /* Pods-CanvasQuake.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A983637AY3;
+				INFOPLIST_FILE = CanvasQuake/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbolinger.CanvasQuake;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55562C7A20C070C80016B718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E245B9B20E08DE2D0AF6D75 /* Pods-CanvasQuake.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A983637AY3;
+				INFOPLIST_FILE = CanvasQuake/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbolinger.CanvasQuake;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		55562C7C20C070C80016B718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4731C9D708D90D9FFBEF0C35 /* Pods-CanvasQuakeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A983637AY3;
+				INFOPLIST_FILE = CanvasQuakeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbolinger.CanvasQuakeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CanvasQuake.app/CanvasQuake";
+			};
+			name = Debug;
+		};
+		55562C7D20C070C80016B718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D7DF4F1F0E6CD42D46510C5 /* Pods-CanvasQuakeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A983637AY3;
+				INFOPLIST_FILE = CanvasQuakeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbolinger.CanvasQuakeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CanvasQuake.app/CanvasQuake";
+			};
+			name = Release;
+		};
+		55562C7F20C070C80016B718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A847F5A8FFA806D63672A7D /* Pods-CanvasQuakeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A983637AY3;
+				INFOPLIST_FILE = CanvasQuakeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbolinger.CanvasQuakeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CanvasQuake;
+			};
+			name = Debug;
+		};
+		55562C8020C070C80016B718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F2EE53817012E50BDC1511D /* Pods-CanvasQuakeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A983637AY3;
+				INFOPLIST_FILE = CanvasQuakeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbolinger.CanvasQuakeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CanvasQuake;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55562C4820C070C60016B718 /* Build configuration list for PBXProject "CanvasQuake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55562C7620C070C80016B718 /* Debug */,
+				55562C7720C070C80016B718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55562C7820C070C80016B718 /* Build configuration list for PBXNativeTarget "CanvasQuake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55562C7920C070C80016B718 /* Debug */,
+				55562C7A20C070C80016B718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55562C7B20C070C80016B718 /* Build configuration list for PBXNativeTarget "CanvasQuakeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55562C7C20C070C80016B718 /* Debug */,
+				55562C7D20C070C80016B718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55562C7E20C070C80016B718 /* Build configuration list for PBXNativeTarget "CanvasQuakeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55562C7F20C070C80016B718 /* Debug */,
+				55562C8020C070C80016B718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55562C4520C070C60016B718 /* Project object */;
+}
