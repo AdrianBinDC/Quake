@@ -190,9 +190,13 @@ class QuakeDataManager: NSObject {
       var recordsExistBools: [Bool] = []
       
       if let startDate = self.startDate, let endDate = self.endDate {
-        let dateSpan = self.datesBetweenDates(startDate: startDate, endDate: endDate)
-        dateSpan.forEach{ date in
-          recordsExistBools.append(self.doRecordsExistForThisDate(date))
+        if startDate.isSameDate(endDate) {
+          recordsExistBools.append(self.doRecordsExistForThisDate(startDate))
+        } else {
+          let dateSpan = self.datesBetweenDates(startDate: startDate, endDate: endDate)
+          dateSpan.forEach{ date in
+            recordsExistBools.append(self.doRecordsExistForThisDate(date))
+          }
         }
       }
       
