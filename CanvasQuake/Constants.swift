@@ -20,6 +20,7 @@ struct StoryboardID {
 
 struct SegueID {
   static let calendar = "CalendarSegue"
+  static let mapSegue = "MapSegue"
 }
 
 struct USGSUrlString {

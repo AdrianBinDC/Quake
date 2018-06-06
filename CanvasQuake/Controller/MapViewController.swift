@@ -43,6 +43,10 @@ class MapViewController: UIViewController {
     NotificationCenter.default.addObserver(self, selector: #selector(handlePredicateNotification(_:)), name: .mapPredicateUpdated, object: nil)
     
     // FIXME: This is a test only
+    if let earthquakeArray = earthquakeArray {
+      print("earthquakeArray.count =", earthquakeArray.count)
+    }
+
     centerCoordinate = CLLocationCoordinate2D(latitude: 39.885403, longitude: -86.053936)
     mapView.centerCoordinate = centerCoordinate
     

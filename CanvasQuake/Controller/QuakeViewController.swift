@@ -19,6 +19,7 @@ class QuakeViewController: UIViewController {
   // MARK: IBOutlets
   
   @IBOutlet weak var resetButton: UIBarButtonItem!
+  @IBOutlet weak var mapButton: UIBarButtonItem!
   @IBOutlet weak var segmentedControl: UISegmentedControl!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var gradientView: UIViewCanvas!
@@ -259,7 +260,13 @@ class QuakeViewController: UIViewController {
     // Observer picks this up and sets the start date to the end of day
     // There have been no earthquakes tomorrow, so the fetch is guaranteed to return no quakes.
     self.startDate = Date().dateByAdding(days: 1)
+    segmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
   }
+  
+  @IBAction func mapButtonAction(_ sender: UIBarButtonItem) {
+    self.performSegue(withIdentifier: SegueID.mapSegue, sender: self)
+  }
+  
   
   @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
     resetStartAndEndDates()
@@ -312,6 +319,17 @@ class QuakeViewController: UIViewController {
       }
     }
   }
+  
+  // MARK: Navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == SegueID.mapSegue {
+      let destination = segue.destination as! MapViewController
+      if let earthquakes = fetchedResultsController.fetchedObjects {
+        destination.earthquakeArray = earthquakes
+      }
+    }
+  }
+  
 }
 
 // MARK: UITableViewDelegate, UITableViewDataSource

@@ -17,7 +17,7 @@
         <!--Map-->
         <scene sceneID="unq-O5-id6">
             <objects>
-                <viewController title="Map" id="93K-6N-nrm" customClass="MapViewController" customModule="CanvasQuake" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" title="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="93K-6N-nrm" customClass="MapViewController" customModule="CanvasQuake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R84-TV-YOI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DeO-ah-bpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1349.5999999999999" y="349.50738916256159"/>
+            <point key="canvasLocation" x="2047" y="-314"/>
         </scene>
         <!--Quakes-->
         <scene sceneID="Ahi-ss-hZx">
@@ -307,9 +307,17 @@
                                 <action selector="resetButtonAction:" destination="I8l-Rh-bkI" id="n63-G4-g9g"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="map" id="KaA-Rj-UUm">
+                            <color key="tintColor" red="0.070588235289999995" green="0.53333333329999999" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="mapButtonAction:" destination="I8l-Rh-bkI" id="fr5-CG-2AS"/>
+                                <segue destination="93K-6N-nrm" kind="show" identifier="MapSegue" id="w9W-XS-hXp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="gradientView" destination="yIG-N6-Ihl" id="jQI-m4-JMg"/>
+                        <outlet property="mapButton" destination="KaA-Rj-UUm" id="8UV-Om-LhM"/>
                         <outlet property="resetButton" destination="xfj-uO-8Sh" id="Mdo-O1-QZp"/>
                         <outlet property="segmentedControl" destination="0Up-gl-7vS" id="mud-YW-kJQ"/>
                         <outlet property="tableView" destination="OmJ-Na-E9N" id="MFU-SJ-zMM"/>
@@ -453,7 +461,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Id-pt-ek3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2082" y="-313"/>
+            <point key="canvasLocation" x="2726" y="-314"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="heA-WS-3Nd">
@@ -467,31 +475,11 @@
                     </tabBar>
                     <connections>
                         <segue destination="re8-ZX-9jr" kind="relationship" relationship="viewControllers" id="sO8-ED-zJW"/>
-                        <segue destination="RGw-xC-CyT" kind="relationship" relationship="viewControllers" id="JyE-qt-f1n"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFf-yh-lKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-350" y="19"/>
-        </scene>
-        <!--Map-->
-        <scene sceneID="dI1-2m-n8C">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RGw-xC-CyT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="map" id="sMz-ug-KAI"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cIa-kn-ptx">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="93K-6N-nrm" kind="relationship" relationship="rootViewController" id="JZF-kn-6Vw"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eq5-Dy-XEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="600.79999999999995" y="350.37481259370315"/>
         </scene>
         <!--Quakes-->
         <scene sceneID="PPR-cE-kEx">
