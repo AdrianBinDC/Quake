@@ -24,6 +24,9 @@ I utilized WARangeSlider, which is a two-handled slider on the FilterView on the
 
 I utilized StackOverflow to obtain the most recent version of [setting a timeout for Alamofire](https://stackoverflow.com/a/48869211/4475605). I also used StackOverflow to determine [how to save Core Data](https://stackoverflow.com/questions/33423824/how-save-to-coredata-in-background-thread-using-swift) on a background thread.
 
+### Around the web
+I utilized [dionc/MapKitExtensions.swift](https://gist.github.com/dionc/46f7e7ee9db7dbd7bddec56bd5418ca6) extension to compute the center from an array of `CLLocation2DCoordinates`.
+
 
 ### Core Data
 I utilized Core Data to persist returns. When returns come back from USGS, before the data is imported into Core Data, I did a fetch request for unique identifiers that are already persisted. Then, I used Set to do a comparison between the two to determine which records should be persisted in Core Data.

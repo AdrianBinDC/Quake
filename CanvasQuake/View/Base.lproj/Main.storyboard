@@ -49,8 +49,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3R7-yo-zpu"/>
                     </view>
-                    <navigationItem key="navigationItem" id="k0t-Ac-I7F"/>
+                    <navigationItem key="navigationItem" id="k0t-Ac-I7F">
+                        <barButtonItem key="rightBarButtonItem" image="calendar" id="6fb-Vl-SOb">
+                            <connections>
+                                <action selector="calendarButtonAction:" destination="93K-6N-nrm" id="hX5-WE-hhN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="calendarButton" destination="6fb-Vl-SOb" id="HfL-RT-4sF"/>
                         <outlet property="mapView" destination="3Ss-Lx-kwW" id="QT0-YI-1KR"/>
                     </connections>
                 </viewController>

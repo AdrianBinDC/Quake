@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		327AD0CB9ED5B1E451040E7B /* Pods_CanvasQuake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEBFBC97CC0145DD33AFD3C /* Pods_CanvasQuake.framework */; };
 		443C5C3572B3FFA1C0863890 /* Pods_CanvasQuakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B090BCB0BF8E22EAF5450E9 /* Pods_CanvasQuakeTests.framework */; };
+		552891E720C85E8D0062C1B5 /* MKCoordinateRegion+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552891E620C85E8D0062C1B5 /* MKCoordinateRegion+Extension.swift */; };
 		552E78A920C07BCB002C4AE2 /* QuakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */; };
 		552E78AB20C07C01002C4AE2 /* QuakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E78AA20C07C01002C4AE2 /* QuakeViewController.swift */; };
 		554BE12F20C09BF900C07248 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554BE12E20C09BF900C07248 /* CalendarViewController.swift */; };
@@ -67,6 +68,7 @@
 		1C536091BC35D8235C3BCD28 /* Pods_CanvasQuakeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanvasQuakeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEBFBC97CC0145DD33AFD3C /* Pods_CanvasQuake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanvasQuake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4731C9D708D90D9FFBEF0C35 /* Pods-CanvasQuakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeTests/Pods-CanvasQuakeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		552891E620C85E8D0062C1B5 /* MKCoordinateRegion+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extension.swift"; sourceTree = "<group>"; };
 		552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeTableViewCell.swift; sourceTree = "<group>"; };
 		552E78AA20C07C01002C4AE2 /* QuakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeViewController.swift; sourceTree = "<group>"; };
 		553CEBFC20C1B61F00980569 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				554BE13420C0F4D000C07248 /* UIColor+Extension.swift */,
 				5580D78320C30ED7004E692F /* Double+Extension.swift */,
 				55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */,
+				552891E620C85E8D0062C1B5 /* MKCoordinateRegion+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 				552E78A920C07BCB002C4AE2 /* QuakeTableViewCell.swift in Sources */,
 				55562C5120C070C60016B718 /* AppDelegate.swift in Sources */,
 				55940CBB20C778B700C5D38B /* MapPredicate.swift in Sources */,
+				552891E720C85E8D0062C1B5 /* MKCoordinateRegion+Extension.swift in Sources */,
 				55AE125C20C0763800DB7F6C /* CanvasQuake.xcdatamodel in Sources */,
 				55B75BD720C1C868007B1602 /* ABWebView.swift in Sources */,
 				55783E0620C1BF91001C825E /* CanvasEmptySet.swift in Sources */,
