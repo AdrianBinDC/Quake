@@ -79,22 +79,19 @@ class QuakeDataManager: NSObject {
    TODO: Create a method that takes an array of EarthQuake entities,
    */
   private func datesBetweenDates(startDate: Date, endDate: Date) -> [Date] {
-    var dateArray: [Date] = [startDate.startOfDay, endDate.startOfDay].sorted()
+    // sort the dates to ensure the earliest date is index 0
+    let dateArray: [Date] = [startDate.startOfDay, endDate.startOfDay].sorted()
     
-    let dayToCheck = dateArray.first
-    let endDate = dateArray.last
+    var returnArray: [Date] = []
     
+    var dateToIncrement = dateArray.first!
     
-    if var dayToCheck = dayToCheck, let endDate = endDate {
-      while !dayToCheck.isSameDate(endDate) {
-        if !dateArray.contains(dayToCheck) {
-          dateArray.append(dayToCheck)
-          dayToCheck = dayToCheck.dateByAdding(days: 1)!
-        }
-      }
+    while dateToIncrement.isBeforeDate(dateArray.last!) {
+      returnArray.append(dateToIncrement)
+      dateToIncrement = dateToIncrement.dateByAdding(days: 1)!
     }
     
-    return dateArray
+    return returnArray
   }
   
   // TODO: create url creation function that takes all the parameters
@@ -291,7 +288,6 @@ class QuakeDataManager: NSObject {
       privateContext.persistentStoreCoordinator = self.manageObjectContext.persistentStoreCoordinator
       
       privateContext.performAndWait {
-//      privateContext.perform {
         itemsToImportArray.forEach { quakeStruct in
           let quakeEntity = NSEntityDescription.entity(forEntityName: QuakeDataEntity.earthquake.rawValue, in: privateContext)
           

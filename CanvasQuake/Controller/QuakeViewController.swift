@@ -42,19 +42,8 @@ class QuakeViewController: UIViewController {
   }
   
   // This is used to set values for searching via segmentedControl
-  var startDate: Date? {
-    didSet {
-      print("startDate = ", startDate?.startOfDay.asDate() ?? "nil")
-      updatePredicate()
-    }
-  }
-  
-  var endDate: Date? {
-    didSet {
-      print("endDate = ", endDate?.endOfDay?.asDate() ?? "nil")
-      updatePredicate()
-    }
-  }
+  @objc dynamic var startDate: Date?
+  @objc dynamic var endDate: Date?
   
   var currentIndexPath: IndexPath? {
     // this keeps track of what's clicked
@@ -74,7 +63,6 @@ class QuakeViewController: UIViewController {
     didSet {
       if let predicate = currentPredicate {
         fetchedResultsController.fetchRequest.predicate = predicate
-        print("currentPredicate = ", currentPredicate.debugDescription)
       }
     }
   }
@@ -104,18 +92,16 @@ class QuakeViewController: UIViewController {
   }
   
   func updatePredicate() {
-    if startDate != nil && endDate != nil {
-      if let start = startDate?.startOfDay, let end = endDate?.endOfDay {
-        currentPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [start, end])
-      }
+    // you need a start date or stop executing
+    guard let startDate = startDate else { return }
+    
+    if let endDate = endDate {
+      currentPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [startDate, endDate])
+    } else {
+      // use the startDate's end of day if endDate is nil
+      currentPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [startDate, startDate.endOfDay!])
     }
     
-    if startDate != nil && endDate == nil {
-      if let start = startDate?.startOfDay, let end = startDate?.endOfDay {
-        // force unwrap because i already checked for nil
-        currentPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [start, end])
-      }
-    }
     fetchResults()
   }
   
@@ -127,11 +113,13 @@ class QuakeViewController: UIViewController {
     webView.delegate = self
     
     self.navigationItem.title = "Earthquakes"
+    
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = CellHeight.compact.rawValue
     
     segmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
     configureCoreData()
+    configureObservers()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -166,14 +154,51 @@ class QuakeViewController: UIViewController {
   
   // MARK: Initial configuration
   fileprivate func configureCoreData() {
-    //    QuakeDataManager.sharedInstance.delegate = self
     dataManager?.delegate = self
     managedObjectContext = appDelegate.persistentContainer.viewContext
     tableView.delegate = self
     tableView.dataSource = self
   }
   
-  // MARK: Helpers  
+  // MARK: Observers
+  override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    switch keyPath {
+    case #keyPath(startDate):
+      updatePredicate()
+    case #keyPath(endDate):
+      updatePredicate()
+    default:
+      if let keyPath = keyPath {
+        print("** undefined case for \(keyPath) **")
+      }
+    }
+  }
+  
+  // MARK: Observer configuration and handlers
+  func configureObservers() {
+    // configure observers for start date and end date
+    addObserver(self, forKeyPath: #keyPath(startDate), options: [.initial, .new], context: nil)
+    addObserver(self, forKeyPath: #keyPath(endDate), options: [.initial, .new], context: nil)
+    
+    // watch for core data changes
+    NotificationCenter.default.addObserver(self, selector: #selector(managedObjectContextDidSave(_:)), name: NSNotification.Name.NSManagedObjectContextDidSave, object: managedObjectContext)
+    
+  }
+  
+  @objc func managedObjectContextDidSave(_ notifiation: Notification) {
+    print("managedObjectContextDidSave")
+  }
+
+  
+  // MARK: Helpers
+  
+  // TODO: Add these in for where view deallocates (older versions of iOS will crash if they're not removed)
+  func removeObservers() {
+    removeObserver(self, forKeyPath: #keyPath(startDate))
+    removeObserver(self, forKeyPath: #keyPath(endDate))
+  }
+  
+  
   func configureDates(period: SearchPeriod) {
     // set start date to now
     endDate = Date()
@@ -226,35 +251,37 @@ class QuakeViewController: UIViewController {
     dataManager = nil // nuke it & start fresh
     self.dataManager = QuakeDataManager.init()
     self.dataManager?.delegate = self
+    self.endDate = Date()
     
     switch sender.selectedSegmentIndex {
     case 0:
       print("hour")
       dataManager?.getQuakeData(usgsURL: .hour)
+      self.startDate = Calendar.current.date(byAdding: .hour, value: -1, to: endDate!) // we set the end earlier in this method
     case 1:
       print("day")
       dataManager?.getQuakeData(usgsURL: .day)
+      self.startDate = Calendar.current.date(byAdding: .day, value: -1, to: endDate!) // we set the end earlier in this method
     case 2:
       print("week")
       dataManager?.getQuakeData(usgsURL: .week)
+      self.startDate = Calendar.current.date(byAdding: .day, value: -7, to: endDate!) // we set the end earlier in this method
     case 3:
       print("month")
       dataManager?.getQuakeData(usgsURL: .month)
+      self.startDate = Calendar.current.date(byAdding: .month, value: -1, to: endDate!) // we set the end earlier in this method
     case 4:
-      self.performSegue(withIdentifier: SegueID.calendar, sender: self)
+//      self.performSegue(withIdentifier: SegueID.calendar, sender: self)
+      let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+      let calendarVC = storyboard.instantiateViewController(withIdentifier: StoryboardID.calendarVC) as! CalendarViewController
+      calendarVC.delegate = self
+      self.present(calendarVC, animated: false, completion: nil)
+      
     default:
       break
     }
   }
-  
-  // MARK: Navigation
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == SegueID.calendar {
-      let calendarVC = segue.destination as! CalendarViewController
-      calendarVC.delegate = self
-    }
-  }
-  
+    
   // MARK: Animation
   func animateBackgroundColor() {
     
@@ -411,7 +438,6 @@ extension QuakeViewController: ABWebViewDelegate {
   }
 }
 
-
 // MARK: QuakeTableViewCellDelegate
 
 extension QuakeViewController: QuakeTableViewCellDelegate {
@@ -451,7 +477,6 @@ extension QuakeViewController: QuakeTableViewCellDelegate {
 extension QuakeViewController: CalendarViewControllerDelegate {
   func setDates(startDate: Date?, endDate: Date?) {
     segmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
-    resetStartAndEndDates()
     if let start = startDate {
       self.startDate = start.startOfDay
       print("start =", start.asDate())
