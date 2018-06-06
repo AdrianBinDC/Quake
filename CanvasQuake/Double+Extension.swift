@@ -18,8 +18,22 @@ extension Double {
   }
   
   func asString(roundedTo places: Int) -> String {
-//    return String(format: "%.\(places)f", self)
     let stringValue = String(format: "%.\(places)", arguments: [self as CVarArg])
     return stringValue
   }
+  
+  /// convert kilometers to degrees latitude
+  func convertToLatDegrees() -> Double {
+    // where self is a kilometer
+    return self * 1/111
+  }
+  
+  /// convert kilometers to degrees longitude
+  func convertToLongDegrees(atLatitude: Double) -> Double {
+    // where self is a kilometer
+    // Not 100% sure on the calculation
+    // gets bigger the further away on the equator
+    return self * 1 / (111.320 * cos(atLatitude))
+  }
+  
 }

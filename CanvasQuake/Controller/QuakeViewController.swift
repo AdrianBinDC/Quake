@@ -124,7 +124,7 @@ class QuakeViewController: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    viewIsActive = true // used to turn onn gradient animation if user switches screens
+    viewIsActive = true // used to turn on gradient animation if user switches screens
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -185,8 +185,16 @@ class QuakeViewController: UIViewController {
     
   }
   
-  @objc func managedObjectContextDidSave(_ notifiation: Notification) {
+  @objc func managedObjectContextDidSave(_ notification: Notification) {
     print("managedObjectContextDidSave")
+    guard let context = notification.object as? NSManagedObjectContext else { return }
+    
+    if context.parent == managedObjectContext {
+      managedObjectContext.performAndWait {
+        
+      }
+      tableView.reloadData()
+    }
   }
 
   

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "CanvasQuake/Controller/CalendarViewController.swift"
-            timestampString = "549774491.724954"
+            timestampString = "549985785.390756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
@@ -35,11 +35,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CanvasQuake/Controller/QuakeViewController.swift"
-            timestampString = "549940511.41144"
+            timestampString = "549985785.390828"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "495"
-            endingLineNumber = "495">
+            startingLineNumber = "503"
+            endingLineNumber = "503">
             <Actions>
                <BreakpointActionProxy
                   ActionExtensionID = "Xcode.BreakpointAction.Log">
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "CanvasQuake/Controller/CalendarViewController.swift"
-            timestampString = "549774491.725131"
+            timestampString = "549985785.391183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
@@ -111,7 +111,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "CanvasQuake/Controller/CalendarViewController.swift"
-            timestampString = "549774491.7251821"
+            timestampString = "549985785.391246"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "145"
@@ -142,12 +142,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "CanvasQuake/QuakeDataManager.swift"
-            timestampString = "549940511.411587"
+            timestampString = "549985785.3913"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "setURL(startDate:endDate:)"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "getQuakeData(usgsURL:)"
             landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
@@ -173,7 +173,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "CanvasQuake/Controller/QuakeViewController.swift"
-            timestampString = "549940511.412078"
+            timestampString = "549985785.391356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "167"
@@ -198,7 +198,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "CanvasQuake/Controller/QuakeViewController.swift"
-            timestampString = "549940511.412147"
+            timestampString = "549985785.3916349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "169"
@@ -214,6 +214,70 @@
                   </ActionContent>
                </BreakpointActionProxy>
             </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CanvasQuake/QuakeDataManager.swift"
+            timestampString = "549985785.3918869"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "getQuakeData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CanvasQuake.QuakeDataManager.getQuakeData() -&gt; ()"
+                  moduleName = "CanvasQuake"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrianbolinger/Desktop/Experimental/Quake/CanvasQuake/QuakeDataManager.swift"
+                  timestampString = "549983555.8880171"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "187"
+                  endingLineNumber = "187"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in CanvasQuake.QuakeDataManager.getQuakeData() -&gt; ()"
+                  moduleName = "CanvasQuake"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrianbolinger/Desktop/Experimental/Quake/CanvasQuake/QuakeDataManager.swift"
+                  timestampString = "549983555.890082"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "190"
+                  endingLineNumber = "190"
+                  offsetFromSymbolStart = "113">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CanvasQuake/QuakeDataManager.swift"
+            timestampString = "549985785.391938"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
+            landmarkName = "getQuakeData()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

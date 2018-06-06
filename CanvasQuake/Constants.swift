@@ -29,6 +29,12 @@ struct USGSUrlString {
   static let month = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
 }
 
+extension Notification.Name {
+  // this gets fired from MapPredicate class when the predicate is updated
+  // TODO: When done, this notification will be handled to update the FRC's predicate and redraw the map
+  static let mapPredicateUpdated = Notification.Name("mapPredicateUpdated")
+}
+
 //@objc var sectionSeverityString: String {
 //  switch self.magnitude {
 //  case -5..<5:
