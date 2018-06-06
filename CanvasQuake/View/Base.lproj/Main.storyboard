@@ -293,9 +293,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UFv-J8-3aL"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1ue-ie-8yc"/>
+                    <navigationItem key="navigationItem" id="1ue-ie-8yc">
+                        <barButtonItem key="leftBarButtonItem" title="Reset" id="xfj-uO-8Sh">
+                            <color key="tintColor" red="0.070588235289999995" green="0.53333333329999999" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="resetButtonAction:" destination="I8l-Rh-bkI" id="n63-G4-g9g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="gradientView" destination="yIG-N6-Ihl" id="jQI-m4-JMg"/>
+                        <outlet property="resetButton" destination="xfj-uO-8Sh" id="Mdo-O1-QZp"/>
                         <outlet property="segmentedControl" destination="0Up-gl-7vS" id="mud-YW-kJQ"/>
                         <outlet property="tableView" destination="OmJ-Na-E9N" id="MFU-SJ-zMM"/>
                         <outlet property="webView" destination="Ecv-3x-u85" id="Whi-tp-iAL"/>

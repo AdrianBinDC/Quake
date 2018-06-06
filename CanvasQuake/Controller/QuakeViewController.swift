@@ -18,6 +18,7 @@ class QuakeViewController: UIViewController {
   
   // MARK: IBOutlets
   
+  @IBOutlet weak var resetButton: UIBarButtonItem!
   @IBOutlet weak var segmentedControl: UISegmentedControl!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var gradientView: UIViewCanvas!
@@ -251,6 +252,13 @@ class QuakeViewController: UIViewController {
     case day
     case week
     case month
+  }
+  
+  
+  @IBAction func resetButtonAction(_ sender: UIBarButtonItem) {
+    // Observer picks this up and sets the start date to the end of day
+    // There have been no earthquakes tomorrow, so the fetch is guaranteed to return no quakes.
+    self.startDate = Date().dateByAdding(days: 1)
   }
   
   @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
