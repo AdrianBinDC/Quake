@@ -100,7 +100,7 @@ class MapViewController: UIViewController {
   
   @objc func handlePredicateNotification(_ notification: Notification) {
     print("handlePredicateNotification fired")
-    updateDataSource()
+//    updateDataSource()
     
   }
   
@@ -132,6 +132,11 @@ class MapViewController: UIViewController {
 
 // MARK: FilterViewDelegate
 extension MapViewController: FilterViewDelegate {
+  func filterButtonTapped() {
+    print("filter button tapped")
+    updateDataSource()
+  }
+  
   // TODO: Dates will get picked up via yet-to-be-implemented notification
   
   func updateMagnitude(minMag: Double, maxMag: Double) {

@@ -197,6 +197,7 @@ class QuakeViewController: UIViewController {
         print(notification)
       }
     }
+    updateLabelsForResults()
   }
 
   

@@ -16,6 +16,7 @@
             <connections>
                 <outlet property="endDateLabel" destination="Z21-zH-CBU" id="5yz-22-dRe"/>
                 <outlet property="endLabelTitle" destination="eNQ-sh-PeJ" id="2BM-b0-LSk"/>
+                <outlet property="filterButton" destination="aZv-MH-ev4" id="zVa-Fg-TMe"/>
                 <outlet property="latitudeLabel" destination="fC2-IE-hA6" id="OOj-Eq-Csf"/>
                 <outlet property="latitudeSlider" destination="RqF-7e-eUk" id="Cq7-7r-DcR"/>
                 <outlet property="latitudeStack" destination="paC-CH-lXk" id="M6W-C0-vm6"/>
@@ -31,7 +32,6 @@
                 <outlet property="minLatLabel" destination="Xpv-91-O18" id="XuI-PA-oUt"/>
                 <outlet property="minLongLabel" destination="8LT-IG-oXx" id="cCG-e6-S7Y"/>
                 <outlet property="minMagLabel" destination="Gxu-AM-flz" id="yWd-f5-s9U"/>
-                <outlet property="searchButton" destination="aZv-MH-ev4" id="zVa-Fg-TMe"/>
                 <outlet property="searchStack" destination="S1a-y7-h3C" id="fEK-Tw-GAD"/>
                 <outlet property="startDateLabel" destination="RjW-iI-VHa" id="0Gt-D9-rwb"/>
                 <outlet property="startLabelTitle" destination="S4j-w6-jXx" id="7by-Wn-Z4a"/>
@@ -91,6 +91,9 @@
                                         <constraint firstAttribute="width" secondItem="aZv-MH-ev4" secondAttribute="height" multiplier="1:1" id="qPR-fH-qAh"/>
                                     </constraints>
                                     <state key="normal" image="filter"/>
+                                    <connections>
+                                        <action selector="filterButtonAction:" destination="-1" eventType="touchUpInside" id="0Ue-Z2-uAk"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>

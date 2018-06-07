@@ -30,6 +30,7 @@ protocol FilterViewDelegate: class {
   func updateMagnitude(minMag: Double, maxMag: Double)
   func updateLatitude(minLat: Double, maxLat: Double)
   func updateLongitude(minLong: Double, maxLong: Double)
+  func filterButtonTapped()
   
   /*
    Documentation link for configurign distance
@@ -112,7 +113,7 @@ extension FilterViewDelegate {
   @IBOutlet weak var startDateLabel: UILabel!
   @IBOutlet weak var endDateLabel: UILabel!
   
-  @IBOutlet weak var searchButton: UIButton!
+  @IBOutlet weak var filterButton: UIButton!
   
   @IBOutlet weak var magnitudeStack: UIStackView!
   @IBOutlet weak var magnitudeLabel: UILabel!
@@ -237,7 +238,7 @@ extension FilterViewDelegate {
     // colors
     
     // FIXME: perhaps remove this and set tint on the view instead...not familiar with the 3rd party framework, so doing it the "safe way" for now
-    searchButton.tintColor = sliderTintColor
+    filterButton.tintColor = sliderTintColor
     
     [magnitudeSlider, latitudeSlider, longitudeSlider].forEach { customSlider in
       customSlider?.tintColor = sliderTintColor
@@ -259,6 +260,11 @@ extension FilterViewDelegate {
   }
   
   // MARK: IBActions
+  
+  @IBAction func filterButtonAction(_ sender: UIButton) {
+    delegate?.filterButtonTapped()
+  }
+  
   /* These just set the values of the QuakeParameters struct. Search button will do the "work"*/
   @IBAction private func magSliderAction(_ sender: RangeSlider) {
     currentParameters.minMag = sender.lowerValue
