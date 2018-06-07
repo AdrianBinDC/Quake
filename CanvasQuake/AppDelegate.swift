@@ -103,15 +103,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // FIXME: delete thisi when you're done
   // MARK: generate sample data...nuke for production
   var objectsInCoreData: Int {
-    let moc = persistentContainer.viewContext
-    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "EarthquakeEntity")
-    var results: [EarthquakeEntity] = []
-    do {
-      results = try moc.fetch(fetchRequest) as! [EarthquakeEntity]
-    } catch {
-      print("SOMETHING WENT HORRIBLY WRONG!")
-    }
-    return results.count
+//    let moc = persistentContainer.viewContext
+//    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "EarthquakeEntity")
+//    var results: [EarthquakeEntity] = []
+//    do {
+//      results = try moc.fetch(fetchRequest) as! [EarthquakeEntity]
+//    } catch {
+//      print("SOMETHING WENT HORRIBLY WRONG!")
+//    }
+//    return results.count
+    return 42
   }
   
 }

@@ -42,7 +42,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6i4-jy-VRs" firstAttribute="top" secondItem="3R7-yo-zpu" secondAttribute="top" id="1sf-pu-ZnF"/>
-                            <constraint firstItem="qw8-yj-GAj" firstAttribute="height" secondItem="3R7-yo-zpu" secondAttribute="height" multiplier="0.3" priority="750" id="2TE-YO-N8p"/>
+                            <constraint firstItem="qw8-yj-GAj" firstAttribute="height" secondItem="3R7-yo-zpu" secondAttribute="height" multiplier="0.2" priority="750" id="2TE-YO-N8p"/>
                             <constraint firstItem="6i4-jy-VRs" firstAttribute="leading" secondItem="3R7-yo-zpu" secondAttribute="leading" id="DWw-pw-1lf"/>
                             <constraint firstAttribute="bottom" secondItem="6i4-jy-VRs" secondAttribute="bottom" id="Efv-Zq-BLA"/>
                             <constraint firstItem="6i4-jy-VRs" firstAttribute="trailing" secondItem="3R7-yo-zpu" secondAttribute="trailing" id="cNL-5P-Fel"/>
@@ -58,6 +58,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="calendarButton" destination="6fb-Vl-SOb" id="HfL-RT-4sF"/>
+                        <outlet property="filterView" destination="qw8-yj-GAj" id="vep-7P-JS9"/>
                         <outlet property="mapView" destination="3Ss-Lx-kwW" id="QT0-YI-1KR"/>
                     </connections>
                 </viewController>

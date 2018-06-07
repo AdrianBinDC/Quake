@@ -12,19 +12,6 @@ import CoreData
 
 // TODO: Set up a notification on the CalendarVC to update start and end date labels
 // TODO: Add observer to pick up notifications
-// TODO: Get rid of calendar delegate and just post a notification so "everyone" knows about updates
-
-// Keep this as a struct, not a class...I'm only concerned with values from this class and I don't want anyone touching it.
-struct QuakeParameters {
-  var startDate: Date?
-  var endDate: Date?
-  var minMag: Double?
-  var maxMag: Double?
-  var minLat: Double?
-  var maxLat: Double?
-  var minLong: Double?
-  var maxLong: Double?
-}
 
 // Minimize typos
 struct GeoStrings {
@@ -39,60 +26,26 @@ struct GeoStrings {
 // MARK: FilterViewDelegate
 protocol FilterViewDelegate: class {
   // This updates the FRC on the VC
-  func updatePredicate(_ predicate: NSPredicate)
-  func zoom(toDistance: Double)
+  func updateZoom(toDistance: Double)
+  func updateMagnitude(minMag: Double, maxMag: Double)
+  func updateLatitude(minLat: Double, maxLat: Double)
+  func updateLongitude(minLong: Double, maxLong: Double)
+  
   /*
    Documentation link for configurign distance
+   Handle this on the Map Controller
    https://developer.apple.com/documentation/mapkit/1452245-mkcoordinateregionmakewithdistan#
    */
 }
 
-// TODO: This is gonna get pretty chunky. Might want to subclass this when it's done and create the predicate when the search button is clicked.
 
 // MARK: FilterViewDelegate Optional methods
 extension FilterViewDelegate {
   
-  func zoom(toDistance: Double) {
+  func updateZoom(toDistance: Double) {
     // Empty stub to render it optional so TVC doesn't need to implement it
   }
-  
-  // TODO: Subclass this to a predicate factory
-  // TODO: do a predicate for start & end date only, too in the factory
-  /// Feed it parameters and it spits out a predicate the VC can use
-  // call updatePredicate from search Button
-  func predicate(from quakeParameters: QuakeParameters) -> NSPredicate {
-    
-    // TODO: Write predicates for these
-    
-    var predicateArray: [NSPredicate] = []
-    
-    // start date and end date predicate
-    if let startDate = quakeParameters.startDate, let endDate = quakeParameters.endDate {
-      // TODO: create predicate, chuck in array
-    }
-    
-    if let startDate = quakeParameters.startDate {
-      // TODO: create predicate, chuck in array
-    }
-    
-    // TODO: Don't need to unwrap geographic or magnitude values...just provide default for nil.
-    
-    // TODO: magnitude predicate
-    
-    
-    // TODO: longitude predicate
-    
-    
-    // TODO: latitude predicate
-    
-    // zoomFactor value isn't part of the predicate USGS takes.
-    
-    return NSCompoundPredicate(andPredicateWithSubpredicates: predicateArray)
-    
-  }
 }
-
-typealias SliderRange = (min: Float, max: Float) // FIXME: delete...
 
 @IBDesignable class FilterView: UIView {
   
@@ -102,8 +55,7 @@ typealias SliderRange = (min: Float, max: Float) // FIXME: delete...
   
   var currentParameters: QuakeParameters! {
     didSet {
-//      updateSliderValues(with: currentParameters)
-//      print(currentParameters)
+      print(currentParameters)
     }
   }
   
@@ -181,9 +133,20 @@ typealias SliderRange = (min: Float, max: Float) // FIXME: delete...
   @IBOutlet weak var maxLongLabel: UILabel!
   
   @IBOutlet weak var zoomFactorStack: UIStackView!
-  @IBOutlet weak var zoomFactorSlider: UISlider!
-  @IBOutlet weak var zoomFactorLabel: UILabel!
+  @IBOutlet weak var zoomSlider: UISlider!
+  @IBOutlet weak var zoomSliderLabel: UILabel!
   
+  // This is just to keep track within the class
+  struct QuakeParameters {
+    var startDate: Date?
+    var endDate: Date?
+    var minMag: Double?
+    var maxMag: Double?
+    var minLat: Double?
+    var maxLat: Double?
+    var minLong: Double?
+    var maxLong: Double?
+  }
   
   // MARK: Initialization
   
@@ -202,7 +165,7 @@ typealias SliderRange = (min: Float, max: Float) // FIXME: delete...
     commonInit()
   }
   
-  func commonInit() {
+  private func commonInit() {
     let bundle = Bundle(for: type(of: self))
     let nib = UINib(nibName: "FilterView", bundle: bundle)
     view = nib.instantiate(withOwner: self, options: nil).first as! UIView
@@ -224,9 +187,11 @@ typealias SliderRange = (min: Float, max: Float) // FIXME: delete...
     configureSliders()
   }
   
-  func configureSliders() {
+  private func configureSliders() {
     magnitudeSlider.maximumValue = 10
     magnitudeSlider.minimumValue = 0
+    magnitudeSlider.upperValue = 10 // FIXME: bug in framework code, update
+    magnitudeSlider.lowerValue = 0 // FIXME: bug in framework code, update
     minMagLabel.text = GeoStrings.minMag
     maxMagLabel.text = GeoStrings.maxMag
     
@@ -240,27 +205,27 @@ typealias SliderRange = (min: Float, max: Float) // FIXME: delete...
     minLatLabel.text = GeoStrings.minLat
     maxLatLabel.text = GeoStrings.maxLat
     
-    zoomFactorSlider.minimumValue = 0.0
-    zoomFactorSlider.maximumValue = 1_000.00
+    startDateLabel.text = Date().asDate()
+    endDateLabel.text = Date().asDate()
+    
+    // ** set the zoom with the method below.
     
     let rangeSliders = view.subviews.filter{$0 is RangeSlider} as! [RangeSlider]
     rangeSliders.forEach{
-//      $0.lowerValue = $0.minimumValue
-//      $0.upperValue = $0.maximumValue
-      $0.setValue($0.minimumValue, forKey: #keyPath(RangeSlider.lowerValue))
-      $0.setValue($0.maximumValue, forKey: #keyPath(RangeSlider.upperValue))
+      $0.lowerValue = $0.minimumValue
+      $0.upperValue = $0.maximumValue
     }
   }
   
-  func updateAppearance() {
+  private func updateAppearance() {
     
     // Title labels
-    [startLabelTitle, endLabelTitle, magnitudeLabel, latitudeLabel, longitudeLabel, zoomFactorLabel].forEach{ titleLabel in
+    [startLabelTitle, endLabelTitle, magnitudeLabel, latitudeLabel, longitudeLabel, zoomSliderLabel].forEach{ titleLabel in
       titleLabel?.textColor = titleLabelColor
     }
     
     // Subtitle Labels
-    [startDateLabel, endDateLabel, minMagLabel, maxMagLabel, minLatLabel, maxLatLabel, minLongLabel, maxLongLabel, zoomFactorLabel].forEach{ subtitle in
+    [startDateLabel, endDateLabel, minMagLabel, maxMagLabel, minLatLabel, maxLatLabel, minLongLabel, maxLongLabel, zoomSliderLabel].forEach{ subtitle in
       subtitle?.textColor = subtitleLabelColor
     }
     
@@ -278,12 +243,24 @@ typealias SliderRange = (min: Float, max: Float) // FIXME: delete...
       customSlider?.tintColor = sliderTintColor
     }
     
-    zoomFactorSlider.tintColor = sliderTintColor // custom slider isn't same class
+    zoomSlider.tintColor = sliderTintColor // custom slider isn't same class
+  }
+  
+  public func setDate(startDate: Date, endDate: Date) {
+    self.startDateLabel.text = startDate.asDate()
+    self.endDateLabel.text = endDate.asDate()
+  }
+  
+  public func setZoom(min: Double, max: Double, value: Double) {
+    zoomSlider.minimumValue = Float(min)
+    zoomSlider.maximumValue = Float(max)
+    zoomSlider.value = Float(value)
+    zoomSliderLabel.text = String(Double(value).rounded(toPlaces: 0)) + " km"
   }
   
   // MARK: IBActions
   /* These just set the values of the QuakeParameters struct. Search button will do the "work"*/
-  @IBAction func magSliderAction(_ sender: RangeSlider) {
+  @IBAction private func magSliderAction(_ sender: RangeSlider) {
     currentParameters.minMag = sender.lowerValue
     currentParameters.maxMag = sender.upperValue
 //    diagnose(name: "magSlider", sender: sender)
@@ -295,7 +272,7 @@ typealias SliderRange = (min: Float, max: Float) // FIXME: delete...
 
   }
   
-  @IBAction func latSliderAction(_ sender: RangeSlider) {
+  @IBAction private func latSliderAction(_ sender: RangeSlider) {
     currentParameters.minLat = sender.lowerValue
     currentParameters.maxLat = sender.upperValue
 //    diagnose(name: "latSlider", sender: sender)
@@ -303,7 +280,7 @@ typealias SliderRange = (min: Float, max: Float) // FIXME: delete...
     maxLatLabel.text = String(sender.upperValue.rounded(.toNearestOrEven))
   }
   
-  @IBAction func longSliderAction(_ sender: RangeSlider) {
+  @IBAction private func longSliderAction(_ sender: RangeSlider) {
     currentParameters.minLong = sender.lowerValue
     currentParameters.maxLong = sender.upperValue
 //    diagnose(name: "longSlider", sender: sender)
@@ -311,47 +288,20 @@ typealias SliderRange = (min: Float, max: Float) // FIXME: delete...
     maxLongLabel.text = String(sender.upperValue.rounded(.toNearestOrEven))
   }
   
-  @IBAction func zoomSliderAction(_ sender: UISlider) {
+  @IBAction private func zoomSliderAction(_ sender: UISlider) {
     // MapKit deals in Doubles.
-    delegate?.zoom(toDistance: Double(sender.value))
-    zoomFactorLabel.text = String(Double(sender.value).rounded(toPlaces: 0)) + " km"
-  }
-  
-  // MARK: Update from results
-  
-  /// View controllers can update the view for new value
-  public func updateSliderValues(with parameters: QuakeParameters) {
-    // TODO: This gets called when FRC updates
-    // TODO: Write method that grabs "outer boundaries" of [EarthQuakeStruct] to update slider values, which get fed to this. Quake parameters get overwritten
-    
-//    UIView.animate(withDuration: 0.3) {
-//      self.magnitudeSlider.lowerValue = parameters.minMag ?? self.magnitudeSlider.minimumValue
-//      self.magnitudeSlider.upperValue = parameters.maxMag ?? self.magnitudeSlider.maximumValue
-//      self.minMagLabel.text = parameters.minMag?.asString(roundedTo: 1) ?? GeoStrings.minMag
-//      self.maxMagLabel.text = parameters.maxMag?.asString(roundedTo: 1) ?? GeoStrings.maxMag
-//
-//      self.longitudeSlider.lowerValue = parameters.minLong ?? self.longitudeSlider.minimumValue
-//      self.longitudeSlider.upperValue = parameters.maxLong ?? self.longitudeSlider.maximumValue
-//      self.minLongLabel.text = parameters.minLong?.asString(roundedTo: 1) ?? GeoStrings.minLong
-//      self.maxLongLabel.text = parameters.maxLong?.asString(roundedTo: 1) ?? GeoStrings.maxLong
-//
-//      self.latitudeSlider.lowerValue = parameters.minLat ?? self.latitudeSlider.minimumValue
-//      self.latitudeSlider.maximumValue = parameters.maxLat ?? self.latitudeSlider.maximumValue
-//      self.minLatLabel.text = parameters.minLat?.asString(roundedTo: 1) ?? GeoStrings.minLat
-//      self.maxLatLabel.text = parameters.maxLat?.asString(roundedTo: 1) ?? GeoStrings.maxLat
-//
-//      // zoomSlider is controlled by the user. just set min and max scale
-//    }
+    delegate?.updateZoom(toDistance: Double(sender.value))
+    zoomSliderLabel.text = String(Double(sender.value).rounded(toPlaces: 0)) + " km"
   }
   
   // MARK: Diagnnostic methods
-  func diagnose(name: String, sender: RangeSlider) {
+  private func diagnose(name: String, sender: RangeSlider) {
     print(name)
     print(sender.lowerValue)
     print(sender.upperValue)
   }
   
-  func diagnose(name: String, sender: UISlider) {
+  private func diagnose(name: String, sender: UISlider) {
     print("\(name) is \(sender.minimumValue), max is \(sender.maximumValue)")
     print("currentValue is \(sender.value)")
   }

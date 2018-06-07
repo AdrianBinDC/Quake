@@ -8,15 +8,19 @@
 
 import UIKit
 import MapKit
+import CoreData
 
 class MapViewController: UIViewController {
   
   // MARK: IBOutlets
   @IBOutlet weak var calendarButton: UIBarButtonItem!
+  @IBOutlet weak var filterView: FilterView!
   @IBOutlet weak var mapView: MKMapView!
   
   // Used to fetch results from MOC
   var mapPredicate: MapPredicate!
+  
+  var managedObjectContext: NSManagedObjectContext!
   
   // one or the other, but not both?
   var earthquake: EarthquakeEntity? // perhaps designate this as the center?
@@ -40,19 +44,12 @@ class MapViewController: UIViewController {
     super.viewDidLoad()
     self.navigationItem.title = "Quake Maps"
     
-    if earthquake == nil { }
+    managedObjectContext = appDelegate.persistentContainer.viewContext
     
-    NotificationCenter.default.addObserver(self, selector: #selector(handlePredicateNotification(_:)), name: .mapPredicateUpdated, object: nil)
+    observersInitialConfig()
+    filterInitialConfig()
     
-    // FIXME: This is a test only
-    if let earthquakeArray = earthquakeArray {
-      print("earthquakeArray.count =", earthquakeArray.count)
-    }
-    
-    if let earthquake = earthquake {
-      print("earthQuake that happened at ", earthquake.time?.asDateAndTime())
-    }
-
+    // configure the map
     centerCoordinate = CLLocationCoordinate2D(latitude: 39.885403, longitude: -86.053936)
     mapView.centerCoordinate = centerCoordinate
     
@@ -61,10 +58,21 @@ class MapViewController: UIViewController {
   
   // MARK: Configuration, Observers & Notifications
   
+  func filterInitialConfig() {
+    filterView.delegate = self
+    filterView.setZoom(min: 0, max: 1500, value: 1500)
+  }
+  
+  func observersInitialConfig() {
+    // handles notifications from predicate being updated via MapPredicate class
+    NotificationCenter.default.addObserver(self, selector: #selector(handlePredicateNotification(_:)), name: .mapPredicateUpdated, object: nil)
+  }
+  
   func configureMapPredicate() {
     // Initialize based on whether it's one earthquake
     if let earthquake = earthquake {
       mapPredicate = MapPredicate(earthquake: earthquake, zoomFactor: 1500)
+      
     }
     // ...or an array of earthquakes
     else if let earthquakeArray = earthquakeArray {
@@ -85,6 +93,7 @@ class MapViewController: UIViewController {
   
   @objc func handlePredicateNotification(_ notification: Notification) {
     print("handlePredicateNotification fired")
+    
   }
   
   // MARK: Navigation
@@ -105,6 +114,25 @@ class MapViewController: UIViewController {
   }
 }
 
+// MARK: FilterViewDelegate
+extension MapViewController: FilterViewDelegate {
+  // TODO: Dates will get picked up via yet-to-be-implemented notification
+  
+  func updateMagnitude(minMag: Double, maxMag: Double) {
+    mapPredicate.setMagnitude(minMag: minMag, maxMag: maxMag)
+  }
+  
+  func updateLatitude(minLat: Double, maxLat: Double) {
+    mapPredicate.setLatitude(minLat: minLat, maxLat: maxLat)
+  }
+  
+  func updateLongitude(minLong: Double, maxLong: Double) {
+    mapPredicate.setLongitude(minLong: minLong, maxLong: maxLong)
+  }
+
+  
+}
+
 // MARK: CalendarViewControllerDelegate
 extension MapViewController: CalendarViewControllerDelegate {
   func setDates(startDate: Date?, endDate: Date?) {
@@ -115,11 +143,13 @@ extension MapViewController: CalendarViewControllerDelegate {
     }
     // two dates sent
     if let startDate = startDate, let endDate = endDate {
-      mapPredicate.updateDate(for: startDate, endDate: endDate)
+      mapPredicate.setDate(for: startDate, endDate: endDate)
+      filterView.setDate(startDate: startDate, endDate: endDate)
     }
     // one date sent
     else if let startDate = startDate {
-      mapPredicate.updateDate(for: startDate, endDate: nil)
+      mapPredicate.setDate(for: startDate, endDate: nil)
+      filterView.setDate(startDate: startDate, endDate: startDate)
     }
   }
   

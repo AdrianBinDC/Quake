@@ -10,6 +10,11 @@ import Foundation
 import CoreData
 import MapKit
 
+/*
+ This takes all the parameters that are not nil and spits out a predicate to search Core Data
+ Makes more sense to put all that stuff in a dedicated class than do it on a ViewController
+ */
+
 class MapPredicate: NSObject {
   
   public var predicate: NSPredicate! {
@@ -18,8 +23,9 @@ class MapPredicate: NSObject {
     }
   }
   
-  @objc private dynamic var startDate: Date?
-  @objc private dynamic var endDate: Date?
+  // these are publicly viewable, but privately settable. Set via methods
+  @objc private (set) dynamic var startDate: Date?
+  @objc private (set) dynamic var endDate: Date?
   // optional doubles can't be represented in objc, so update predicate via didSet
   private var minMag: Double? {
     didSet {
@@ -27,24 +33,25 @@ class MapPredicate: NSObject {
     }
   }
   
-  private var maxMag: Double? {
+  private (set) var maxMag: Double? {
     didSet {
       updatePredicate()
     }
   }
   
-  private var minLat: Double? {
+  private (set) var minLat: Double? {
     didSet {
       updatePredicate()
     }
   }
   
-  private var maxLat: Double? {
+  private (set) var maxLat: Double? {
     didSet {
       updatePredicate()
     }
   }
-  private var minLong: Double? {
+  
+  private (set) var minLong: Double? {
     didSet {
       if let minLong = minLong {
         // FIXME: Calculation seems a little off...close enough for now
@@ -53,7 +60,7 @@ class MapPredicate: NSObject {
       updatePredicate()
     }
   }
-  private var maxLong: Double? {
+  private (set) var maxLong: Double? {
     didSet {
       if let maxLong = maxLong {
         // FIXME: Calculation seems a little off...close enough for now
@@ -64,6 +71,7 @@ class MapPredicate: NSObject {
   }
   
   // MARK: Initializers
+  // NSObject, so you can just initialize it and set via sliders, too.
   
   // feed some vars, but needs a var or it'll fail b/c we don't want to spend all day watching a map draw
   init?(startDate: Date?, endDate: Date?, minMag: Double?, maxMag: Double?, minLat: Double?, maxLat: Double?, minLong: Double?, maxLong: Double?) {
@@ -97,13 +105,13 @@ class MapPredicate: NSObject {
     commonInit()
   }
   
-  func commonInit() {
+  private func commonInit() {
     updatePredicate()
   }
   
   // MARK: Observers
   // Optional doubles aren't observable, so need to use didSet for those 🙄
-  override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+  internal override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
     switch keyPath {
     case #keyPath(startDate), #keyPath(endDate):
       self.updatePredicate()
@@ -114,7 +122,7 @@ class MapPredicate: NSObject {
   
   // MARK: Update class vars
   
-  public func updateDate(for startDate: Date, endDate: Date?) {
+  public func setDate(for startDate: Date, endDate: Date?) {
     if let endDate = endDate {
       self.startDate = startDate.startOfDay
       self.endDate = endDate.endOfDay!
@@ -124,9 +132,19 @@ class MapPredicate: NSObject {
     }
   }
   
-  public func updateMagnitude(minMag: Double, maxMag: Double) {
+  public func setMagnitude(minMag: Double, maxMag: Double) {
     self.minMag = minMag
     self.maxMag = maxMag
+  }
+  
+  public func setLatitude(minLat: Double, maxLat: Double) {
+    self.minLat = minLat
+    self.maxLat = maxLat
+  }
+  
+  public func setLongitude(minLong: Double, maxLong: Double) {
+    self.minLong = minLong
+    self.maxLong = maxLong
   }
   
   // MARK: Update predicate
@@ -158,13 +176,13 @@ class MapPredicate: NSObject {
     
     // predicate for latitude
     if let minLat = minLat, let maxLat = maxLat {
-      let latitudePredicate = NSPredicate(format: "coordinate.minLat >= %f AND coordinate.maxLat <= %f", argumentArray: [minLat, maxLat])
+      let latitudePredicate = NSPredicate(format: "coordinate.latitude >= %f AND coordinate.latitude <= %f", argumentArray: [minLat, maxLat])
       predicateArray.append(latitudePredicate)
     }
     
     // predicate for longitude
     if let minLong = minLong, let maxLong = maxLong {
-      let longitudePredicate = NSPredicate(format: "coordinate.minLong >= %f AND coordinate.maxLong <= %f", argumentArray: [minLong, maxLong])
+      let longitudePredicate = NSPredicate(format: "coordinate.longitude >= %f AND coordinate.longitude <= %f", argumentArray: [minLong, maxLong])
       predicateArray.append(longitudePredicate)
     }
     
