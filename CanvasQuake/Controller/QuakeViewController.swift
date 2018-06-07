@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import TGPControls
 
 class QuakeViewController: UIViewController {
   
