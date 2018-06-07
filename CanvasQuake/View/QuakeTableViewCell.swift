@@ -11,6 +11,7 @@ import UIKit
 protocol QuakeTableViewCellDelegate: class {
   func presentWebView(urlString: String)
   func preLoad(urlString: String)
+  func mapPinSegue(quake: EarthquakeEntity)
 }
 
 class QuakeTableViewCell: UITableViewCell {
@@ -27,6 +28,7 @@ class QuakeTableViewCell: UITableViewCell {
   
   @IBOutlet weak var magLabel: UILabel!
   @IBOutlet weak var timeLabel: UILabel!
+  @IBOutlet weak var pinButton: UIButton!
   
   @IBOutlet weak var depthLabel: UILabel!
   @IBOutlet weak var placeLabel: UILabel!
@@ -66,6 +68,12 @@ class QuakeTableViewCell: UITableViewCell {
   }
   
   // MARK: IBActions
+  
+  @IBAction func pinButtonAction(_ sender: UIButton) {
+    guard let quake = quake else { return }
+    delegate?.mapPinSegue(quake: quake)
+  }
+  
   
   @IBAction func webViewAction(_ sender: UIButton) {
     guard let quakeURL = quake?.url else { return }

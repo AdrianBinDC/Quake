@@ -40,11 +40,17 @@ class MapViewController: UIViewController {
     super.viewDidLoad()
     self.navigationItem.title = "Quake Maps"
     
+    if earthquake == nil { }
+    
     NotificationCenter.default.addObserver(self, selector: #selector(handlePredicateNotification(_:)), name: .mapPredicateUpdated, object: nil)
     
     // FIXME: This is a test only
     if let earthquakeArray = earthquakeArray {
       print("earthquakeArray.count =", earthquakeArray.count)
+    }
+    
+    if let earthquake = earthquake {
+      print("earthQuake that happened at ", earthquake.time?.asDateAndTime())
     }
 
     centerCoordinate = CLLocationCoordinate2D(latitude: 39.885403, longitude: -86.053936)
@@ -79,6 +85,11 @@ class MapViewController: UIViewController {
   
   @objc func handlePredicateNotification(_ notification: Notification) {
     print("handlePredicateNotification fired")
+  }
+  
+  // MARK: Navigation
+  @objc func closeView(_ sender: UIBarButtonItem) {
+    self.dismiss(animated: true, completion: nil)
   }
   
   

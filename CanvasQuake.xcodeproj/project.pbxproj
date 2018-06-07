@@ -30,6 +30,7 @@
 		558FA7F920C119A5004A16C0 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7F820C119A5004A16C0 /* Structs.swift */; };
 		558FA7FD20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7FC20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift */; };
 		55940CBB20C778B700C5D38B /* MapPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55940CBA20C778B700C5D38B /* MapPredicate.swift */; };
+		55AC767220C89F03003940C3 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC767120C89F03003940C3 /* UITableView+Extension.swift */; };
 		55AE125320C0752D00DB7F6C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE125220C0752D00DB7F6C /* Constants.swift */; };
 		55AE125820C0756100DB7F6C /* Complementary.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE125520C0756000DB7F6C /* Complementary.png */; };
 		55AE125920C0756100DB7F6C /* GradientShades.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE125620C0756000DB7F6C /* GradientShades.png */; };
@@ -96,6 +97,7 @@
 		558FA7F820C119A5004A16C0 /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		558FA7FC20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EarthquakeEntity+Extension.swift"; sourceTree = "<group>"; };
 		55940CBA20C778B700C5D38B /* MapPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPredicate.swift; sourceTree = "<group>"; };
+		55AC767120C89F03003940C3 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		55AE125220C0752D00DB7F6C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		55AE125520C0756000DB7F6C /* Complementary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Complementary.png; sourceTree = "<group>"; };
 		55AE125620C0756000DB7F6C /* GradientShades.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GradientShades.png; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				5580D78320C30ED7004E692F /* Double+Extension.swift */,
 				55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */,
 				552891E620C85E8D0062C1B5 /* MKCoordinateRegion+Extension.swift */,
+				55AC767120C89F03003940C3 /* UITableView+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				55AE125C20C0763800DB7F6C /* CanvasQuake.xcdatamodel in Sources */,
 				55B75BD720C1C868007B1602 /* ABWebView.swift in Sources */,
 				55783E0620C1BF91001C825E /* CanvasEmptySet.swift in Sources */,
+				55AC767220C89F03003940C3 /* UITableView+Extension.swift in Sources */,
 				552E78AB20C07C01002C4AE2 /* QuakeViewController.swift in Sources */,
 				558FA7FD20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift in Sources */,
 				55FFBCE720C2E02500A64B5A /* FilterView.swift in Sources */,

@@ -90,6 +90,7 @@ class QuakeViewController: UIViewController {
     DispatchQueue.main.async {
       self.tableView.reloadData()
       self.tableView.setContentOffset(.zero, animated: true)
+      self.updateLabelsForResults()
     }
   }
   
@@ -246,6 +247,20 @@ class QuakeViewController: UIViewController {
     endDate = nil
   }
   
+  func updateLabelsForResults() {
+    if let recordsFound = fetchedResultsController.fetchedObjects?.count {
+      self.title = "\(recordsFound) Records Found"
+      
+      if recordsFound == 0 {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+          self.title = "Earthquakes"
+        }
+      }
+    } else {
+      self.title = "Earthquakes"
+    }
+  }
+  
   // MARK: IBActions
   
   enum SearchPeriod {
@@ -264,7 +279,6 @@ class QuakeViewController: UIViewController {
   }
   
   @IBAction func mapButtonAction(_ sender: UIBarButtonItem) {
-    self.performSegue(withIdentifier: SegueID.mapSegue, sender: self)
   }
   
   
@@ -294,7 +308,6 @@ class QuakeViewController: UIViewController {
       dataManager?.getQuakeData(usgsURL: .month)
       self.startDate = Calendar.current.date(byAdding: .month, value: -1, to: endDate!) // we set the end earlier in this method
     case 4:
-//      self.performSegue(withIdentifier: SegueID.calendar, sender: self)
       let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
       let calendarVC = storyboard.instantiateViewController(withIdentifier: StoryboardID.calendarVC) as! CalendarViewController
       calendarVC.delegate = self
@@ -329,7 +342,6 @@ class QuakeViewController: UIViewController {
       }
     }
   }
-  
 }
 
 // MARK: UITableViewDelegate, UITableViewDataSource
@@ -352,7 +364,7 @@ extension QuakeViewController: UITableViewDelegate, UITableViewDataSource {
       print("Something went wrong with titleForHeaderInSection")
       return ""
     }
-    return sectionInfo.name + " | " + String(sectionInfo.numberOfObjects) + " records"
+    return sectionInfo.name + " UTC | " + String(sectionInfo.numberOfObjects) + " records"
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -475,13 +487,19 @@ extension QuakeViewController: ABWebViewDelegate {
 // MARK: QuakeTableViewCellDelegate
 
 extension QuakeViewController: QuakeTableViewCellDelegate {
+  
+  func mapPinSegue(quake: EarthquakeEntity) {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let mapViewController = storyboard.instantiateViewController(withIdentifier: StoryboardID.mapVC) as! MapViewController
+    mapViewController.earthquake = quake
+    navigationController?.pushViewController(mapViewController, animated: true)
+  }
+  
   func preLoad(urlString: String) {
     webView.url = urlString
   }
   
-  func presentWebView(urlString: String) {
-    
-    // TODO: stick this in the cell's "setSelected" to send it over before the button is clicked so the page is loaded already
+  func presentWebView(urlString: String) {    
     webView.url = urlString
     webView.alpha = 0.0
     self.view.bringSubview(toFront: self.webView)
