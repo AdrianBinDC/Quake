@@ -8,6 +8,11 @@ While I utilized the endpoints given on the URL referenced in the PDF, I also cr
 ## Patterns
 I used delegation to communicate between the data manager class and the view controllers. I created a custom webview to view details about the quake from the USGS' website. That view uses KVO to update a progress bar to know how the page load is going with the WKWebView.
 
+## Core Data
+Data that is retrieved from USGS is persisted locally to minimize network calls. The current date will always download from USGS, but prior dates are first checked to see if they exist in the managed object context before they are saved to ensure no duplicate data is persisted.
+
+Additionally, data is displayed in a UITableView utilizing `NSFetchedResultsController`. 
+
 ## Third party libraries
 ### [`Alamofire`](https://github.com/Alamofire/Alamofire):
 I utiliized Alamofire for networking. Additionally, I used Apple's URL constuctors and the Codable protocol to parse the JSON returns.
@@ -42,4 +47,4 @@ I used Inkscape to create the vector icons in the app. Some of them are inspired
 I created a webview that displays the USGS webpage for the earthquakes. The webview utilizes KVO to monitor load progress.
 
 # Testing Notes
-Press the UISegmentedControl on the Quake tab to retrieve quake data for minutes, hours, week, and month. The calendar icon opens up a view controller that enables you to select a date to search via delegation.
+Press the `UISegmentedControl` on the Quake tab to retrieve quake data for minutes, hours, week, and month. The calendar icon opens up a view controller that enables you to select dates to search. Multiple selection is only available for contiguous dates. You probably don't want to import more than 30 days at a time.
