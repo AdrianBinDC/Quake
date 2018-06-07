@@ -106,16 +106,16 @@ class CalendarViewController: UIViewController {
     default:
       // nil addressed above
       if date.isAfterDate(calendarView.selectedDates.min()!) {
-        var startDate: Date = calendarView.selectedDates.min()!
-        while startDate < date {
-          calendarView.select(startDate)
-          startDate = startDate.dateByAdding(days: 1)!
+        var nextDate: Date = calendarView.selectedDates.min()!
+        while nextDate < date {
+          calendarView.select(nextDate)
+          nextDate = nextDate.dateByAdding(days: 1)!
         }
       } else {
-        var startDate: Date = calendarView.selectedDates.max()!
-        while startDate > date {
-          calendarView.select(startDate)
-          startDate = startDate.dateByAdding(days: -1)!
+        var nextDate: Date = calendarView.selectedDates.max()!
+        while nextDate > date {
+          calendarView.select(nextDate)
+          nextDate = nextDate.dateByAdding(days: -1)!
         }
       }
     }
@@ -134,7 +134,6 @@ class CalendarViewController: UIViewController {
       updateDateLabel()
     }
   } // end updateSelection(date: Date)
-
 }
 
 // MARK: FSCalendarDelegate

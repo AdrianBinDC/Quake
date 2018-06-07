@@ -301,6 +301,7 @@ class QuakeViewController: UIViewController {
     self.startDate = Date().dateByAdding(days: 1)
     segmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
     magSlider.setValue(0.0, animated: true)
+    magLabel.text = "0.0"
   }
   
   @IBAction func mapButtonAction(_ sender: UIBarButtonItem) {
@@ -517,10 +518,11 @@ extension QuakeViewController: ABWebViewDelegate {
 extension QuakeViewController: QuakeTableViewCellDelegate {
   
   func mapPinSegue(quake: EarthquakeEntity) {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let mapViewController = storyboard.instantiateViewController(withIdentifier: StoryboardID.mapVC) as! MapViewController
-    mapViewController.earthquake = quake
-    navigationController?.pushViewController(mapViewController, animated: true)
+    // FIXME: re-enable later
+//    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//    let mapViewController = storyboard.instantiateViewController(withIdentifier: StoryboardID.mapVC) as! MapViewController
+//    mapViewController.earthquake = quake
+//    navigationController?.pushViewController(mapViewController, animated: true)
   }
   
   func preLoad(urlString: String) {
