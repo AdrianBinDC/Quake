@@ -250,12 +250,12 @@
 		55AE124F20C074F100DB7F6C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				558FA7F820C119A5004A16C0 /* Structs.swift */,
-				558FA7F620C11970004A16C0 /* QuakeDataManager.swift */,
 				55940CBA20C778B700C5D38B /* MapPredicate.swift */,
-				554BE13620C0F8CA00C07248 /* IBDesignable Base Classes */,
-				55AE125D20C0765D00DB7F6C /* Extensions */,
+				558FA7F620C11970004A16C0 /* QuakeDataManager.swift */,
+				558FA7F820C119A5004A16C0 /* Structs.swift */,
 				55AE125120C0751C00DB7F6C /* Core Data */,
+				55AE125D20C0765D00DB7F6C /* Extensions */,
+				554BE13620C0F8CA00C07248 /* IBDesignable Base Classes */,
 			);
 			name = Model;
 			sourceTree = "<group>";

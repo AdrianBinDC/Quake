@@ -194,9 +194,8 @@ class QuakeViewController: UIViewController {
     
     if context.parent == managedObjectContext {
       managedObjectContext.performAndWait {
-        
+        print(notification)
       }
-      tableView.reloadData()
     }
   }
 

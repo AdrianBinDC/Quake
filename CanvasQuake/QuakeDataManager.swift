@@ -291,6 +291,7 @@ class QuakeDataManager: NSObject {
       let privateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
       privateContext.persistentStoreCoordinator = self.manageObjectContext.persistentStoreCoordinator
       
+      
       privateContext.performAndWait {
         itemsToImportArray.forEach { quakeStruct in
           let quakeEntity = NSEntityDescription.entity(forEntityName: QuakeDataEntity.earthquake.rawValue, in: privateContext)
@@ -337,16 +338,19 @@ class QuakeDataManager: NSObject {
       }
       
       // ...then save it
+      
       do {
         try privateContext.save()
-        print("There were \(count) records imported")
-        DispatchQueue.main.async {
-          self.delegate?.updateFetchedResultsController()
+        self.manageObjectContext.performAndWait {
+          do {
+            try self.manageObjectContext.save()
+          } catch {
+            print("self.manageObjectContext.save(): \(error.localizedDescription)")
+          }
         }
       } catch {
-        print("Error saving to privateContext")
+        print("privateContext.save(): \(error.localizedDescription)")
       }
-
     }
   }
   
