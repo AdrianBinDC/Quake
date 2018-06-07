@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0940"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F085F02ACE9E7DD0CC2D69E5FFF77FC"
+               BlueprintIdentifier = "CBA05BCD8C26C7F7D8FBD1D38734F4DC"
                BuildableName = "Pods_CanvasQuake.framework"
                BlueprintName = "Pods-CanvasQuake"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F085F02ACE9E7DD0CC2D69E5FFF77FC"
+            BlueprintIdentifier = "CBA05BCD8C26C7F7D8FBD1D38734F4DC"
             BuildableName = "Pods_CanvasQuake.framework"
             BlueprintName = "Pods-CanvasQuake"
             ReferencedContainer = "container:Pods.xcodeproj">

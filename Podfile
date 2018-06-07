@@ -7,10 +7,8 @@ target 'CanvasQuake' do
   
   # Pods for CanvasQuake
   pod 'Alamofire', '~> 4.7'
-  pod 'EmptyDataSet-Swift', '~> 4.0.4'
   pod 'FSCalendar'
   pod 'WARangeSlider'
-  pod 'TGPControls'
 
   
   target 'CanvasQuakeTests' do
