@@ -19,6 +19,7 @@ class MapPredicate: NSObject {
   
   public var predicate: NSPredicate! {
     didSet {
+//      print("predicate updated on MapPredicate")
       NotificationCenter.default.post(name: .mapPredicateUpdated, object: nil)
     }
   }
@@ -72,6 +73,10 @@ class MapPredicate: NSObject {
   
   // MARK: Initializers
   // NSObject, so you can just initialize it and set via sliders, too.
+  
+  override init() {
+    super.init()
+  }
   
   // feed some vars, but needs a var or it'll fail b/c we don't want to spend all day watching a map draw
   init?(startDate: Date?, endDate: Date?, minMag: Double?, maxMag: Double?, minLat: Double?, maxLat: Double?, minLong: Double?, maxLong: Double?) {
@@ -156,37 +161,70 @@ class MapPredicate: NSObject {
      self.maxLong = maxLong
      */
     
-    var predicateArray: [NSPredicate] = []
-    
-    // predicates for dates
-    if let startDate = startDate, let endDate = endDate {
-      let startEndDatePredicate = NSPredicate(format: "startDate >= %@ AND endDate >= %@", argumentArray: [startDate.startOfDay, endDate.endOfDay!])
-      predicateArray.append(startEndDatePredicate)
-    } else if let startDate = startDate {
-      let startDatePredicate = NSPredicate(format: "startDate >= %@ AND endDate >= %@", argumentArray: [startDate.startOfDay, startDate.endOfDay!])
-      predicateArray.append(startDatePredicate)
+    DispatchQueue.global(qos: .userInteractive).async {
+      var predicateArray: [NSPredicate] = []
+      
+      // predicates for dates
+      if let startDate = self.startDate, let endDate = self.endDate {
+        let startEndDatePredicate = NSPredicate(format: "startDate >= %@ AND endDate >= %@", argumentArray: [startDate.startOfDay, endDate.endOfDay!])
+        predicateArray.append(startEndDatePredicate)
+      } else if let startDate = self.startDate {
+        let startDatePredicate = NSPredicate(format: "startDate >= %@ AND endDate >= %@", argumentArray: [startDate.startOfDay, startDate.endOfDay!])
+        predicateArray.append(startDatePredicate)
+      }
+      
+      // predicate for magnitudes
+      // these will always come in from a range slider with two values, so only need one statement
+      if let minMag = self.minMag, let maxMag = self.maxMag {
+        let magnitudePredicate = NSPredicate(format: "magnitude >= %f AND magnitude <= %f", argumentArray: [minMag, maxMag])
+        predicateArray.append(magnitudePredicate)
+      }
+      
+      // predicate for latitude
+      if let minLat = self.minLat, let maxLat = self.maxLat {
+        let latitudePredicate = NSPredicate(format: "coordinate.latitude >= %f AND coordinate.latitude <= %f", argumentArray: [minLat, maxLat])
+        predicateArray.append(latitudePredicate)
+      }
+      
+      // predicate for longitude
+      if let minLong = self.minLong, let maxLong = self.maxLong {
+        let longitudePredicate = NSPredicate(format: "coordinate.longitude >= %f AND coordinate.longitude <= %f", argumentArray: [minLong, maxLong])
+        predicateArray.append(longitudePredicate)
+      }
+      
+      self.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicateArray)
     }
-    
-    // predicate for magnitudes
-    // these will always come in from a range slider with two values, so only need one statement
-    if let minMag = minMag, let maxMag = maxMag {
-      let magnitudePredicate = NSPredicate(format: "magnitude >= %f AND magnitude <= %f", argumentArray: [minMag, maxMag])
-      predicateArray.append(magnitudePredicate)
-    }
-    
-    // predicate for latitude
-    if let minLat = minLat, let maxLat = maxLat {
-      let latitudePredicate = NSPredicate(format: "coordinate.latitude >= %f AND coordinate.latitude <= %f", argumentArray: [minLat, maxLat])
-      predicateArray.append(latitudePredicate)
-    }
-    
-    // predicate for longitude
-    if let minLong = minLong, let maxLong = maxLong {
-      let longitudePredicate = NSPredicate(format: "coordinate.longitude >= %f AND coordinate.longitude <= %f", argumentArray: [minLong, maxLong])
-      predicateArray.append(longitudePredicate)
-    }
-    
-    self.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicateArray)
+//    var predicateArray: [NSPredicate] = []
+//
+//    // predicates for dates
+//    if let startDate = startDate, let endDate = endDate {
+//      let startEndDatePredicate = NSPredicate(format: "startDate >= %@ AND endDate >= %@", argumentArray: [startDate.startOfDay, endDate.endOfDay!])
+//      predicateArray.append(startEndDatePredicate)
+//    } else if let startDate = startDate {
+//      let startDatePredicate = NSPredicate(format: "startDate >= %@ AND endDate >= %@", argumentArray: [startDate.startOfDay, startDate.endOfDay!])
+//      predicateArray.append(startDatePredicate)
+//    }
+//
+//    // predicate for magnitudes
+//    // these will always come in from a range slider with two values, so only need one statement
+//    if let minMag = minMag, let maxMag = maxMag {
+//      let magnitudePredicate = NSPredicate(format: "magnitude >= %f AND magnitude <= %f", argumentArray: [minMag, maxMag])
+//      predicateArray.append(magnitudePredicate)
+//    }
+//
+//    // predicate for latitude
+//    if let minLat = minLat, let maxLat = maxLat {
+//      let latitudePredicate = NSPredicate(format: "coordinate.latitude >= %f AND coordinate.latitude <= %f", argumentArray: [minLat, maxLat])
+//      predicateArray.append(latitudePredicate)
+//    }
+//
+//    // predicate for longitude
+//    if let minLong = minLong, let maxLong = maxLong {
+//      let longitudePredicate = NSPredicate(format: "coordinate.longitude >= %f AND coordinate.longitude <= %f", argumentArray: [minLong, maxLong])
+//      predicateArray.append(longitudePredicate)
+//    }
+//
+//    self.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicateArray)
   }
   
 }

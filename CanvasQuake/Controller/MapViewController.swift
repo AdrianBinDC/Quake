@@ -18,7 +18,7 @@ class MapViewController: UIViewController {
   @IBOutlet weak var mapView: MKMapView!
   
   // Used to fetch results from MOC
-  var mapPredicate: MapPredicate!
+  var mapPredicate: MapPredicate? // absolutely need, but initialize in viewDidLoad
   
   var managedObjectContext: NSManagedObjectContext!
   
@@ -35,8 +35,13 @@ class MapViewController: UIViewController {
   
   private var coordinateSpan: MKCoordinateSpan?
   
+  // MARK: Data Source
   // initialized as an empty array
-  private var fetchResults: [EarthquakeEntity] = []
+  private var fetchResults: [EarthquakeEntity] = [] {
+    didSet {
+      print("There are now \(fetchResults.count) records")
+    }
+  }
   @objc private dynamic var fetchedResultsCount: Int = 0
   
   // MARK: Lifecycle Methods
@@ -48,6 +53,7 @@ class MapViewController: UIViewController {
     
     observersInitialConfig()
     filterInitialConfig()
+    mapPredicateInitialConfig()
     
     // configure the map
     centerCoordinate = CLLocationCoordinate2D(latitude: 39.885403, longitude: -86.053936)
@@ -60,7 +66,7 @@ class MapViewController: UIViewController {
   
   func filterInitialConfig() {
     filterView.delegate = self
-    filterView.setZoom(min: 0, max: 1500, value: 1500)
+    filterView.setZoom(min: 0, max: 1000, value: 1000)
   }
   
   func observersInitialConfig() {
@@ -68,11 +74,12 @@ class MapViewController: UIViewController {
     NotificationCenter.default.addObserver(self, selector: #selector(handlePredicateNotification(_:)), name: .mapPredicateUpdated, object: nil)
   }
   
-  func configureMapPredicate() {
+  func mapPredicateInitialConfig() {
     // Initialize based on whether it's one earthquake
     if let earthquake = earthquake {
       mapPredicate = MapPredicate(earthquake: earthquake, zoomFactor: 1500)
-      
+      updateDataSource()
+
     }
     // ...or an array of earthquakes
     else if let earthquakeArray = earthquakeArray {
@@ -93,14 +100,23 @@ class MapViewController: UIViewController {
   
   @objc func handlePredicateNotification(_ notification: Notification) {
     print("handlePredicateNotification fired")
+    updateDataSource()
     
   }
   
-  // MARK: Navigation
-  @objc func closeView(_ sender: UIBarButtonItem) {
-    self.dismiss(animated: true, completion: nil)
-  }
+  // MARK: Core Data Methods
   
+  func updateDataSource() {
+    guard let mapPredicate = mapPredicate else { return }
+    let fetchRequest = NSFetchRequest<EarthquakeEntity>(entityName: "EarthquakeEntity")
+    fetchRequest.predicate = mapPredicate.predicate
+    
+    do {
+      self.fetchResults = try managedObjectContext.fetch(fetchRequest)
+    } catch {
+      print("updateDataSource: ", error.localizedDescription)
+    }
+  }
   
   // MARK: Map Center from Coordinates
   // TODO: write code to find center coordiate
@@ -119,14 +135,23 @@ extension MapViewController: FilterViewDelegate {
   // TODO: Dates will get picked up via yet-to-be-implemented notification
   
   func updateMagnitude(minMag: Double, maxMag: Double) {
+    guard let mapPredicate = mapPredicate else {
+      return
+    }
     mapPredicate.setMagnitude(minMag: minMag, maxMag: maxMag)
   }
   
   func updateLatitude(minLat: Double, maxLat: Double) {
+    guard let mapPredicate = mapPredicate else {
+      return
+    }
     mapPredicate.setLatitude(minLat: minLat, maxLat: maxLat)
   }
   
   func updateLongitude(minLong: Double, maxLong: Double) {
+    guard let mapPredicate = mapPredicate else {
+      return
+    }
     mapPredicate.setLongitude(minLong: minLong, maxLong: maxLong)
   }
 

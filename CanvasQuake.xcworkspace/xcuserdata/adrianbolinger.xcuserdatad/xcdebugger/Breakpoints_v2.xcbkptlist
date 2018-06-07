@@ -35,7 +35,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CanvasQuake/Controller/QuakeViewController.swift"
-            timestampString = "550032087.415378"
+            timestampString = "550036870.35843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "547"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CanvasQuake/View/FilterView/FilterView.swift"
-            timestampString = "550032087.4154691"
+            timestampString = "550036870.358526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "264"
@@ -173,7 +173,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "CanvasQuake/Controller/QuakeViewController.swift"
-            timestampString = "550032087.415585"
+            timestampString = "550036870.358641"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "170"
@@ -198,7 +198,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "CanvasQuake/Controller/QuakeViewController.swift"
-            timestampString = "550032087.415657"
+            timestampString = "550036870.358712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "172"
@@ -277,6 +277,38 @@
             startingLineNumber = "202"
             endingLineNumber = "202"
             landmarkName = "getQuakeData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CanvasQuake/Controller/MapViewController.swift"
+            timestampString = "550036870.358815"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "updateDataSource()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CanvasQuake/Controller/MapViewController.swift"
+            timestampString = "550036870.3594331"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "updateDataSource()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

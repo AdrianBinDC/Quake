@@ -55,7 +55,7 @@ extension FilterViewDelegate {
   
   var currentParameters: QuakeParameters! {
     didSet {
-      print(currentParameters)
+//      print(currentParameters)
     }
   }
   
@@ -268,8 +268,8 @@ extension FilterViewDelegate {
     // gets correct values, but label doesn't update
     minMagLabel.text = String(sender.lowerValue.rounded(.towardZero))
     maxMagLabel.text = String(sender.upperValue.rounded(.towardZero))
-
-
+    
+    delegate?.updateMagnitude(minMag: sender.lowerValue, maxMag: sender.upperValue)
   }
   
   @IBAction private func latSliderAction(_ sender: RangeSlider) {
@@ -278,6 +278,8 @@ extension FilterViewDelegate {
 //    diagnose(name: "latSlider", sender: sender)
     minLatLabel.text = String(sender.lowerValue.rounded(.toNearestOrEven))
     maxLatLabel.text = String(sender.upperValue.rounded(.toNearestOrEven))
+    
+    delegate?.updateLatitude(minLat: sender.lowerValue, maxLat: sender.upperValue)
   }
   
   @IBAction private func longSliderAction(_ sender: RangeSlider) {
@@ -286,12 +288,16 @@ extension FilterViewDelegate {
 //    diagnose(name: "longSlider", sender: sender)
     minLongLabel.text = String(sender.lowerValue.rounded(.toNearestOrEven))
     maxLongLabel.text = String(sender.upperValue.rounded(.toNearestOrEven))
+    
+    delegate?.updateLongitude(minLong: sender.lowerValue, maxLong: sender.upperValue)
   }
   
   @IBAction private func zoomSliderAction(_ sender: UISlider) {
     // MapKit deals in Doubles.
     delegate?.updateZoom(toDistance: Double(sender.value))
     zoomSliderLabel.text = String(Double(sender.value).rounded(toPlaces: 0)) + " km"
+    
+    delegate?.updateZoom(toDistance: Double(sender.value))
   }
   
   // MARK: Diagnnostic methods
