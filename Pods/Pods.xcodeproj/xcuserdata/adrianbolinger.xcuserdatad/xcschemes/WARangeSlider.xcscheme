@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "20843F58648ABA97FC75874E19C8B53D"
+               BlueprintIdentifier = "07C3D086D35E9CFAE15A2482E30CC6F0"
                BuildableName = "WARangeSlider.framework"
                BlueprintName = "WARangeSlider"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "20843F58648ABA97FC75874E19C8B53D"
+            BlueprintIdentifier = "07C3D086D35E9CFAE15A2482E30CC6F0"
             BuildableName = "WARangeSlider.framework"
             BlueprintName = "WARangeSlider"
             ReferencedContainer = "container:Pods.xcodeproj">

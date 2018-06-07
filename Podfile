@@ -10,6 +10,7 @@ target 'CanvasQuake' do
   pod 'EmptyDataSet-Swift', '~> 4.0.4'
   pod 'FSCalendar'
   pod 'WARangeSlider'
+  pod 'TGPControls'
 
   
   target 'CanvasQuakeTests' do

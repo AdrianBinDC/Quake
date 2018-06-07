@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "25C1437064D4DE609AFF39B45E7CE400"
+               BlueprintIdentifier = "1F085F02ACE9E7DD0CC2D69E5FFF77FC"
                BuildableName = "Pods_CanvasQuake.framework"
                BlueprintName = "Pods-CanvasQuake"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "25C1437064D4DE609AFF39B45E7CE400"
+            BlueprintIdentifier = "1F085F02ACE9E7DD0CC2D69E5FFF77FC"
             BuildableName = "Pods_CanvasQuake.framework"
             BlueprintName = "Pods-CanvasQuake"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "88E9EC28B8B46C3631E6B242B50F4442"
-               BuildableName = "Alamofire.framework"
-               BlueprintName = "Alamofire"
+               BlueprintIdentifier = "8DF8B0747209DA0F677B08FC1D1717F2"
+               BuildableName = "TGPControls.framework"
+               BlueprintName = "TGPControls"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "88E9EC28B8B46C3631E6B242B50F4442"
-            BuildableName = "Alamofire.framework"
-            BlueprintName = "Alamofire"
+            BlueprintIdentifier = "8DF8B0747209DA0F677B08FC1D1717F2"
+            BuildableName = "TGPControls.framework"
+            BlueprintName = "TGPControls"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

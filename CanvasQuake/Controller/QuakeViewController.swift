@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import TGPControls
 
 class QuakeViewController: UIViewController {
   
@@ -21,6 +22,8 @@ class QuakeViewController: UIViewController {
   @IBOutlet weak var resetButton: UIBarButtonItem!
   @IBOutlet weak var mapButton: UIBarButtonItem!
   @IBOutlet weak var segmentedControl: UISegmentedControl!
+  @IBOutlet weak var magSlider: UISlider!
+  @IBOutlet weak var magLabel: UILabel!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var gradientView: UIViewCanvas!
   @IBOutlet weak var webView: ABWebView!
@@ -65,6 +68,7 @@ class QuakeViewController: UIViewController {
     didSet {
       if let predicate = currentPredicate {
         fetchedResultsController.fetchRequest.predicate = predicate
+        fetchedResultsController.managedObjectContext.refreshAllObjects()
       }
     }
   }
@@ -98,12 +102,22 @@ class QuakeViewController: UIViewController {
     // you need a start date or stop executing
     guard let startDate = startDate else { return }
     
+    var predicateArray: [NSPredicate] = []
+    
     if let endDate = endDate {
-      currentPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [startDate, endDate])
+      let startEndPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [startDate, endDate])
+      predicateArray.append(startEndPredicate)
     } else {
       // use the startDate's end of day if endDate is nil
-      currentPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [startDate, startDate.endOfDay!])
+      let startPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [startDate, startDate.endOfDay!])
+      predicateArray.append(startPredicate)
     }
+    
+    // FIXME: update
+    let sliderPredicate = NSPredicate(format: "magnitude >= %f", argumentArray: [magSlider.value])
+    predicateArray.append(sliderPredicate)
+    
+    currentPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicateArray)
     
     fetchResults()
   }
@@ -117,10 +131,15 @@ class QuakeViewController: UIViewController {
     
     self.navigationItem.title = "Earthquakes"
     
+    magSlider.isContinuous = false
+    
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = CellHeight.compact.rawValue
     
     segmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
+    
+    // FIXME: connfigure slider
+    
     configureCoreData()
     configureObservers()
   }
@@ -270,15 +289,23 @@ class QuakeViewController: UIViewController {
     case month
   }
   
+  @IBAction func magSliderAction(_ sender: UISlider) {
+    magSlider.value = magSlider.value.rounded(.towardZero)
+    magLabel.text = String(format: "%.1f", arguments: [magSlider.value])
+    updatePredicate()
+  }
+  
   
   @IBAction func resetButtonAction(_ sender: UIBarButtonItem) {
     // Observer picks this up and sets the start date to the end of day
     // There have been no earthquakes tomorrow, so the fetch is guaranteed to return no quakes.
     self.startDate = Date().dateByAdding(days: 1)
     segmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
+    magSlider.setValue(0.0, animated: true)
   }
   
   @IBAction func mapButtonAction(_ sender: UIBarButtonItem) {
+    
   }
   
   
@@ -317,7 +344,9 @@ class QuakeViewController: UIViewController {
       break
     }
   }
-    
+  
+  
+  
   // MARK: Animation
   func animateBackgroundColor() {
     
