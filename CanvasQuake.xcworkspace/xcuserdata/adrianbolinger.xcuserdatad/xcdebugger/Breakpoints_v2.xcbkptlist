@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CanvasQuake/Controller/QuakeViewController.swift"
-            timestampString = "550101161.494747"
+            timestampString = "550107874.214474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "577"
@@ -33,7 +33,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CanvasQuake/View/FilterView/FilterView.swift"
-            timestampString = "550101161.495079"
+            timestampString = "550107874.214547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "270"
@@ -49,7 +49,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "CanvasQuake/Controller/CalendarViewController.swift"
-            timestampString = "550101161.495419"
+            timestampString = "550102827.271971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
@@ -86,7 +86,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "CanvasQuake/Controller/CalendarViewController.swift"
-            timestampString = "550101161.495473"
+            timestampString = "550102827.2722681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "144"
@@ -148,7 +148,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "CanvasQuake/Controller/QuakeViewController.swift"
-            timestampString = "550101161.495545"
+            timestampString = "550107874.21503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "188"
@@ -173,7 +173,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "CanvasQuake/Controller/QuakeViewController.swift"
-            timestampString = "550101161.495803"
+            timestampString = "550107874.215088"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "190"
@@ -284,6 +284,22 @@
             startingLineNumber = "115"
             endingLineNumber = "115"
             landmarkName = "updateDataSource()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CanvasQuakeTests/CanvasQuakeTests.swift"
+            timestampString = "550107951.6015691"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "testStartOfDay()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
