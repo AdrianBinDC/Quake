@@ -74,6 +74,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qM4-Nb-LJJ">
+                                <rect key="frame" x="169" y="388" width="37" height="37"/>
+                                <color key="color" red="0.87450980389999999" green="0.0" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ecv-3x-u85" customClass="ABWebView" customModule="CanvasQuake" customModuleProvider="target">
                                 <rect key="frame" x="18" y="95" width="337.33333333333331" height="621"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -348,6 +352,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="qM4-Nb-LJJ" firstAttribute="centerX" secondItem="FrU-hu-tgv" secondAttribute="centerX" id="26B-MT-ifC"/>
                             <constraint firstItem="iHP-en-S4x" firstAttribute="trailing" secondItem="yIG-N6-Ihl" secondAttribute="trailing" id="4Mz-zu-Mdk"/>
                             <constraint firstItem="hJi-9i-VsL" firstAttribute="top" secondItem="UFv-J8-3aL" secondAttribute="top" id="6GY-E8-R6C"/>
                             <constraint firstAttribute="trailing" secondItem="yIG-N6-Ihl" secondAttribute="trailing" id="BIT-e0-WhJ"/>
@@ -355,6 +360,7 @@
                             <constraint firstItem="iHP-en-S4x" firstAttribute="bottom" secondItem="UFv-J8-3aL" secondAttribute="bottom" id="HGK-Xe-tdc"/>
                             <constraint firstItem="Ecv-3x-u85" firstAttribute="centerX" secondItem="FrU-hu-tgv" secondAttribute="centerX" id="HN8-72-usx"/>
                             <constraint firstItem="Ecv-3x-u85" firstAttribute="centerY" secondItem="FrU-hu-tgv" secondAttribute="centerY" id="Hb2-Fe-eYa"/>
+                            <constraint firstItem="qM4-Nb-LJJ" firstAttribute="centerY" secondItem="FrU-hu-tgv" secondAttribute="centerY" id="NVf-ak-GmO"/>
                             <constraint firstItem="Ecv-3x-u85" firstAttribute="height" secondItem="UFv-J8-3aL" secondAttribute="height" multiplier="0.9" id="UUy-uI-VcK"/>
                             <constraint firstItem="UFv-J8-3aL" firstAttribute="bottom" secondItem="hJi-9i-VsL" secondAttribute="bottom" id="WIu-et-EbB"/>
                             <constraint firstItem="hJi-9i-VsL" firstAttribute="leading" secondItem="UFv-J8-3aL" secondAttribute="leading" id="ZCu-uh-etc"/>
@@ -382,6 +388,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="qM4-Nb-LJJ" id="ksQ-nj-lhd"/>
                         <outlet property="gradientView" destination="yIG-N6-Ihl" id="jQI-m4-JMg"/>
                         <outlet property="magLabel" destination="Bl5-ew-WL0" id="Wid-YV-eMS"/>
                         <outlet property="magSlider" destination="LNO-nK-1gl" id="l0L-Hb-mLu"/>

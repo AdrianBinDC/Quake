@@ -35,6 +35,8 @@ extension Notification.Name {
   // this gets fired from MapPredicate class when the predicate is updated
   // TODO: When done, this notification will be handled to update the FRC's predicate and redraw the map
   static let mapPredicateUpdated = Notification.Name("mapPredicateUpdated")
+  static let searchBegan = Notification.Name("searchBegan")
+  static let searchEnded = Notification.Name("searchEnded")
 }
 
 //@objc var sectionSeverityString: String {

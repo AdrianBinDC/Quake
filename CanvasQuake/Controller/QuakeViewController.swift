@@ -18,6 +18,8 @@ class QuakeViewController: UIViewController {
   
   // MARK: IBOutlets
   
+  
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var resetButton: UIBarButtonItem!
   @IBOutlet weak var mapButton: UIBarButtonItem!
   @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -204,6 +206,10 @@ class QuakeViewController: UIViewController {
     // watch for core data changes
     NotificationCenter.default.addObserver(self, selector: #selector(managedObjectContextDidSave(_:)), name: NSNotification.Name.NSManagedObjectContextDidSave, object: managedObjectContext)
     
+    // listen for search notifications
+    NotificationCenter.default.addObserver(self, selector: #selector(handleSearch(notification:)), name: .searchBegan, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(handleSearch(notification:)), name: .searchEnded, object: nil)
+
   }
   
   @objc func managedObjectContextDidSave(_ notification: Notification) {
@@ -216,6 +222,28 @@ class QuakeViewController: UIViewController {
       }
     }
     updateLabelsForResults()
+    NotificationCenter.default.post(name: .searchEnded, object: nil)
+  }
+  
+  @objc func handleSearch(notification: Notification) {
+    DispatchQueue.main.async {
+      let name = notification.name
+      
+      print("Notification received")
+      
+      switch name {
+      case .searchBegan:
+        self.activityIndicator.superview?.bringSubview(toFront: self.activityIndicator)
+        self.activityIndicator.startAnimating()
+        break
+      case .searchEnded:
+        self.activityIndicator.stopAnimating()
+        self.view.sendSubview(toBack: self.activityIndicator)
+        break
+      default:
+        break
+      }
+    }
   }
 
   
@@ -311,6 +339,11 @@ class QuakeViewController: UIViewController {
   
   @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
     resetStartAndEndDates()
+    
+    DispatchQueue.main.async {
+      // do it when you've got time
+      NotificationCenter.default.post(name: .searchBegan, object: nil)
+    }
     
     dataManager = nil // nuke it & start fresh
     self.dataManager = QuakeDataManager.init()

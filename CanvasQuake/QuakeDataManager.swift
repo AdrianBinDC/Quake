@@ -54,12 +54,16 @@ class QuakeDataManager: NSObject {
     super.init()
     self.startDate = startDate
     self.endDate = endDate
+    
     self.manageObjectContext = appDelegate.persistentContainer.viewContext
+    
   }
   
   override init() {
     super.init()
+    
     self.manageObjectContext = appDelegate.persistentContainer.viewContext
+
   }
   
   enum QuakeDataEntity: String {
@@ -171,10 +175,16 @@ class QuakeDataManager: NSObject {
               })
               
             } catch {
+              DispatchQueue.main.async {
+                NotificationCenter.default.post(name: .searchEnded, object: nil)
+              }
               self.delegate?.errorAlert(error.localizedDescription, sender: self)
             }
           }
         case .failure(let error):
+          DispatchQueue.main.async {
+            NotificationCenter.default.post(name: .searchEnded, object: nil)
+          }
           self.delegate?.errorAlert(error.localizedDescription, sender: self)
         }
       } // end Alamofire
@@ -202,6 +212,9 @@ class QuakeDataManager: NSObject {
       
       if !recordsExistBools.contains(false) {
         print("🍺 Our work here is done")
+        DispatchQueue.main.async {
+          NotificationCenter.default.post(name: .searchEnded, object: nil)
+        }
         self.delegate?.updateFetchedResultsController()
         return
       }
@@ -227,10 +240,16 @@ class QuakeDataManager: NSObject {
               })
               
             } catch {
+              DispatchQueue.main.async {
+                NotificationCenter.default.post(name: .searchEnded, object: nil)
+              }
               self.delegate?.errorAlert(error.localizedDescription, sender: self)
             }
           }
         case .failure(let error):
+          DispatchQueue.main.async {
+            NotificationCenter.default.post(name: .searchEnded, object: nil)
+          }
           self.delegate?.errorAlert(error.localizedDescription, sender: self)
         }
       } // end Alamofire
@@ -397,6 +416,9 @@ class QuakeDataManager: NSObject {
       existingIds = try privateContext.fetch(fetchRequest) as! [EarthquakeEntity]
     } catch let error {
       DispatchQueue.main.async {
+        DispatchQueue.main.async {
+          NotificationCenter.default.post(name: .searchEnded, object: nil)
+        }
         self.delegate?.errorAlert(error.localizedDescription, sender: self)
       }
     }
