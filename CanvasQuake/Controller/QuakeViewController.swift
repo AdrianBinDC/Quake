@@ -319,6 +319,9 @@ class QuakeViewController: UIViewController {
   @IBAction func magSliderAction(_ sender: UISlider) {
     magSlider.value = magSlider.value.rounded(.towardZero)
     magLabel.text = String(format: "%.1f", arguments: [magSlider.value])
+    
+    self.hapticFeedback(style: .light)
+    
     updatePredicate()
   }
   

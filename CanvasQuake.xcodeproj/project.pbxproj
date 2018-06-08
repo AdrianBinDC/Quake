@@ -40,6 +40,7 @@
 		55B75BD220C1C081007B1602 /* CanvasEmptySet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B75BD120C1C081007B1602 /* CanvasEmptySet.xib */; };
 		55B75BD620C1C868007B1602 /* ABWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B75BD420C1C867007B1602 /* ABWebView.xib */; };
 		55B75BD720C1C868007B1602 /* ABWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B75BD520C1C868007B1602 /* ABWebView.swift */; };
+		55DAB9C620CAAD36006D289D /* FloatingPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAB9C520CAAD36006D289D /* FloatingPoint+Extension.swift */; };
 		55FFBCE520C2E01000A64B5A /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FFBCE420C2E01000A64B5A /* FilterView.xib */; };
 		55FFBCE720C2E02500A64B5A /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FFBCE620C2E02500A64B5A /* FilterView.swift */; };
 		9ABC520EF973C3B9C07ABAF5 /* Pods_CanvasQuakeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C536091BC35D8235C3BCD28 /* Pods_CanvasQuakeUITests.framework */; };
@@ -107,6 +108,7 @@
 		55B75BD120C1C081007B1602 /* CanvasEmptySet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanvasEmptySet.xib; sourceTree = "<group>"; };
 		55B75BD420C1C867007B1602 /* ABWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ABWebView.xib; sourceTree = "<group>"; };
 		55B75BD520C1C868007B1602 /* ABWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABWebView.swift; sourceTree = "<group>"; };
+		55DAB9C520CAAD36006D289D /* FloatingPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Extension.swift"; sourceTree = "<group>"; };
 		55FFBCE420C2E01000A64B5A /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		55FFBCE620C2E02500A64B5A /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		5F2EE53817012E50BDC1511D /* Pods-CanvasQuakeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeUITests/Pods-CanvasQuakeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */,
 				552891E620C85E8D0062C1B5 /* MKCoordinateRegion+Extension.swift */,
 				55AC767120C89F03003940C3 /* UITableView+Extension.swift */,
+				55DAB9C520CAAD36006D289D /* FloatingPoint+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				558FA7F920C119A5004A16C0 /* Structs.swift in Sources */,
 				552E78A920C07BCB002C4AE2 /* QuakeTableViewCell.swift in Sources */,
 				55562C5120C070C60016B718 /* AppDelegate.swift in Sources */,
+				55DAB9C620CAAD36006D289D /* FloatingPoint+Extension.swift in Sources */,
 				55940CBB20C778B700C5D38B /* MapPredicate.swift in Sources */,
 				552891E720C85E8D0062C1B5 /* MKCoordinateRegion+Extension.swift in Sources */,
 				55AE125C20C0763800DB7F6C /* CanvasQuake.xcdatamodel in Sources */,
@@ -832,7 +836,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A983637AY3;
 				INFOPLIST_FILE = CanvasQuake/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbolinger.CanvasQuake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -848,7 +855,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A983637AY3;
 				INFOPLIST_FILE = CanvasQuake/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbolinger.CanvasQuake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -865,7 +875,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A983637AY3;
 				INFOPLIST_FILE = CanvasQuakeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbolinger.CanvasQuakeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -883,7 +897,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A983637AY3;
 				INFOPLIST_FILE = CanvasQuakeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbolinger.CanvasQuakeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -900,7 +918,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A983637AY3;
 				INFOPLIST_FILE = CanvasQuakeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbolinger.CanvasQuakeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -917,7 +939,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A983637AY3;
 				INFOPLIST_FILE = CanvasQuakeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adrianbolinger.CanvasQuakeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

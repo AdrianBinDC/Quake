@@ -23,4 +23,18 @@ extension UIViewController {
     
     return [gradient1, gradient2, gradient3, gradient4, gradient5]
   }
+  
+  // MARK: Haptic feedback
+  // TODO: finish later
+  // https://www.hackingwithswift.com/example-code/uikit/how-to-generate-haptic-feedback-with-uifeedbackgenerator
+  
+  func hapticSelectionChange() {
+    let generator = UISelectionFeedbackGenerator()
+    generator.selectionChanged()
+  }
+  
+  func hapticFeedback(style: UIImpactFeedbackStyle) {
+    let generator = UIImpactFeedbackGenerator(style: style)
+    generator.impactOccurred()
+  }
 }
