@@ -329,6 +329,7 @@ class QuakeViewController: UIViewController {
   @IBAction func resetButtonAction(_ sender: UIBarButtonItem) {
     // Observer picks this up and sets the start date to the end of day
     // There have been no earthquakes tomorrow, so the fetch is guaranteed to return no quakes.
+    self.hapticFeedback(style: .medium)
     self.startDate = Date().dateByAdding(days: 1)
     segmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
     magSlider.setValue(0.0, animated: true)
@@ -342,6 +343,8 @@ class QuakeViewController: UIViewController {
   
   @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
     resetStartAndEndDates()
+    
+    currentIndexPath = nil
     
     DispatchQueue.main.async {
       // do it when you've got time
@@ -595,6 +598,9 @@ extension QuakeViewController: QuakeTableViewCellDelegate {
 extension QuakeViewController: CalendarViewControllerDelegate {
   func setDates(startDate: Date?, endDate: Date?) {
     segmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
+    
+    resetStartAndEndDates()
+
     if let start = startDate {
       self.startDate = start.startOfDay
       print("start =", start.asDate())

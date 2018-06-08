@@ -77,11 +77,13 @@ class CalendarViewController: UIViewController {
   
   // MARK: IBActions
   @IBAction func resetButtonAction(_ sender: UIButton) {
+    hapticFeedback(style: .medium)
     calendarView.selectedDates.forEach{ calendarView.deselect($0)}
     updateDateLabel()
   }
   
   @IBAction func closeButtonAction(_ sender: UIButton) {
+    hapticFeedback(style: .medium)
     self.dismiss(animated: false, completion: nil)
   }
   
@@ -141,6 +143,8 @@ extension CalendarViewController: FSCalendarDelegate {
   
   func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
     guard !date.isAfterDate(Date()) else { calendar.deselect(date); return }
+    
+    hapticFeedback(style: .light)
     
     updateDateLabel()
     
