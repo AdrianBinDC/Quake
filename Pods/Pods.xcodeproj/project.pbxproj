@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -131,18 +131,18 @@
 		441434683D6B2D1D18878568114DB0EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		460014F8E5FF934AD137AA8774DF7DCB /* Pods-CanvasQuakeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CanvasQuakeTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4C75B4BF2DA3987E802225CAB0135198 /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarDynamicHeader.h; path = FSCalendar/FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
-		4D983BB7CB1B84E5A9E74CCE4B600B3E /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FSCalendar.framework; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D983BB7CB1B84E5A9E74CCE4B600B3E /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		552E623A42A6268FEEA30E84A0FBCBD8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55F1D6A672657E76E706984FDA80C75C /* FSCalendarAppearance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarAppearance.m; path = FSCalendar/FSCalendarAppearance.m; sourceTree = "<group>"; };
 		57EDF1AFF9A00CBF2FE5EEACD65D2934 /* Pods-CanvasQuakeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CanvasQuakeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		593D459171516C5A025921A2B38BA253 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		6392CD690A9F738407345791833095E3 /* WARangeSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WARangeSlider.xcconfig; sourceTree = "<group>"; };
 		639544097755EEB717A21526CF7EA40D /* Pods-CanvasQuakeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CanvasQuakeUITests-dummy.m"; sourceTree = "<group>"; };
-		65771EABAE1DD688C4CE9E495B4F440E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65771EABAE1DD688C4CE9E495B4F440E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E695B5E0277BCBA38F43FB5B0F6D90 /* Pods-CanvasQuakeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CanvasQuakeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		698AE98C2D4746D116A13665D5B5B7FE /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		69B5374CDA50DE1B41F74B7A25AF66CA /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		6BD530DEE2E0328DE0E3DD904DDF0C85 /* Pods_CanvasQuakeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CanvasQuakeTests.framework; path = "Pods-CanvasQuakeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BD530DEE2E0328DE0E3DD904DDF0C85 /* Pods_CanvasQuakeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanvasQuakeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E2B098A4D90EC8F7C8028F5468D9749 /* FSCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSCalendar-dummy.m"; sourceTree = "<group>"; };
 		6E84D5829A008A99A69B3B2410EBA80E /* Pods-CanvasQuakeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CanvasQuakeTests.modulemap"; sourceTree = "<group>"; };
 		70BFBBA40A5280ED45CB7C32C83D716E /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarStickyHeader.h; path = FSCalendar/FSCalendarStickyHeader.h; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		772D7CAF893F27A3380D31DB9482F001 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		78B1B4B90AB13BECBAD97466B9958669 /* FSCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSCalendar-prefix.pch"; sourceTree = "<group>"; };
 		7A42676667CF7A50A91C76DBCD750388 /* Pods-CanvasQuakeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CanvasQuakeUITests-umbrella.h"; sourceTree = "<group>"; };
-		7E1E8D08156532245F62FCD016E01348 /* Pods_CanvasQuakeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CanvasQuakeUITests.framework; path = "Pods-CanvasQuakeUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E1E8D08156532245F62FCD016E01348 /* Pods_CanvasQuakeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanvasQuakeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A60E5E7459AC7EDA602A76AC03F938 /* Pods-CanvasQuakeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CanvasQuakeUITests-frameworks.sh"; sourceTree = "<group>"; };
 		82CA74E74631A8DC87F15A696F23EA6E /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		82ECDB19FBA1FB4FD4217ED7FE0B0883 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
@@ -160,12 +160,12 @@
 		8B17F11EE1B5207EE2CD4C7EA84C3FAE /* FSCalendarCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCalculator.m; path = FSCalendar/FSCalendarCalculator.m; sourceTree = "<group>"; };
 		8B8D4AE89A0E65AF0843FD9D468CC450 /* Pods-CanvasQuakeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CanvasQuakeTests-frameworks.sh"; sourceTree = "<group>"; };
 		8CE25DE38487BD09C4C8274931B20C6B /* FSCalendarExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarExtensions.m; path = FSCalendar/FSCalendarExtensions.m; sourceTree = "<group>"; };
-		8DDE70B4F6BC15800F3AA0D91F065243 /* Pods_CanvasQuake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CanvasQuake.framework; path = "Pods-CanvasQuake.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DDE70B4F6BC15800F3AA0D91F065243 /* Pods_CanvasQuake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanvasQuake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7AAD9B017B8295E892C6F588F27044 /* FSCalendarCollectionViewLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCollectionViewLayout.m; path = FSCalendar/FSCalendarCollectionViewLayout.m; sourceTree = "<group>"; };
 		90686C459E4FA410DCF7F609D5734917 /* Pods-CanvasQuakeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CanvasQuakeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		90ABCDDBB9BA59B6BBF4AAD8E35E4AB2 /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationFactory.m; path = FSCalendar/FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
 		90DC32BFF98E6F114D1E626187D3096D /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96EFFE24C979C71905721FD7084C8900 /* FSCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSCalendar-umbrella.h"; sourceTree = "<group>"; };
 		99C3B266F0C36547995AC0539BDD879D /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		9B3B81F2F44E29361286993F4FC8520C /* FSCalendarScopeHandle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarScopeHandle.m; path = FSCalendar/FSCalendarScopeHandle.m; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 		CFB39F5FFD77FE03784CDCFEDF497ED1 /* FSCalendar+Deprecated.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FSCalendar+Deprecated.m"; path = "FSCalendar/FSCalendar+Deprecated.m"; sourceTree = "<group>"; };
 		D65E6ACBEA0EC919C17B68D2BCC6EDED /* FSCalendarCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCalculator.h; path = FSCalendar/FSCalendarCalculator.h; sourceTree = "<group>"; };
 		DAAA3088C6BFD3C2FAAFF75DA8022860 /* Pods-CanvasQuakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CanvasQuakeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DB2A4AC8B9641FA2DC5A2EFED24877F2 /* WARangeSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WARangeSlider.framework; path = WARangeSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2A4AC8B9641FA2DC5A2EFED24877F2 /* WARangeSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WARangeSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC05E0B8E71B4E5F1E3BA940337F2E8B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE8C6A0487D66D8BF7929D21C40A16AF /* Pods-CanvasQuakeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CanvasQuakeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E01954297FAC69B7B2C01693496C4FF5 /* Pods-CanvasQuakeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CanvasQuakeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -421,7 +421,6 @@
 				23DD6DFC80C9497428E1E6254B7BE905 /* Validation.swift */,
 				DC03D7110C8BCD4FBF7D4B8599CA40DA /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -476,7 +475,6 @@
 				8560FE741214D62C056C3BF4861A2D3A /* FSCalendarWeekdayView.m */,
 				BAD9E4F73270E84B1B1598E5C9585B7D /* Support Files */,
 			);
-			name = FSCalendar;
 			path = FSCalendar;
 			sourceTree = "<group>";
 		};
@@ -499,7 +497,6 @@
 				E959F5C7410807BDE0DC04D674611779 /* RangeSlider.swift */,
 				3E49906E4BD5075CC079D974AF4FE260 /* Support Files */,
 			);
-			name = WARangeSlider;
 			path = WARangeSlider;
 			sourceTree = "<group>";
 		};
@@ -685,7 +682,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -968,6 +965,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
