@@ -79,7 +79,7 @@
                                 <color key="color" red="0.87450980389999999" green="0.0" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ecv-3x-u85" customClass="ABWebView" customModule="CanvasQuake" customModuleProvider="target">
-                                <rect key="frame" x="18" y="95" width="337.33333333333331" height="621"/>
+                                <rect key="frame" x="8" y="96" width="359" height="674"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="titleFontSize">
@@ -90,6 +90,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="progressTintColor">
                                         <color key="value" red="0.87450980389999999" green="0.0" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -356,20 +359,21 @@
                             <constraint firstItem="iHP-en-S4x" firstAttribute="trailing" secondItem="yIG-N6-Ihl" secondAttribute="trailing" id="4Mz-zu-Mdk"/>
                             <constraint firstItem="hJi-9i-VsL" firstAttribute="top" secondItem="UFv-J8-3aL" secondAttribute="top" id="6GY-E8-R6C"/>
                             <constraint firstAttribute="trailing" secondItem="yIG-N6-Ihl" secondAttribute="trailing" id="BIT-e0-WhJ"/>
-                            <constraint firstItem="Ecv-3x-u85" firstAttribute="width" secondItem="UFv-J8-3aL" secondAttribute="width" multiplier="0.9" id="Ev2-Qg-xf1"/>
                             <constraint firstItem="iHP-en-S4x" firstAttribute="bottom" secondItem="UFv-J8-3aL" secondAttribute="bottom" id="HGK-Xe-tdc"/>
                             <constraint firstItem="Ecv-3x-u85" firstAttribute="centerX" secondItem="FrU-hu-tgv" secondAttribute="centerX" id="HN8-72-usx"/>
-                            <constraint firstItem="Ecv-3x-u85" firstAttribute="centerY" secondItem="FrU-hu-tgv" secondAttribute="centerY" id="Hb2-Fe-eYa"/>
                             <constraint firstItem="qM4-Nb-LJJ" firstAttribute="centerY" secondItem="FrU-hu-tgv" secondAttribute="centerY" id="NVf-ak-GmO"/>
-                            <constraint firstItem="Ecv-3x-u85" firstAttribute="height" secondItem="UFv-J8-3aL" secondAttribute="height" multiplier="0.9" id="UUy-uI-VcK"/>
+                            <constraint firstItem="UFv-J8-3aL" firstAttribute="trailing" secondItem="Ecv-3x-u85" secondAttribute="trailing" constant="8" id="RQg-tJ-3cv"/>
                             <constraint firstItem="UFv-J8-3aL" firstAttribute="bottom" secondItem="hJi-9i-VsL" secondAttribute="bottom" id="WIu-et-EbB"/>
                             <constraint firstItem="hJi-9i-VsL" firstAttribute="leading" secondItem="UFv-J8-3aL" secondAttribute="leading" id="ZCu-uh-etc"/>
+                            <constraint firstItem="Ecv-3x-u85" firstAttribute="top" secondItem="FrU-hu-tgv" secondAttribute="topMargin" constant="8" id="b6E-5c-eqF"/>
                             <constraint firstItem="yIG-N6-Ihl" firstAttribute="leading" secondItem="FrU-hu-tgv" secondAttribute="leading" id="cSD-3q-WCg"/>
                             <constraint firstItem="iHP-en-S4x" firstAttribute="leading" secondItem="yIG-N6-Ihl" secondAttribute="leading" id="di4-di-Mc1"/>
                             <constraint firstItem="iHP-en-S4x" firstAttribute="top" secondItem="UFv-J8-3aL" secondAttribute="top" id="mbu-9Y-wPt"/>
                             <constraint firstItem="iHP-en-S4x" firstAttribute="top" secondItem="yIG-N6-Ihl" secondAttribute="top" id="mxO-ZP-4XV"/>
+                            <constraint firstItem="UFv-J8-3aL" firstAttribute="bottom" secondItem="Ecv-3x-u85" secondAttribute="bottom" constant="8" id="tsm-3W-R5A"/>
                             <constraint firstItem="UFv-J8-3aL" firstAttribute="trailing" secondItem="hJi-9i-VsL" secondAttribute="trailing" id="x03-qG-g2U"/>
                             <constraint firstAttribute="bottom" secondItem="yIG-N6-Ihl" secondAttribute="bottom" id="xi3-ac-hfp"/>
+                            <constraint firstItem="Ecv-3x-u85" firstAttribute="leading" secondItem="UFv-J8-3aL" secondAttribute="leading" constant="8" id="ybm-uz-gAb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UFv-J8-3aL"/>
                     </view>

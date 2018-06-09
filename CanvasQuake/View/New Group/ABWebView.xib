@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -37,13 +37,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="38"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAb-El-1UP">
-                                            <rect key="frame" x="0.0" y="0.0" width="337" height="38"/>
+                                            <rect key="frame" x="8" y="0.0" width="321" height="38"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4H-3p-0Ji">
-                                            <rect key="frame" x="337" y="0.0" width="38" height="38"/>
+                                            <rect key="frame" x="329" y="0.0" width="38" height="38"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="p4H-3p-0Ji" secondAttribute="height" id="L0Q-PZ-Ta2"/>
                                             </constraints>
@@ -53,6 +53,7 @@
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
                                 </stackView>
                             </subviews>
                         </stackView>
