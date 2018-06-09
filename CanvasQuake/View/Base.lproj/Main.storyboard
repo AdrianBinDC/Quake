@@ -105,7 +105,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="canvasLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hJi-9i-VsL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hJi-9i-VsL">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iHP-en-S4x">
@@ -560,7 +560,6 @@
     </scenes>
     <resources>
         <image name="calendar" width="38" height="38"/>
-        <image name="canvasLogo" width="865" height="168"/>
         <image name="close" width="38" height="38"/>
         <image name="earthquake" width="38" height="38"/>
         <image name="map" width="38" height="38"/>
