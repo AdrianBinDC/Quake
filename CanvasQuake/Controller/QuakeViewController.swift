@@ -88,6 +88,7 @@ class QuakeViewController: UIViewController {
   func fetchResults() {
     do {
       fetchedResultsController.fetchRequest.fetchBatchSize = 35
+      fetchedResultsController.fetchRequest.fetchLimit = 2_500
       try fetchedResultsController.performFetch()
     } catch let error {
       print("\(error) \(error.localizedDescription)")
