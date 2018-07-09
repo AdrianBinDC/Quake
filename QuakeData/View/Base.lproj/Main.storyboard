@@ -9,67 +9,16 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map-->
-        <scene sceneID="unq-O5-id6">
-            <objects>
-                <viewController storyboardIdentifier="MapViewController" title="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="93K-6N-nrm" customClass="MapViewController" customModule="CanvasQuake" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="R84-TV-YOI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6i4-jy-VRs">
-                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qw8-yj-GAj" customClass="FilterView" customModule="CanvasQuake" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="237.66666666666666"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="latStackHidden" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="longStackHidden" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3Ss-Lx-kwW">
-                                        <rect key="frame" x="0.0" y="237.66666666666669" width="375" height="530.33333333333326"/>
-                                    </mapView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="6i4-jy-VRs" firstAttribute="top" secondItem="3R7-yo-zpu" secondAttribute="top" id="1sf-pu-ZnF"/>
-                            <constraint firstItem="qw8-yj-GAj" firstAttribute="height" secondItem="3R7-yo-zpu" secondAttribute="height" multiplier="0.2" priority="750" id="2TE-YO-N8p"/>
-                            <constraint firstItem="6i4-jy-VRs" firstAttribute="leading" secondItem="3R7-yo-zpu" secondAttribute="leading" id="DWw-pw-1lf"/>
-                            <constraint firstAttribute="bottom" secondItem="6i4-jy-VRs" secondAttribute="bottom" id="Efv-Zq-BLA"/>
-                            <constraint firstItem="6i4-jy-VRs" firstAttribute="trailing" secondItem="3R7-yo-zpu" secondAttribute="trailing" id="cNL-5P-Fel"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="3R7-yo-zpu"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="k0t-Ac-I7F">
-                        <barButtonItem key="rightBarButtonItem" image="calendar" id="6fb-Vl-SOb">
-                            <connections>
-                                <action selector="calendarButtonAction:" destination="93K-6N-nrm" id="hX5-WE-hhN"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="calendarButton" destination="6fb-Vl-SOb" id="HfL-RT-4sF"/>
-                        <outlet property="filterView" destination="qw8-yj-GAj" id="vep-7P-JS9"/>
-                        <outlet property="mapView" destination="3Ss-Lx-kwW" id="QT0-YI-1KR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DeO-ah-bpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2140" y="-314.03940886699507"/>
-        </scene>
         <!--Quakes-->
         <scene sceneID="Ahi-ss-hZx">
             <objects>
-                <viewController title="Quakes" id="I8l-Rh-bkI" customClass="QuakeViewController" customModule="CanvasQuake" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Quakes" id="I8l-Rh-bkI" customClass="QuakeViewController" customModule="QuakeData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FrU-hu-tgv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +27,7 @@
                                 <rect key="frame" x="169" y="388" width="37" height="37"/>
                                 <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ecv-3x-u85" customClass="ABWebView" customModule="CanvasQuake" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ecv-3x-u85" customClass="ABWebView" customModule="QuakeData" customModuleProvider="target">
                                 <rect key="frame" x="8" y="96" width="359" height="674"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -96,7 +45,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIG-N6-Ihl" customClass="UIViewCanvas" customModule="CanvasQuake" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIG-N6-Ihl" customClass="UIViewCanvas" customModule="QuakeData" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -189,7 +138,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="109" id="ilx-37-hv1" customClass="QuakeTableViewCell" customModule="CanvasQuake" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="109" id="ilx-37-hv1" customClass="QuakeTableViewCell" customModule="QuakeData" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="109"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ilx-37-hv1" id="RQm-Ys-gcG">
@@ -384,12 +333,19 @@
                                 <action selector="resetButtonAction:" destination="I8l-Rh-bkI" id="n63-G4-g9g"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="map" id="KaA-Rj-UUm">
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="mapButtonAction:" destination="I8l-Rh-bkI" id="fr5-CG-2AS"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="map" id="hpP-jk-FYD">
+                                <connections>
+                                    <segue destination="8O2-CX-XKi" kind="show" identifier="MapSegue" id="JMa-1V-3Iq"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="map" id="KaA-Rj-UUm">
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="mapButtonAction:" destination="I8l-Rh-bkI" id="fr5-CG-2AS"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="qM4-Nb-LJJ" id="ksQ-nj-lhd"/>
@@ -407,10 +363,39 @@
             </objects>
             <point key="canvasLocation" x="1349.5999999999999" y="-314.03940886699507"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="QHd-4u-Sct">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="8O2-CX-XKi" customClass="MapViewController" customModule="QuakeData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wLj-3N-fDW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qBa-xV-spk">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qBa-xV-spk" firstAttribute="leading" secondItem="wLj-3N-fDW" secondAttribute="leading" id="Fc7-A5-DSf"/>
+                            <constraint firstItem="qBa-xV-spk" firstAttribute="top" secondItem="igD-oI-VMV" secondAttribute="top" id="XjT-FK-dBx"/>
+                            <constraint firstAttribute="trailing" secondItem="qBa-xV-spk" secondAttribute="trailing" id="hci-13-mAD"/>
+                            <constraint firstAttribute="bottom" secondItem="qBa-xV-spk" secondAttribute="bottom" id="mxc-nu-daZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="igD-oI-VMV"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="qBa-xV-spk" id="log-fp-eRV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hiA-BR-Bwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2157.5999999999999" y="-312.5615763546798"/>
+        </scene>
         <!--Calendar View Controller-->
         <scene sceneID="shy-KC-Sjz">
             <objects>
-                <viewController storyboardIdentifier="CalendarViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3kD-M6-U4c" customClass="CalendarViewController" customModule="CanvasQuake" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3kD-M6-U4c" customClass="CalendarViewController" customModule="QuakeData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jYr-cJ-Zns">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -540,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Id-pt-ek3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3527" y="-314"/>
+            <point key="canvasLocation" x="2961" y="-314"/>
         </scene>
         <!--Quakes-->
         <scene sceneID="PPR-cE-kEx">

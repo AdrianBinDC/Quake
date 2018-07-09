@@ -434,7 +434,7 @@ class QuakeViewController: UIViewController {
     if segue.identifier == SegueID.mapSegue {
       let destination = segue.destination as! MapViewController
       if let earthquakes = fetchedResultsController.fetchedObjects {
-        destination.earthquakeArray = earthquakes
+        destination.earthquakes = earthquakes
       }
     }
   }
