@@ -1,6 +1,0 @@
-framework module Pods_CanvasQuake {
-  umbrella header "Pods-CanvasQuake-umbrella.h"
-
-  export *
-  module * { export * }
-}

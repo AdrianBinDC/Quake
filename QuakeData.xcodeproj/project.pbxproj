@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		327AD0CB9ED5B1E451040E7B /* Pods_CanvasQuake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEBFBC97CC0145DD33AFD3C /* Pods_CanvasQuake.framework */; };
+		1C6B339EE4E95F46B12F96FC /* Pods_QuakeData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15D9E9A402B6E853B58D491 /* Pods_QuakeData.framework */; };
 		443C5C3572B3FFA1C0863890 /* Pods_CanvasQuakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B090BCB0BF8E22EAF5450E9 /* Pods_CanvasQuakeTests.framework */; };
 		552891E720C85E8D0062C1B5 /* MKCoordinateRegion+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552891E620C85E8D0062C1B5 /* MKCoordinateRegion+Extension.swift */; };
 		552E78A920C07BCB002C4AE2 /* QuakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */; };
@@ -43,7 +43,9 @@
 		55DAB9C620CAAD36006D289D /* FloatingPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAB9C520CAAD36006D289D /* FloatingPoint+Extension.swift */; };
 		55FFBCE520C2E01000A64B5A /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FFBCE420C2E01000A64B5A /* FilterView.xib */; };
 		55FFBCE720C2E02500A64B5A /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FFBCE620C2E02500A64B5A /* FilterView.swift */; };
+		568B28EE85EB68E60B6FCB86 /* Pods_QuakeDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2B2BB8E9604B801392ADB7 /* Pods_QuakeDataUITests.framework */; };
 		9ABC520EF973C3B9C07ABAF5 /* Pods_CanvasQuakeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C536091BC35D8235C3BCD28 /* Pods_CanvasQuakeUITests.framework */; };
+		9C7D7926AA26EBEC49DAD157 /* Pods_QuakeDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32CCF824DC32CCE7D9725A0 /* Pods_QuakeDataTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +69,10 @@
 		029883B028C116A78B33BF15 /* Pods-CanvasQuake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuake.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuake/Pods-CanvasQuake.debug.xcconfig"; sourceTree = "<group>"; };
 		0D7DF4F1F0E6CD42D46510C5 /* Pods-CanvasQuakeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeTests/Pods-CanvasQuakeTests.release.xcconfig"; sourceTree = "<group>"; };
 		0E245B9B20E08DE2D0AF6D75 /* Pods-CanvasQuake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuake.release.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuake/Pods-CanvasQuake.release.xcconfig"; sourceTree = "<group>"; };
+		139DA04B5E1788B8400298BB /* Pods-QuakeDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuakeDataUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuakeDataUITests/Pods-QuakeDataUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1C536091BC35D8235C3BCD28 /* Pods_CanvasQuakeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanvasQuakeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEBFBC97CC0145DD33AFD3C /* Pods_CanvasQuake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanvasQuake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E2B2BB8E9604B801392ADB7 /* Pods_QuakeDataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuakeDataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4731C9D708D90D9FFBEF0C35 /* Pods-CanvasQuakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeTests/Pods-CanvasQuakeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		552891E620C85E8D0062C1B5 /* MKCoordinateRegion+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extension.swift"; sourceTree = "<group>"; };
 		552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeTableViewCell.swift; sourceTree = "<group>"; };
@@ -79,16 +83,16 @@
 		554BE13220C0AA0700C07248 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		554BE13420C0F4D000C07248 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		554BE13720C0F91500C07248 /* UIViewCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCanvas.swift; sourceTree = "<group>"; };
-		55562C4D20C070C60016B718 /* Quake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55562C4D20C070C60016B718 /* QuakeData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuakeData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55562C5020C070C60016B718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55562C5520C070C60016B718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55562C5A20C070C70016B718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55562C5D20C070C70016B718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55562C5F20C070C70016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55562C6420C070C70016B718 /* QuakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55562C6420C070C70016B718 /* QuakeDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuakeDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55562C6820C070C80016B718 /* CanvasQuakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasQuakeTests.swift; sourceTree = "<group>"; };
 		55562C6A20C070C80016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55562C6F20C070C80016B718 /* QuakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55562C6F20C070C80016B718 /* QuakeDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuakeDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasQuakeUITests.swift; sourceTree = "<group>"; };
 		55562C7520C070C80016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55783E0520C1BF91001C825E /* CanvasEmptySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasEmptySet.swift; sourceTree = "<group>"; };
@@ -112,8 +116,15 @@
 		55FFBCE420C2E01000A64B5A /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		55FFBCE620C2E02500A64B5A /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		5F2EE53817012E50BDC1511D /* Pods-CanvasQuakeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeUITests/Pods-CanvasQuakeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		62F101E207F20B9BEDB95311 /* Pods-QuakeDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuakeDataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuakeDataTests/Pods-QuakeDataTests.release.xcconfig"; sourceTree = "<group>"; };
 		6A847F5A8FFA806D63672A7D /* Pods-CanvasQuakeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeUITests/Pods-CanvasQuakeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		87ACA847ACD694DA80AA4C79 /* Pods-QuakeDataUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuakeDataUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuakeDataUITests/Pods-QuakeDataUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B090BCB0BF8E22EAF5450E9 /* Pods_CanvasQuakeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanvasQuakeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C71995E06246D490FC34EB6 /* Pods-QuakeData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuakeData.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuakeData/Pods-QuakeData.release.xcconfig"; sourceTree = "<group>"; };
+		A32CCF824DC32CCE7D9725A0 /* Pods_QuakeDataTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuakeDataTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D15D9E9A402B6E853B58D491 /* Pods_QuakeData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuakeData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD50EF94B38F90767B545FDE /* Pods-QuakeData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuakeData.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuakeData/Pods-QuakeData.debug.xcconfig"; sourceTree = "<group>"; };
+		DE13DD7EAA77F1F69FBDAF97 /* Pods-QuakeDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuakeDataTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuakeDataTests/Pods-QuakeDataTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				327AD0CB9ED5B1E451040E7B /* Pods_CanvasQuake.framework in Frameworks */,
+				1C6B339EE4E95F46B12F96FC /* Pods_QuakeData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				443C5C3572B3FFA1C0863890 /* Pods_CanvasQuakeTests.framework in Frameworks */,
+				9C7D7926AA26EBEC49DAD157 /* Pods_QuakeDataTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ABC520EF973C3B9C07ABAF5 /* Pods_CanvasQuakeUITests.framework in Frameworks */,
+				568B28EE85EB68E60B6FCB86 /* Pods_QuakeDataUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,9 +200,9 @@
 		55562C4E20C070C60016B718 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55562C4D20C070C60016B718 /* Quake.app */,
-				55562C6420C070C70016B718 /* QuakeTests.xctest */,
-				55562C6F20C070C80016B718 /* QuakeUITests.xctest */,
+				55562C4D20C070C60016B718 /* QuakeData.app */,
+				55562C6420C070C70016B718 /* QuakeDataTests.xctest */,
+				55562C6F20C070C80016B718 /* QuakeDataUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,7 +218,8 @@
 				55AE125020C0750100DB7F6C /* Supporting Files */,
 				55562C5F20C070C70016B718 /* Info.plist */,
 			);
-			path = CanvasQuake;
+			name = CanvasQuake;
+			path = QuakeData;
 			sourceTree = "<group>";
 		};
 		55562C6720C070C80016B718 /* CanvasQuakeTests */ = {
@@ -214,7 +228,8 @@
 				55562C6820C070C80016B718 /* CanvasQuakeTests.swift */,
 				55562C6A20C070C80016B718 /* Info.plist */,
 			);
-			path = CanvasQuakeTests;
+			name = CanvasQuakeTests;
+			path = QuakeDataTests;
 			sourceTree = "<group>";
 		};
 		55562C7220C070C80016B718 /* CanvasQuakeUITests */ = {
@@ -223,7 +238,8 @@
 				55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */,
 				55562C7520C070C80016B718 /* Info.plist */,
 			);
-			path = CanvasQuakeUITests;
+			name = CanvasQuakeUITests;
+			path = QuakeDataUITests;
 			sourceTree = "<group>";
 		};
 		55AE124D20C074E300DB7F6C /* Controller */ = {
@@ -320,6 +336,9 @@
 				2DEBFBC97CC0145DD33AFD3C /* Pods_CanvasQuake.framework */,
 				9B090BCB0BF8E22EAF5450E9 /* Pods_CanvasQuakeTests.framework */,
 				1C536091BC35D8235C3BCD28 /* Pods_CanvasQuakeUITests.framework */,
+				D15D9E9A402B6E853B58D491 /* Pods_QuakeData.framework */,
+				A32CCF824DC32CCE7D9725A0 /* Pods_QuakeDataTests.framework */,
+				3E2B2BB8E9604B801392ADB7 /* Pods_QuakeDataUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -333,6 +352,12 @@
 				0D7DF4F1F0E6CD42D46510C5 /* Pods-CanvasQuakeTests.release.xcconfig */,
 				6A847F5A8FFA806D63672A7D /* Pods-CanvasQuakeUITests.debug.xcconfig */,
 				5F2EE53817012E50BDC1511D /* Pods-CanvasQuakeUITests.release.xcconfig */,
+				DD50EF94B38F90767B545FDE /* Pods-QuakeData.debug.xcconfig */,
+				9C71995E06246D490FC34EB6 /* Pods-QuakeData.release.xcconfig */,
+				DE13DD7EAA77F1F69FBDAF97 /* Pods-QuakeDataTests.debug.xcconfig */,
+				62F101E207F20B9BEDB95311 /* Pods-QuakeDataTests.release.xcconfig */,
+				87ACA847ACD694DA80AA4C79 /* Pods-QuakeDataUITests.debug.xcconfig */,
+				139DA04B5E1788B8400298BB /* Pods-QuakeDataUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -340,66 +365,61 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		55562C4C20C070C60016B718 /* Quake */ = {
+		55562C4C20C070C60016B718 /* QuakeData */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55562C7820C070C80016B718 /* Build configuration list for PBXNativeTarget "Quake" */;
+			buildConfigurationList = 55562C7820C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeData" */;
 			buildPhases = (
 				5A66343AE78D0A828214ED82 /* [CP] Check Pods Manifest.lock */,
 				55562C4920C070C60016B718 /* Sources */,
 				55562C4A20C070C60016B718 /* Frameworks */,
 				55562C4B20C070C60016B718 /* Resources */,
 				23101CDA7C03E1A9AE929229 /* [CP] Embed Pods Frameworks */,
-				E2CDE18E4FB4E94EC01DE442 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Quake;
+			name = QuakeData;
 			productName = CanvasQuake;
-			productReference = 55562C4D20C070C60016B718 /* Quake.app */;
+			productReference = 55562C4D20C070C60016B718 /* QuakeData.app */;
 			productType = "com.apple.product-type.application";
 		};
-		55562C6320C070C70016B718 /* QuakeTests */ = {
+		55562C6320C070C70016B718 /* QuakeDataTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55562C7B20C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeTests" */;
+			buildConfigurationList = 55562C7B20C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeDataTests" */;
 			buildPhases = (
 				185CD3F24368C0AE33F0B80F /* [CP] Check Pods Manifest.lock */,
 				55562C6020C070C70016B718 /* Sources */,
 				55562C6120C070C70016B718 /* Frameworks */,
 				55562C6220C070C70016B718 /* Resources */,
-				DDBE481DE9C3E5765E14DA1E /* [CP] Embed Pods Frameworks */,
-				8C8D9E53CC121152BDC6E0AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				55562C6620C070C80016B718 /* PBXTargetDependency */,
 			);
-			name = QuakeTests;
+			name = QuakeDataTests;
 			productName = CanvasQuakeTests;
-			productReference = 55562C6420C070C70016B718 /* QuakeTests.xctest */;
+			productReference = 55562C6420C070C70016B718 /* QuakeDataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		55562C6E20C070C80016B718 /* QuakeUITests */ = {
+		55562C6E20C070C80016B718 /* QuakeDataUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55562C7E20C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeUITests" */;
+			buildConfigurationList = 55562C7E20C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeDataUITests" */;
 			buildPhases = (
 				9EBB413B1145BB551B0EEF80 /* [CP] Check Pods Manifest.lock */,
 				55562C6B20C070C80016B718 /* Sources */,
 				55562C6C20C070C80016B718 /* Frameworks */,
 				55562C6D20C070C80016B718 /* Resources */,
-				81275C0464FF7ACFADE8B6CB /* [CP] Embed Pods Frameworks */,
-				D55894A5045FC726109D2DDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				55562C7120C070C80016B718 /* PBXTargetDependency */,
 			);
-			name = QuakeUITests;
+			name = QuakeDataUITests;
 			productName = CanvasQuakeUITests;
-			productReference = 55562C6F20C070C80016B718 /* QuakeUITests.xctest */;
+			productReference = 55562C6F20C070C80016B718 /* QuakeDataUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -425,7 +445,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 55562C4820C070C60016B718 /* Build configuration list for PBXProject "Quake" */;
+			buildConfigurationList = 55562C4820C070C60016B718 /* Build configuration list for PBXProject "QuakeData" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -438,9 +458,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55562C4C20C070C60016B718 /* Quake */,
-				55562C6320C070C70016B718 /* QuakeTests */,
-				55562C6E20C070C80016B718 /* QuakeUITests */,
+				55562C4C20C070C60016B718 /* QuakeData */,
+				55562C6320C070C70016B718 /* QuakeDataTests */,
+				55562C6E20C070C80016B718 /* QuakeDataUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -490,7 +510,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CanvasQuakeTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-QuakeDataTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -503,7 +523,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuake/Pods-CanvasQuake-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuakeData/Pods-QuakeData-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/WARangeSlider/WARangeSlider.framework",
@@ -516,7 +536,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuake/Pods-CanvasQuake-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuakeData/Pods-QuakeData-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5A66343AE78D0A828214ED82 /* [CP] Check Pods Manifest.lock */ = {
@@ -530,41 +550,11 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CanvasQuake-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-QuakeData-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		81275C0464FF7ACFADE8B6CB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuakeUITests/Pods-CanvasQuakeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8C8D9E53CC121152BDC6E0AA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuakeTests/Pods-CanvasQuakeTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9EBB413B1145BB551B0EEF80 /* [CP] Check Pods Manifest.lock */ = {
@@ -578,56 +568,11 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CanvasQuakeUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-QuakeDataUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D55894A5045FC726109D2DDA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuakeUITests/Pods-CanvasQuakeUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DDBE481DE9C3E5765E14DA1E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuakeTests/Pods-CanvasQuakeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E2CDE18E4FB4E94EC01DE442 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CanvasQuake/Pods-CanvasQuake-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -684,12 +629,12 @@
 /* Begin PBXTargetDependency section */
 		55562C6620C070C80016B718 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 55562C4C20C070C60016B718 /* Quake */;
+			target = 55562C4C20C070C60016B718 /* QuakeData */;
 			targetProxy = 55562C6520C070C80016B718 /* PBXContainerItemProxy */;
 		};
 		55562C7120C070C80016B718 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 55562C4C20C070C60016B718 /* Quake */;
+			target = 55562C4C20C070C60016B718 /* QuakeData */;
 			targetProxy = 55562C7020C070C80016B718 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -830,12 +775,12 @@
 		};
 		55562C7920C070C80016B718 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 029883B028C116A78B33BF15 /* Pods-CanvasQuake.debug.xcconfig */;
+			baseConfigurationReference = DD50EF94B38F90767B545FDE /* Pods-QuakeData.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A983637AY3;
-				INFOPLIST_FILE = CanvasQuake/Info.plist;
+				INFOPLIST_FILE = QuakeData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -849,12 +794,12 @@
 		};
 		55562C7A20C070C80016B718 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E245B9B20E08DE2D0AF6D75 /* Pods-CanvasQuake.release.xcconfig */;
+			baseConfigurationReference = 9C71995E06246D490FC34EB6 /* Pods-QuakeData.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A983637AY3;
-				INFOPLIST_FILE = CanvasQuake/Info.plist;
+				INFOPLIST_FILE = QuakeData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -868,7 +813,7 @@
 		};
 		55562C7C20C070C80016B718 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4731C9D708D90D9FFBEF0C35 /* Pods-CanvasQuakeTests.debug.xcconfig */;
+			baseConfigurationReference = DE13DD7EAA77F1F69FBDAF97 /* Pods-QuakeDataTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -884,13 +829,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quake.app/Quake";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuakeData.app/QuakeData";
 			};
 			name = Debug;
 		};
 		55562C7D20C070C80016B718 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D7DF4F1F0E6CD42D46510C5 /* Pods-CanvasQuakeTests.release.xcconfig */;
+			baseConfigurationReference = 62F101E207F20B9BEDB95311 /* Pods-QuakeDataTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -906,13 +851,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quake.app/Quake";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuakeData.app/QuakeData";
 			};
 			name = Release;
 		};
 		55562C7F20C070C80016B718 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A847F5A8FFA806D63672A7D /* Pods-CanvasQuakeUITests.debug.xcconfig */;
+			baseConfigurationReference = 87ACA847ACD694DA80AA4C79 /* Pods-QuakeDataUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -933,7 +878,7 @@
 		};
 		55562C8020C070C80016B718 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F2EE53817012E50BDC1511D /* Pods-CanvasQuakeUITests.release.xcconfig */;
+			baseConfigurationReference = 139DA04B5E1788B8400298BB /* Pods-QuakeDataUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -955,7 +900,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		55562C4820C070C60016B718 /* Build configuration list for PBXProject "Quake" */ = {
+		55562C4820C070C60016B718 /* Build configuration list for PBXProject "QuakeData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55562C7620C070C80016B718 /* Debug */,
@@ -964,7 +909,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55562C7820C070C80016B718 /* Build configuration list for PBXNativeTarget "Quake" */ = {
+		55562C7820C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55562C7920C070C80016B718 /* Debug */,
@@ -973,7 +918,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55562C7B20C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeTests" */ = {
+		55562C7B20C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeDataTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55562C7C20C070C80016B718 /* Debug */,
@@ -982,7 +927,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55562C7E20C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeUITests" */ = {
+		55562C7E20C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeDataUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55562C7F20C070C80016B718 /* Debug */,

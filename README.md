@@ -1,4 +1,4 @@
-#  Canvas Quake.
+#  QuakeData
 
 ## Endpoint
 <!--I used a slightly different endpoint from the endpoint given in the instructions, so that you can retrieve truly historic earthquake data, rather than just cannned hour, day, week, and month returns. I created a custom URL constructor that takes two dates and enters them as parameters in the URL request to USGS's website. That is contained within QuakeData.-->
@@ -34,17 +34,17 @@ I utilized [dionc/MapKitExtensions.swift](https://gist.github.com/dionc/46f7e7ee
 
 
 ### Core Data
-I utilized Core Data to persist returns. When returns come back from USGS, before the data is imported into Core Data, I did a fetch request for unique identifiers that are already persisted. Then, I used Set to do a comparison between the two to determine which records should be persisted in Core Data.
+I utilized Core Data to persist data from USGS. When returns come back from USGS, before the data is imported into Core Data, I did a fetch request for unique identifiers that are already persisted. Then, I use Set to do a comparison between the two to determine which records should be persisted in Core Data.
 
 I initially envisioned two view controllers utilizing a singleton class, but I encountered flaky behavior, so I refactored to a non-singleton class with a couple of initializers. One initializer takes date parameters andn another one just runs the canned USGS URLs. Prior to working on this project, I had never found it necessary to run core data on a background thread, so I finally got to use a private queue to run it on a background thread.
 
-# Extra Credit
+# Other
 
 ## Icons
-I used Inkscape to create the vector icons in the app. Some of them are inspired by icons found at [Icons8](https://icons8.com). I utilized a script to create GoCanvas' logo in all the required sizes to ship an iOS app.
+I used Inkscape to create the vector icons in the app. Some of them are inspired by icons found at [Icons8](https://icons8.com). 
 
 ## ABWebView
-I created a webview that displays the USGS webpage for the earthquakes. The webview utilizes KVO to monitor load progress.
+I created a webview that displays the USGS webpage for the earthquakes. The webview utilizes KVO to monitor page load progress.
 
 # Testing Notes
 Press the `UISegmentedControl` on the Quake tab to retrieve quake data for minutes, hours, week, and month. The calendar icon opens up a view controller that enables you to select dates to search. Multiple selection is only available for contiguous dates. You probably don't want to import more than 30 days at a time.

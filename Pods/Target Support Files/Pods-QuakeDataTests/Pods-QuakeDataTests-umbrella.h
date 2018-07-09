@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_CanvasQuakeTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_CanvasQuakeTestsVersionString[];
+FOUNDATION_EXPORT double Pods_QuakeDataTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_QuakeDataTestsVersionString[];
 

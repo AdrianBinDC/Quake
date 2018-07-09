@@ -250,6 +250,7 @@ class QuakeViewController: UIViewController {
       case .searchEnded:
         self.activityIndicator.stopAnimating()
         self.view.sendSubview(toBack: self.activityIndicator)
+        self.magSlider.isEnabled = true
         break
       default:
         break
@@ -407,6 +408,8 @@ class QuakeViewController: UIViewController {
     default:
       break
     }
+    
+    magSlider.isEnabled = false
   }
   
   

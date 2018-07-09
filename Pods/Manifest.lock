@@ -8,11 +8,17 @@ DEPENDENCIES:
   - FSCalendar
   - WARangeSlider
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - FSCalendar
+    - WARangeSlider
+
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
   WARangeSlider: 54b3e0853b8d16c444fd539005901aecee86837d
 
-PODFILE CHECKSUM: b346e94aaa79488b0268c373c3d721492c5aa0f4
+PODFILE CHECKSUM: b1dad34ecd865ef9ba24784f0a509d0ac6ab474d
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

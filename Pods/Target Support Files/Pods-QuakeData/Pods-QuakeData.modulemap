@@ -1,0 +1,6 @@
+framework module Pods_QuakeData {
+  umbrella header "Pods-QuakeData-umbrella.h"
+
+  export *
+  module * { export * }
+}
