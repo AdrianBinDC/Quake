@@ -15,8 +15,8 @@ extension EarthquakeEntity {
   @objc var sectionDateString: String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateStyle = .long
-    dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
-        
+//    dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+    
     if let time = self.time {
       return dateFormatter.string(from: time)
     }

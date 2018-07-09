@@ -253,7 +253,13 @@ class QuakeDataManager: NSObject {
           DispatchQueue.main.async {
             NotificationCenter.default.post(name: .searchEnded, object: nil)
           }
-          self.delegate?.errorAlert(error.localizedDescription, sender: self)
+          if let responseData = response.data {
+            if let responseBody = String(data: responseData, encoding: .utf8) {
+              self.delegate?.errorAlert(responseBody, sender: self)
+            }
+          } else {
+            self.delegate?.errorAlert(error.localizedDescription, sender: self)
+          }
         }
       } // end Alamofire
     }
