@@ -107,6 +107,15 @@ class QuakeViewController: UIViewController {
     var predicateArray: [NSPredicate] = []
     
     if let endDate = endDate {
+      // TODO: constrain results for date spans larger than one week
+      
+      if let numberOfDays = Calendar.current.dateComponents([.day], from: startDate, to: endDate).day {
+        if numberOfDays > 7 && magSlider.value < 2 {
+          magSlider.setValue(2.0, animated: false)
+          updateMagSliderLabel()
+        }
+      }
+
       let startEndPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [startDate, endDate])
       predicateArray.append(startEndPredicate)
     } else {
@@ -114,6 +123,7 @@ class QuakeViewController: UIViewController {
       let startPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [startDate, startDate.endOfDay!])
       predicateArray.append(startPredicate)
     }
+    
     
     // FIXME: update
     let sliderPredicate = NSPredicate(format: "magnitude >= %f", argumentArray: [magSlider.value])
@@ -256,6 +266,20 @@ class QuakeViewController: UIViewController {
     removeObserver(self, forKeyPath: #keyPath(endDate))
   }
   
+  func updateMagSliderLabel() {
+    magLabel.text = String(format: "%.1f", arguments: [magSlider.value])
+  }
+  
+  func validateIndexPath(_ indexPath: IndexPath) -> Bool {
+    if let sections = self.fetchedResultsController.sections,
+      indexPath.section < sections.count {
+      if indexPath.row < sections[indexPath.section].numberOfObjects {
+        return true
+      }
+    }
+    return false
+  }
+  
   
   func configureDates(period: SearchPeriod) {
     // set start date to now
@@ -319,7 +343,7 @@ class QuakeViewController: UIViewController {
   
   @IBAction func magSliderAction(_ sender: UISlider) {
     magSlider.value = magSlider.value.rounded(.towardZero)
-    magLabel.text = String(format: "%.1f", arguments: [magSlider.value])
+    updateMagSliderLabel()
     
     self.hapticFeedback(style: .light)
     
@@ -448,14 +472,19 @@ extension QuakeViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseID, for: indexPath) as! QuakeTableViewCell
-    let quake = fetchedResultsController.object(at: indexPath)
-    cell.quake = quake
-    let clearView = UIView(frame: cell.frame)
-    clearView.backgroundColor = UIColor.white.withAlphaComponent(0.25)
     
-    cell.selectedBackgroundView = clearView
-    cell.delegate = self
-    
+    if self.validateIndexPath(indexPath) {
+      let quake = fetchedResultsController.object(at: indexPath)
+      cell.quake = quake
+      let clearView = UIView(frame: cell.frame)
+      clearView.backgroundColor = UIColor.white.withAlphaComponent(0.25)
+      
+      cell.selectedBackgroundView = clearView
+      cell.delegate = self
+    } else {
+      print("Attempting to configure cell whose indexPath is out of bounds")
+    }
+        
     return cell
   }
   

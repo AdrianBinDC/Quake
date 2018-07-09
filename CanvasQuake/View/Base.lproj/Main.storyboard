@@ -76,7 +76,7 @@
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qM4-Nb-LJJ">
                                 <rect key="frame" x="169" y="388" width="37" height="37"/>
-                                <color key="color" red="0.87450980389999999" green="0.0" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ecv-3x-u85" customClass="ABWebView" customModule="CanvasQuake" customModuleProvider="target">
                                 <rect key="frame" x="8" y="96" width="359" height="674"/>

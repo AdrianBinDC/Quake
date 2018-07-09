@@ -41,7 +41,7 @@ class QuakeDataManager: NSObject {
   private var endDate: Date?
   
   /*
-   DispatchGroup coordinates async threads. Runnning the networking task on its own async thread and core data on its own async thread can lead to errors with larger data sets. DispatchGroup resolves the issue.
+   DispatchGroup coordinates async threads. Running the networking task on its own async thread and core data on its own async thread can lead to errors with larger data sets. DispatchGroup resolves the issue.
    */
   
   private let group = DispatchGroup()
@@ -227,7 +227,7 @@ class QuakeDataManager: NSObject {
       
       guard let constructedURL = url else { print("url not created"); return}
       
-      Alamofire.request(constructedURL).responseJSON { response in
+      Alamofire.request(constructedURL).responseJSON(queue: self.networkingQueue) { response in
         
         // FIXME: write code to handle timeout
         
