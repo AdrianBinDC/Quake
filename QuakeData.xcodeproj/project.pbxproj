@@ -23,7 +23,6 @@
 		55562C5E20C070C70016B718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55562C5C20C070C70016B718 /* LaunchScreen.storyboard */; };
 		55562C6920C070C80016B718 /* CanvasQuakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55562C6820C070C80016B718 /* CanvasQuakeTests.swift */; };
 		55562C7420C070C80016B718 /* CanvasQuakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */; };
-		55783E0620C1BF91001C825E /* CanvasEmptySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55783E0520C1BF91001C825E /* CanvasEmptySet.swift */; };
 		5580D78420C30ED7004E692F /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580D78320C30ED7004E692F /* Double+Extension.swift */; };
 		55874D8B20C3A9DB00666793 /* Formatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */; };
 		558FA7F720C11970004A16C0 /* QuakeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7F620C11970004A16C0 /* QuakeDataManager.swift */; };
@@ -37,7 +36,6 @@
 		55AE125A20C0756100DB7F6C /* Master.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE125720C0756100DB7F6C /* Master.png */; };
 		55AE125C20C0763800DB7F6C /* CanvasQuake.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 55AE125B20C0763800DB7F6C /* CanvasQuake.xcdatamodel */; };
 		55AE125F20C0767300DB7F6C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE125E20C0767300DB7F6C /* UIViewController+Extension.swift */; };
-		55B75BD220C1C081007B1602 /* CanvasEmptySet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B75BD120C1C081007B1602 /* CanvasEmptySet.xib */; };
 		55B75BD620C1C868007B1602 /* ABWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B75BD420C1C867007B1602 /* ABWebView.xib */; };
 		55B75BD720C1C868007B1602 /* ABWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B75BD520C1C868007B1602 /* ABWebView.swift */; };
 		55DAB9C620CAAD36006D289D /* FloatingPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAB9C520CAAD36006D289D /* FloatingPoint+Extension.swift */; };
@@ -95,7 +93,6 @@
 		55562C6F20C070C80016B718 /* QuakeDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuakeDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasQuakeUITests.swift; sourceTree = "<group>"; };
 		55562C7520C070C80016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55783E0520C1BF91001C825E /* CanvasEmptySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasEmptySet.swift; sourceTree = "<group>"; };
 		5580D78320C30ED7004E692F /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extension.swift"; sourceTree = "<group>"; };
 		558FA7F620C11970004A16C0 /* QuakeDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeDataManager.swift; sourceTree = "<group>"; };
@@ -109,7 +106,6 @@
 		55AE125720C0756100DB7F6C /* Master.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Master.png; sourceTree = "<group>"; };
 		55AE125B20C0763800DB7F6C /* CanvasQuake.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CanvasQuake.xcdatamodel; sourceTree = "<group>"; };
 		55AE125E20C0767300DB7F6C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		55B75BD120C1C081007B1602 /* CanvasEmptySet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanvasEmptySet.xib; sourceTree = "<group>"; };
 		55B75BD420C1C867007B1602 /* ABWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ABWebView.xib; sourceTree = "<group>"; };
 		55B75BD520C1C868007B1602 /* ABWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABWebView.swift; sourceTree = "<group>"; };
 		55DAB9C520CAAD36006D289D /* FloatingPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Extension.swift"; sourceTree = "<group>"; };
@@ -165,15 +161,6 @@
 			);
 			name = ABWebView;
 			path = "New Group";
-			sourceTree = "<group>";
-		};
-		553CEC0620C1BBA900980569 /* CanvasEmptySet */ = {
-			isa = PBXGroup;
-			children = (
-				55B75BD120C1C081007B1602 /* CanvasEmptySet.xib */,
-				55783E0520C1BF91001C825E /* CanvasEmptySet.swift */,
-			);
-			path = CanvasEmptySet;
 			sourceTree = "<group>";
 		};
 		554BE13620C0F8CA00C07248 /* IBDesignable Base Classes */ = {
@@ -257,7 +244,6 @@
 			children = (
 				55FFBCE320C2E00200A64B5A /* FilterView */,
 				5500001920C3326D00BB8211 /* ABWebView */,
-				553CEC0620C1BBA900980569 /* CanvasEmptySet */,
 				55562C5420C070C60016B718 /* Main.storyboard */,
 				55562C5C20C070C70016B718 /* LaunchScreen.storyboard */,
 				552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */,
@@ -477,7 +463,6 @@
 				55562C5B20C070C70016B718 /* Assets.xcassets in Resources */,
 				55FFBCE520C2E01000A64B5A /* FilterView.xib in Resources */,
 				55562C5620C070C60016B718 /* Main.storyboard in Resources */,
-				55B75BD220C1C081007B1602 /* CanvasEmptySet.xib in Resources */,
 				55AE125920C0756100DB7F6C /* GradientShades.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,7 +578,6 @@
 				552891E720C85E8D0062C1B5 /* MKCoordinateRegion+Extension.swift in Sources */,
 				55AE125C20C0763800DB7F6C /* CanvasQuake.xcdatamodel in Sources */,
 				55B75BD720C1C868007B1602 /* ABWebView.swift in Sources */,
-				55783E0620C1BF91001C825E /* CanvasEmptySet.swift in Sources */,
 				55AC767220C89F03003940C3 /* UITableView+Extension.swift in Sources */,
 				552E78AB20C07C01002C4AE2 /* QuakeViewController.swift in Sources */,
 				558FA7FD20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift in Sources */,

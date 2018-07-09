@@ -1,6 +1,6 @@
 //
-//  CanvasQuakeUITests.swift
-//  CanvasQuakeUITests
+//  QuakeDataUITests.swift
+//  QuakeDataUITests
 //
 //  Created by Adrian Bolinger on 5/31/18.
 //  Copyright © 2018 Adrian Bolinger. All rights reserved.

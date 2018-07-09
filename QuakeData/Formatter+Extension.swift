@@ -1,6 +1,6 @@
 //
 //  Formatter+Extension.swift
-//  CanvasQuake
+//  QuakeData
 //
 //  Created by Adrian Bolinger on 6/3/18.
 //  Copyright © 2018 Adrian Bolinger. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  UITableView+Extension.swift
-//  CanvasQuake
+//  QuakeData
 //
 //  Created by Adrian Bolinger on 6/6/18.
 //  Copyright © 2018 Adrian Bolinger. All rights reserved.
