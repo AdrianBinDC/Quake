@@ -457,7 +457,7 @@ extension QuakeViewController: UITableViewDelegate, UITableViewDataSource {
       print("Something went wrong with titleForHeaderInSection")
       return ""
     }
-    return sectionInfo.name + " UTC | " + String(sectionInfo.numberOfObjects) + " records"
+    return sectionInfo.name + " | " + String(sectionInfo.numberOfObjects) + " records"
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

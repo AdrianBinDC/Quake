@@ -79,16 +79,16 @@
 		554BE13220C0AA0700C07248 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		554BE13420C0F4D000C07248 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		554BE13720C0F91500C07248 /* UIViewCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCanvas.swift; sourceTree = "<group>"; };
-		55562C4D20C070C60016B718 /* CanvasQuake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasQuake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55562C4D20C070C60016B718 /* Quake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55562C5020C070C60016B718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55562C5520C070C60016B718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55562C5A20C070C70016B718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55562C5D20C070C70016B718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55562C5F20C070C70016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55562C6420C070C70016B718 /* CanvasQuakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanvasQuakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55562C6420C070C70016B718 /* QuakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55562C6820C070C80016B718 /* CanvasQuakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasQuakeTests.swift; sourceTree = "<group>"; };
 		55562C6A20C070C80016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55562C6F20C070C80016B718 /* CanvasQuakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanvasQuakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55562C6F20C070C80016B718 /* QuakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasQuakeUITests.swift; sourceTree = "<group>"; };
 		55562C7520C070C80016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55783E0520C1BF91001C825E /* CanvasEmptySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasEmptySet.swift; sourceTree = "<group>"; };
@@ -187,9 +187,9 @@
 		55562C4E20C070C60016B718 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55562C4D20C070C60016B718 /* CanvasQuake.app */,
-				55562C6420C070C70016B718 /* CanvasQuakeTests.xctest */,
-				55562C6F20C070C80016B718 /* CanvasQuakeUITests.xctest */,
+				55562C4D20C070C60016B718 /* Quake.app */,
+				55562C6420C070C70016B718 /* QuakeTests.xctest */,
+				55562C6F20C070C80016B718 /* QuakeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -340,9 +340,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		55562C4C20C070C60016B718 /* CanvasQuake */ = {
+		55562C4C20C070C60016B718 /* Quake */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55562C7820C070C80016B718 /* Build configuration list for PBXNativeTarget "CanvasQuake" */;
+			buildConfigurationList = 55562C7820C070C80016B718 /* Build configuration list for PBXNativeTarget "Quake" */;
 			buildPhases = (
 				5A66343AE78D0A828214ED82 /* [CP] Check Pods Manifest.lock */,
 				55562C4920C070C60016B718 /* Sources */,
@@ -355,14 +355,14 @@
 			);
 			dependencies = (
 			);
-			name = CanvasQuake;
+			name = Quake;
 			productName = CanvasQuake;
-			productReference = 55562C4D20C070C60016B718 /* CanvasQuake.app */;
+			productReference = 55562C4D20C070C60016B718 /* Quake.app */;
 			productType = "com.apple.product-type.application";
 		};
-		55562C6320C070C70016B718 /* CanvasQuakeTests */ = {
+		55562C6320C070C70016B718 /* QuakeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55562C7B20C070C80016B718 /* Build configuration list for PBXNativeTarget "CanvasQuakeTests" */;
+			buildConfigurationList = 55562C7B20C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeTests" */;
 			buildPhases = (
 				185CD3F24368C0AE33F0B80F /* [CP] Check Pods Manifest.lock */,
 				55562C6020C070C70016B718 /* Sources */,
@@ -376,14 +376,14 @@
 			dependencies = (
 				55562C6620C070C80016B718 /* PBXTargetDependency */,
 			);
-			name = CanvasQuakeTests;
+			name = QuakeTests;
 			productName = CanvasQuakeTests;
-			productReference = 55562C6420C070C70016B718 /* CanvasQuakeTests.xctest */;
+			productReference = 55562C6420C070C70016B718 /* QuakeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		55562C6E20C070C80016B718 /* CanvasQuakeUITests */ = {
+		55562C6E20C070C80016B718 /* QuakeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55562C7E20C070C80016B718 /* Build configuration list for PBXNativeTarget "CanvasQuakeUITests" */;
+			buildConfigurationList = 55562C7E20C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeUITests" */;
 			buildPhases = (
 				9EBB413B1145BB551B0EEF80 /* [CP] Check Pods Manifest.lock */,
 				55562C6B20C070C80016B718 /* Sources */,
@@ -397,9 +397,9 @@
 			dependencies = (
 				55562C7120C070C80016B718 /* PBXTargetDependency */,
 			);
-			name = CanvasQuakeUITests;
+			name = QuakeUITests;
 			productName = CanvasQuakeUITests;
-			productReference = 55562C6F20C070C80016B718 /* CanvasQuakeUITests.xctest */;
+			productReference = 55562C6F20C070C80016B718 /* QuakeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -425,7 +425,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 55562C4820C070C60016B718 /* Build configuration list for PBXProject "CanvasQuake" */;
+			buildConfigurationList = 55562C4820C070C60016B718 /* Build configuration list for PBXProject "Quake" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -438,9 +438,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55562C4C20C070C60016B718 /* CanvasQuake */,
-				55562C6320C070C70016B718 /* CanvasQuakeTests */,
-				55562C6E20C070C80016B718 /* CanvasQuakeUITests */,
+				55562C4C20C070C60016B718 /* Quake */,
+				55562C6320C070C70016B718 /* QuakeTests */,
+				55562C6E20C070C80016B718 /* QuakeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -684,12 +684,12 @@
 /* Begin PBXTargetDependency section */
 		55562C6620C070C80016B718 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 55562C4C20C070C60016B718 /* CanvasQuake */;
+			target = 55562C4C20C070C60016B718 /* Quake */;
 			targetProxy = 55562C6520C070C80016B718 /* PBXContainerItemProxy */;
 		};
 		55562C7120C070C80016B718 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 55562C4C20C070C60016B718 /* CanvasQuake */;
+			target = 55562C4C20C070C60016B718 /* Quake */;
 			targetProxy = 55562C7020C070C80016B718 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -884,7 +884,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CanvasQuake.app/CanvasQuake";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quake.app/Quake";
 			};
 			name = Debug;
 		};
@@ -906,7 +906,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CanvasQuake.app/CanvasQuake";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quake.app/Quake";
 			};
 			name = Release;
 		};
@@ -955,7 +955,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		55562C4820C070C60016B718 /* Build configuration list for PBXProject "CanvasQuake" */ = {
+		55562C4820C070C60016B718 /* Build configuration list for PBXProject "Quake" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55562C7620C070C80016B718 /* Debug */,
@@ -964,7 +964,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55562C7820C070C80016B718 /* Build configuration list for PBXNativeTarget "CanvasQuake" */ = {
+		55562C7820C070C80016B718 /* Build configuration list for PBXNativeTarget "Quake" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55562C7920C070C80016B718 /* Debug */,
@@ -973,7 +973,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55562C7B20C070C80016B718 /* Build configuration list for PBXNativeTarget "CanvasQuakeTests" */ = {
+		55562C7B20C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55562C7C20C070C80016B718 /* Debug */,
@@ -982,7 +982,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55562C7E20C070C80016B718 /* Build configuration list for PBXNativeTarget "CanvasQuakeUITests" */ = {
+		55562C7E20C070C80016B718 /* Build configuration list for PBXNativeTarget "QuakeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55562C7F20C070C80016B718 /* Debug */,
