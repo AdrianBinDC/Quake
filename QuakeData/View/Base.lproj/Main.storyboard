@@ -336,7 +336,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="map" id="hpP-jk-FYD">
                                 <connections>
-                                    <segue destination="8O2-CX-XKi" kind="show" identifier="MapSegue" id="JMa-1V-3Iq"/>
+                                    <action selector="mapButtonAction:" destination="I8l-Rh-bkI" id="H8X-oQ-4YG"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="map" id="KaA-Rj-UUm">
@@ -357,6 +357,7 @@
                         <outlet property="segmentedControl" destination="0Up-gl-7vS" id="mud-YW-kJQ"/>
                         <outlet property="tableView" destination="OmJ-Na-E9N" id="MFU-SJ-zMM"/>
                         <outlet property="webView" destination="Ecv-3x-u85" id="Whi-tp-iAL"/>
+                        <segue destination="8O2-CX-XKi" kind="show" identifier="MapSegue" id="Qxd-jU-gwm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZe-6B-vhU" userLabel="First Responder" sceneMemberID="firstResponder"/>

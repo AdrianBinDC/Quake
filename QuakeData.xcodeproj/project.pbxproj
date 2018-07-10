@@ -24,6 +24,7 @@
 		55562C7420C070C80016B718 /* CanvasQuakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */; };
 		5571559F20F3E511001BFE71 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5571559E20F3E511001BFE71 /* MapViewController.swift */; };
 		557155A120F3F42E001BFE71 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557155A020F3F42E001BFE71 /* MapPin.swift */; };
+		557155A320F403E1001BFE71 /* MapRegionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557155A220F403E1001BFE71 /* MapRegionUtility.swift */; };
 		5580D78420C30ED7004E692F /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580D78320C30ED7004E692F /* Double+Extension.swift */; };
 		55874D8B20C3A9DB00666793 /* Formatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */; };
 		558FA7F720C11970004A16C0 /* QuakeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7F620C11970004A16C0 /* QuakeDataManager.swift */; };
@@ -95,6 +96,7 @@
 		55562C7520C070C80016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5571559E20F3E511001BFE71 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		557155A020F3F42E001BFE71 /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
+		557155A220F403E1001BFE71 /* MapRegionUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRegionUtility.swift; sourceTree = "<group>"; };
 		5580D78320C30ED7004E692F /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extension.swift"; sourceTree = "<group>"; };
 		558FA7F620C11970004A16C0 /* QuakeDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeDataManager.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				55AE125120C0751C00DB7F6C /* Core Data */,
 				55AE125D20C0765D00DB7F6C /* Extensions */,
 				554BE13620C0F8CA00C07248 /* IBDesignable Base Classes */,
+				557155A220F403E1001BFE71 /* MapRegionUtility.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				554BE13820C0F91500C07248 /* UIViewCanvas.swift in Sources */,
 				554BE13320C0AA0700C07248 /* Date+Extension.swift in Sources */,
 				554BE13520C0F4D000C07248 /* UIColor+Extension.swift in Sources */,
+				557155A320F403E1001BFE71 /* MapRegionUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

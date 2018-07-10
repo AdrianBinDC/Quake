@@ -342,6 +342,7 @@ class QuakeViewController: UIViewController {
     case month
   }
   
+  
   @IBAction func magSliderAction(_ sender: UISlider) {
     magSlider.value = magSlider.value.rounded(.towardZero)
     updateMagSliderLabel()
@@ -363,7 +364,11 @@ class QuakeViewController: UIViewController {
   }
   
   @IBAction func mapButtonAction(_ sender: UIBarButtonItem) {
-    
+    if let fetchedObjects = fetchedResultsController.fetchedObjects {
+      if fetchedObjects.count > 0 {
+        performSegue(withIdentifier: SegueID.mapSegue, sender: self)
+      }
+    }
   }
   
   
