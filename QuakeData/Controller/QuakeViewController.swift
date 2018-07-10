@@ -151,16 +151,14 @@ class QuakeViewController: UIViewController {
     tableView.estimatedRowHeight = CellHeight.compact.rawValue
     
     segmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
-    
-    // FIXME: connfigure slider
-    
+        
     configureCoreData()
     configureObservers()
+    self.reachability = ConnectivityUtil(delegate: self)
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    self.reachability = ConnectivityUtil(delegate: self)
   }
   
   override func viewDidAppear(_ animated: Bool) {
