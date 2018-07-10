@@ -85,7 +85,7 @@ class MapViewController: UIViewController {
     }
     let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
 
-    [asia, africa, northAmerica, southAmerica, antarctica, europe, australia, cancel].forEach { continent in
+    [asia, africa, antarctica, australia, europe, northAmerica, southAmerica, cancel].forEach { continent in
       actionSheet.addAction(continent)
     }
     
@@ -94,26 +94,6 @@ class MapViewController: UIViewController {
     // oceans
     
   }
-  
-  /*
-   enum DisplayRegion {
-   case asia
-   case africa
-   case northAmerica
-   case southAmerica
-   case antarctica
-   case europe
-   case australia
-   
-   case pacificOcean
-   case atlanticOcean
-   case indianOcean
-   case antarcticOcean
-   case arcticOcean
-   }
-   
-   */
-
   
   @IBAction func oceanButtonAction(_ sender: UIBarButtonItem) {
     let regionUtility = RegionUtility()
@@ -136,7 +116,7 @@ class MapViewController: UIViewController {
     }
     let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
     
-    [pacific, atlantic, indian, antarctic, arctic, cancel].forEach { ocean in
+    [atlantic, indian, pacific, arctic, antarctic, cancel].forEach { ocean in
       actionSheet.addAction(ocean)
     }
     
