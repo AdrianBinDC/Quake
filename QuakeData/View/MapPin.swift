@@ -30,4 +30,8 @@ class MapPin: NSObject, MKAnnotation {
       return nil
     }
   }
+  
+  init(coordinate: CLLocationCoordinate2D) {
+    self.coordinate = coordinate
+  }
 }

@@ -6,67 +6,27 @@
 //  Copyright © 2018 Adrian Bolinger. All rights reserved.
 //
 
+// FIXME: action sheet crashes on ipad.
+
+/*
+ The modalPresentationStyle of a UIAlertController with this style is UIModalPresentationPopover. You must provide location information for this popover through the alert controller's popoverPresentationController. You must provide either a sourceView and sourceRect or a barButtonItem.  If this information is not known when you present the alert controller, you may provide it in the UIPopoverPresentationControllerDelegate method -prepareForPopoverPresentation.'
+ */
+
 import UIKit
 import MapKit
-
-class RegionUtility: NSObject {
-  
-  /*
-   ** continents **
-   asia
-   25.6,-12.2,-169.0,82.0
-   
-   africa
-   -25.4,-47.1,63.8,37.5
-   
-   north america
-   170.6,5.5,-8.3,84.0
-   
-   south america
-   -110.0,-56.1,-28.7,17.7
-   
-   antarctica
-   -180.0,-85.1,180.0,-60.1
-   
-   europe
-   -31.5,34.5,74.4,82.2
-   
-   australia
-   110.95,-54.83,159.29,-9.19
-   
-   ** oceans **
-   pacific ocean
-   128.6,-77.8,-66.5,59.5
-   
-   atlantic ocean
-   West/South/East/North
-   -83.2,-83.0,20.0,68.6
-   
-   indian ocean
-   13.1,-71.4,146.9,10.4
-   
-   antarctic ocean
-   -160.250053,-68.442114,-160.218039,-68.433912
-   
-   arctic ocean
-   -68.98,62.83,-55.7,67.71
-   */
-  
-//  class func asia() -> MKCoordinateRegion {
-//
-//
-////    let region = MKCoordinateRegion(center: <#T##CLLocationCoordinate2D#>, span: <#T##MKCoordinateSpan#>)
-//  }
-}
+import Foundation
 
 class MapViewController: UIViewController {
   
   @IBOutlet weak var mapView: MKMapView!
+  @IBOutlet weak var regionButton: UIBarButtonItem!
   
   var earthquakes: [EarthquakeEntity] = []
   
   private var annotations: [MKAnnotation] = []
   private var centerCoordinate: CLLocation?
+  
+  private var bboxCoordinates: [CLLocationCoordinate2D] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -75,8 +35,8 @@ class MapViewController: UIViewController {
     addAnnnotationsToMap()
     
     if self.mapView.annotations.count > 0 {
-      let region = MKCoordinateRegion.init(coordinates: self.annotations.map{$0.coordinate})!
-      self.mapView.setRegion(region, animated: true)
+      let region = MKCoordinateRegion.init(coordinates: self.annotations.map{$0.coordinate})
+      self.mapView.setRegion(region!, animated: false)
     }
   }
   
@@ -90,8 +50,163 @@ class MapViewController: UIViewController {
     
     mapView.addAnnotations(annotations)
   }
+  /*
+   enum DisplayRegion {
+   case asia
+   case africa
+   case northAmerica
+   case southAmerica
+   case antarctica
+   case europe
+   case australia
+   }
+   
+   */
+  
+  @IBAction func continentButtonAction(_ sender: UIBarButtonItem) {
+    let regionUtility = RegionUtility()
+    
+    let actionSheet = UIAlertController(title: "Select Region", message: "Please select a region", preferredStyle: .actionSheet)
+    // continents
+    let asia = UIAlertAction(title: "Asia", style: .default) { (action) in
+      self.mapView.setRegion(regionUtility.span(for: .asia), animated: true)
+    }
+    let africa = UIAlertAction(title: "Africa", style: .default) { (action) in
+      self.mapView.setRegion(regionUtility.span(for: .africa), animated: true)
+    }
+    let northAmerica = UIAlertAction(title: "North America", style: .default) { (action) in
+      self.mapView.setRegion(regionUtility.span(for: .northAmerica), animated: true)
+    }
+    let southAmerica = UIAlertAction(title: "South America", style: .default) { (action) in
+      self.mapView.setRegion(regionUtility.span(for: .northAmerica), animated: true)
+    }
+    let antarctica = UIAlertAction(title: "Antarctica", style: .default) { (action) in
+      self.mapView.setRegion(regionUtility.span(for: .antarctica), animated: true)
+    }
+    let europe = UIAlertAction(title: "Europe", style: .default) { (action) in
+      self.mapView.setRegion(regionUtility.span(for: .europe), animated: true)
+    }
+    let australia = UIAlertAction(title: "Australia", style: .default) { (action) in
+      self.mapView.setRegion(regionUtility.span(for: .australia), animated: true)
+    }
+    let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
 
+    [asia, africa, northAmerica, southAmerica, antarctica, europe, australia, cancel].forEach { continent in
+      actionSheet.addAction(continent)
+    }
+    
+    self.present(actionSheet, animated: true, completion: nil)
+    
+    // oceans
+    
+  }
+  
+  /*
+   enum DisplayRegion {
+   case asia
+   case africa
+   case northAmerica
+   case southAmerica
+   case antarctica
+   case europe
+   case australia
+   
+   case pacificOcean
+   case atlanticOcean
+   case indianOcean
+   case antarcticOcean
+   case arcticOcean
+   }
+   
+   */
+
+  
+  @IBAction func oceanButtonAction(_ sender: UIBarButtonItem) {
+    let regionUtility = RegionUtility()
+    
+    let actionSheet = UIAlertController(title: "Oceans", message: "Select an ocean", preferredStyle: .actionSheet)
+    let pacific = UIAlertAction(title: "Pacific", style: .default) { (action) in
+      self.mapView.setRegion(regionUtility.span(for: .pacificOcean), animated: true)
+    }
+    let atlantic = UIAlertAction(title: "Atlantic", style: .default) { (action) in
+      self.mapView.setRegion(regionUtility.span(for: .atlanticOcean), animated: true)
+    }
+    let indian = UIAlertAction(title: "Indian Ocean", style: .default) { (action) in
+      self.mapView.setRegion(regionUtility.span(for: .indianOcean), animated: true)
+    }
+    let antarctic = UIAlertAction(title: "Antarctic Ocean", style: .default) { (action) in
+      self.mapView.setRegion(regionUtility.span(for: .antarcticOcean), animated: true)
+    }
+    let arctic = UIAlertAction(title: "Arctic", style: .default) { (action) in
+      self.mapView.setRegion(regionUtility.span(for: .arcticOcean), animated: true)
+    }
+    let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+    
+    [pacific, atlantic, indian, antarctic, arctic, cancel].forEach { ocean in
+      actionSheet.addAction(ocean)
+    }
+    
+    self.present(actionSheet, animated: true, completion: nil)
+
+  }
+  
+  
 }
 
 extension MapViewController: MKMapViewDelegate {
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -334,7 +334,7 @@
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem image="map" id="hpP-jk-FYD">
+                            <barButtonItem image="mapPin" id="hpP-jk-FYD">
                                 <connections>
                                     <action selector="mapButtonAction:" destination="I8l-Rh-bkI" id="H8X-oQ-4YG"/>
                                 </connections>
@@ -357,7 +357,7 @@
                         <outlet property="segmentedControl" destination="0Up-gl-7vS" id="mud-YW-kJQ"/>
                         <outlet property="tableView" destination="OmJ-Na-E9N" id="MFU-SJ-zMM"/>
                         <outlet property="webView" destination="Ecv-3x-u85" id="Whi-tp-iAL"/>
-                        <segue destination="8O2-CX-XKi" kind="show" identifier="MapSegue" id="Qxd-jU-gwm"/>
+                        <segue destination="8O2-CX-XKi" kind="show" identifier="MapSegue" id="kcB-KJ-YFd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZe-6B-vhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -385,13 +385,28 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="igD-oI-VMV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Gmm-Z6-Qcu">
+                        <rightBarButtonItems>
+                            <barButtonItem image="map" id="vpc-1D-SzD">
+                                <connections>
+                                    <action selector="continentButtonAction:" destination="8O2-CX-XKi" id="iYx-lG-RMg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ocean" id="oDJ-I2-dla">
+                                <connections>
+                                    <action selector="oceanButtonAction:" destination="8O2-CX-XKi" id="rwS-sH-okr"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="qBa-xV-spk" id="log-fp-eRV"/>
+                        <outlet property="regionButton" destination="vpc-1D-SzD" id="1Af-Kf-899"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiA-BR-Bwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2157.5999999999999" y="-312.5615763546798"/>
+            <point key="canvasLocation" x="2218" y="-314"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="shy-KC-Sjz">
@@ -526,7 +541,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Id-pt-ek3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2961" y="-314"/>
+            <point key="canvasLocation" x="3022" y="-316"/>
         </scene>
         <!--Quakes-->
         <scene sceneID="PPR-cE-kEx">
@@ -554,6 +569,7 @@
         <image name="earthquake" width="38" height="38"/>
         <image name="map" width="38" height="38"/>
         <image name="mapPin" width="38" height="38"/>
+        <image name="ocean" width="38" height="38"/>
         <image name="web" width="38" height="38"/>
     </resources>
 </document>
