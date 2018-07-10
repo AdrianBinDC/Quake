@@ -6,12 +6,6 @@
 //  Copyright © 2018 Adrian Bolinger. All rights reserved.
 //
 
-// FIXME: action sheet crashes on ipad.
-
-/*
- The modalPresentationStyle of a UIAlertController with this style is UIModalPresentationPopover. You must provide location information for this popover through the alert controller's popoverPresentationController. You must provide either a sourceView and sourceRect or a barButtonItem.  If this information is not known when you present the alert controller, you may provide it in the UIPopoverPresentationControllerDelegate method -prepareForPopoverPresentation.'
- */
-
 import UIKit
 import MapKit
 import Foundation
@@ -66,7 +60,7 @@ class MapViewController: UIViewController {
   @IBAction func continentButtonAction(_ sender: UIBarButtonItem) {
     let regionUtility = RegionUtility()
     
-    let actionSheet = UIAlertController(title: "Select Region", message: "Please select a region", preferredStyle: .actionSheet)
+    let actionSheet = UIAlertController(title: "Select Region", message: "Please select a region", preferredStyle: .alert)
     // continents
     let asia = UIAlertAction(title: "Asia", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.span(for: .asia), animated: true)
@@ -124,7 +118,7 @@ class MapViewController: UIViewController {
   @IBAction func oceanButtonAction(_ sender: UIBarButtonItem) {
     let regionUtility = RegionUtility()
     
-    let actionSheet = UIAlertController(title: "Oceans", message: "Select an ocean", preferredStyle: .actionSheet)
+    let actionSheet = UIAlertController(title: "Oceans", message: "Select an ocean", preferredStyle: .alert)
     let pacific = UIAlertAction(title: "Pacific", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.span(for: .pacificOcean), animated: true)
     }
