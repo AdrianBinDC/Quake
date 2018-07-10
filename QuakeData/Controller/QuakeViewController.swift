@@ -29,6 +29,8 @@ class QuakeViewController: UIViewController {
   @IBOutlet weak var gradientView: UIViewCanvas!
   @IBOutlet weak var webView: ABWebView!
   
+  var reachability: ConnectivityUtil?
+  
   var dataManager: QuakeDataManager? {
     didSet {
       if dataManager != nil {
@@ -154,6 +156,11 @@ class QuakeViewController: UIViewController {
     
     configureCoreData()
     configureObservers()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    self.reachability = ConnectivityUtil(delegate: self)
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -654,3 +661,18 @@ extension QuakeViewController: CalendarViewControllerDelegate {
   }
 }
 
+extension QuakeViewController: ConnectivityUtilDelegate {
+  func postAlert(title: String, message: String) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    alert.addAction(okAction)
+    self.present(alert, animated: true, completion: nil)
+  }
+  
+  func postWarning(title: String, message: String) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "OK", style: .destructive, handler: nil)
+    alert.addAction(okAction)
+    self.present(alert, animated: true, completion: nil)
+  }
+}

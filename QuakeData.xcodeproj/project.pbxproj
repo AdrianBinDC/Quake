@@ -24,6 +24,7 @@
 		5571559F20F3E511001BFE71 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5571559E20F3E511001BFE71 /* MapViewController.swift */; };
 		557155A120F3F42E001BFE71 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557155A020F3F42E001BFE71 /* MapPin.swift */; };
 		557155A320F403E1001BFE71 /* MapRegionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557155A220F403E1001BFE71 /* MapRegionUtility.swift */; };
+		557155A520F4D888001BFE71 /* ConnectivityUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557155A420F4D888001BFE71 /* ConnectivityUtility.swift */; };
 		5580D78420C30ED7004E692F /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580D78320C30ED7004E692F /* Double+Extension.swift */; };
 		55874D8B20C3A9DB00666793 /* Formatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */; };
 		558FA7F720C11970004A16C0 /* QuakeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7F620C11970004A16C0 /* QuakeDataManager.swift */; };
@@ -95,6 +96,7 @@
 		5571559E20F3E511001BFE71 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		557155A020F3F42E001BFE71 /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		557155A220F403E1001BFE71 /* MapRegionUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRegionUtility.swift; sourceTree = "<group>"; };
+		557155A420F4D888001BFE71 /* ConnectivityUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityUtility.swift; sourceTree = "<group>"; };
 		5580D78320C30ED7004E692F /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extension.swift"; sourceTree = "<group>"; };
 		558FA7F620C11970004A16C0 /* QuakeDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeDataManager.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				55AE125120C0751C00DB7F6C /* Core Data */,
 				55AE125D20C0765D00DB7F6C /* Extensions */,
 				554BE13620C0F8CA00C07248 /* IBDesignable Base Classes */,
+				557155A420F4D888001BFE71 /* ConnectivityUtility.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -514,12 +517,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-QuakeData/Pods-QuakeData-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/WARangeSlider/WARangeSlider.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WARangeSlider.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +582,7 @@
 				552E78A920C07BCB002C4AE2 /* QuakeTableViewCell.swift in Sources */,
 				55562C5120C070C60016B718 /* AppDelegate.swift in Sources */,
 				55DAB9C620CAAD36006D289D /* FloatingPoint+Extension.swift in Sources */,
+				557155A520F4D888001BFE71 /* ConnectivityUtility.swift in Sources */,
 				55940CBB20C778B700C5D38B /* MapPredicate.swift in Sources */,
 				55AE125C20C0763800DB7F6C /* CanvasQuake.xcdatamodel in Sources */,
 				55B75BD720C1C868007B1602 /* ABWebView.swift in Sources */,

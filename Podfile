@@ -9,6 +9,7 @@ target 'QuakeData' do
   pod 'Alamofire', '~> 4.7'
   pod 'FSCalendar'
   pod 'WARangeSlider'
+  pod 'ReachabilitySwift'
 
   
   target 'QuakeDataTests' do
