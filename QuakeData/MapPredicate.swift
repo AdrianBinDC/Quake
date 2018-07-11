@@ -19,7 +19,6 @@ class MapPredicate: NSObject {
   
   public var predicate: NSPredicate! {
     didSet {
-//      print("predicate updated on MapPredicate")
       NotificationCenter.default.post(name: .mapPredicateUpdated, object: nil)
     }
   }
@@ -55,16 +54,15 @@ class MapPredicate: NSObject {
   private (set) var minLong: Double? {
     didSet {
       if let minLong = minLong {
-        // FIXME: Calculation seems a little off...close enough for now
         guard minLong >= -90.0 else { self.minLong = -90.0; return }
       }
       updatePredicate()
     }
   }
+  
   private (set) var maxLong: Double? {
     didSet {
       if let maxLong = maxLong {
-        // FIXME: Calculation seems a little off...close enough for now
         guard maxLong <= 90.0 else { self.maxLong = 90.0; return }
       }
       updatePredicate()
@@ -72,40 +70,46 @@ class MapPredicate: NSObject {
   }
   
   // MARK: Initializers
-  // NSObject, so you can just initialize it and set via sliders, too.
+  // NSObject, so you can just initialize it empty and set via sliders, too.
   
   override init() {
     super.init()
   }
   
   // feed some vars, but needs a var or it'll fail b/c we don't want to spend all day watching a map draw
-  init?(startDate: Date?, endDate: Date?, minMag: Double?, maxMag: Double?, minLat: Double?, maxLat: Double?, minLong: Double?, maxLong: Double?) {
+  init?(startDate: Date?, endDate: Date?, minMag: Double?, maxMag: Double?, bbox: BoundingBox?) {
     super.init()
     
     // failable initializer if it's fed all nil values
-    let varCount = [startDate as Any, endDate as Any, minMag as Any, maxMag as Any, minLat as Any, maxLat as Any, minLong as Any, maxLong as Any].compactMap{$0}.count
+    let varCount = [startDate as Any, endDate as Any, minMag as Any, maxMag as Any, bbox as Any].compactMap{$0}.count
     guard varCount != 0 else { return nil }
-
+    
     self.startDate = startDate
     self.endDate = endDate
     self.minMag = minMag
     self.maxMag = maxMag
-    self.minLat = minLat
-    self.maxLat = maxLat
-    self.minLong = minLong
-    self.maxLong = maxLong
+    self.minLat = bbox?.min.latitude ?? nil
+    self.maxLat = bbox?.max.latitude ?? nil
+    self.minLong = bbox?.min.longitude ?? nil
+    self.maxLong = bbox?.max.longitude ?? nil
     
     commonInit()
   }
   
   // feed an earthquake, returns a predicate for the radius around the earthquake's coordinates
+  
   init(earthquake: EarthquakeEntity, zoomFactor: Double) {
     super.init()
     if let coordinate = earthquake.location2d {
-      self.minLat = coordinate.latitude - zoomFactor.convertToLatDegrees()
-      self.maxLat = coordinate.latitude + zoomFactor.convertToLatDegrees()
-      self.minLong = coordinate.longitude - zoomFactor.convertToLongDegrees(atLatitude: coordinate.latitude)
-      self.maxLong = coordinate.longitude + zoomFactor.convertToLongDegrees(atLatitude: coordinate.latitude)
+      // FIXME: In later versions, add a default preferennce for units of distance
+      let searchRegion = MKCoordinateRegionMakeWithDistance(coordinate,
+                                                            zoomFactor.convert(from: .miles, to: .meters),
+                                                            zoomFactor.convert(from: .miles, to: .meters))
+      
+      self.minLat = coordinate.latitude - (searchRegion.span.latitudeDelta / 2)
+      self.maxLat = coordinate.latitude + (searchRegion.span.latitudeDelta / 2)
+      self.minLong = coordinate.longitude - (searchRegion.span.longitudeDelta / 2)
+      self.maxLong = coordinate.longitude + (searchRegion.span.longitudeDelta / 2)
     }
     commonInit()
   }

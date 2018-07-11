@@ -22,6 +22,10 @@ extension Double {
     return stringValue
   }
   
+  func convert(from originalUnit: UnitLength, to convertedUnit: UnitLength) -> Double {
+    return Measurement(value: self, unit: originalUnit).converted(to: convertedUnit).value
+  }
+  
   /// convert kilometers to degrees latitude
   func convertToLatDegrees() -> Double {
     // where self is a kilometer
