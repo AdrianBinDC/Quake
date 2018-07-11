@@ -29,6 +29,8 @@ class QuakeViewController: UIViewController {
   @IBOutlet weak var gradientView: UIViewCanvas!
   @IBOutlet weak var webView: ABWebView!
   
+  let dateUtil = ExistingDataUtil.sharedInstance
+  
   var reachability: ConnectivityUtil?
   
   var dataManager: QuakeDataManager? {
@@ -369,6 +371,7 @@ class QuakeViewController: UIViewController {
   }
   
   @IBAction func mapButtonAction(_ sender: UIBarButtonItem) {
+    
     if let fetchedObjects = fetchedResultsController.fetchedObjects {
       if fetchedObjects.count > 0 {
         performSegue(withIdentifier: SegueID.mapSegue, sender: self)
