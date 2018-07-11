@@ -13,46 +13,65 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-
-
-
 import UIKit
 import MapKit
 
-class RegionUtility: NSObject {
+class BoundingBox: NSObject {
+  let min: CLLocationCoordinate2D
+  let max: CLLocationCoordinate2D
   
-  enum DisplayRegion: String {
+  init(mapRect: MKMapRect) {
+    let bottomLeft = MKMapPointMake(mapRect.origin.x, mapRect.origin.y)
+    let topRight = MKMapPointMake(MKMapRectGetMaxX(mapRect), MKMapRectGetMaxY(mapRect))
     
-    /*
-     Where'd these numbers come from?
-     1) go to https://boundingbox.klokantech.com
-     2) In "Find Place With Google", type whatever you want a bounding box for
-     3) Select "CSV RAW" and copy.
-     
-     Copied format is as follows:
-     
-     bbox = minLongitude , minLatitude , maxLongitude , maxLatitude
-     
-     Don't like the spans? Feel free to change them at the site above
-     
-     */
-    
-    case asia = "25.5886467,-12.2118513,-168.97788,81.9661865"
-    case africa = "-25.383911,-47.1313489,63.8085939,37.5359"
-    case northAmerica = "-172.66113495,5.4961,-15.51269745,83.6655766261"
-    case southAmerica = "-110.0281,-56.1455,-28.650543,17.6606999"
-    case antarctica = "-180.0,-85.0511287798,180.0,-60.1086999"
-    case europe = "-25.48824365,32.5960451596,74.3555001,73.1927977675"
-    case australia = "110.9510339,-54.8337658,159.2872223,-9.1870264"
-    
-    case pacificOcean = "128.576489,-77.8225785,-66.5190814,59.4822293"
-    case atlanticOcean = "-83.2160952,-83.0204773,20.0000002,68.6187516"
-    case indianOcean = "13.0882271,-61.8516375745,146.9166667,25.9666428755"
-    case antarcticOcean = "-160.2500533,-68.4421138,-160.2180385,-68.4339125"
-    case arcticOcean = "-68.9751267,62.8298713,-55.6975281,67.708443"
+    self.min = MKCoordinateForMapPoint(bottomLeft)
+    self.max = MKCoordinateForMapPoint(topRight)
+    super.init()
   }
   
-  public func span(for region: DisplayRegion) -> MKCoordinateRegion {
+  init(displayRegion: GeographicRegion) {
+    let coordinateArray = displayRegion.rawValue.components(separatedBy: ",").map{Double($0)!}
+    min = CLLocationCoordinate2D(latitude: coordinateArray[3], longitude: coordinateArray[2])
+    max = CLLocationCoordinate2D(latitude: coordinateArray[1], longitude: coordinateArray[0])
+    super.init()
+  }
+}
+
+enum GeographicRegion: String {
+  
+  /*
+   Where'd these numbers come from?
+   1) go to https://boundingbox.klokantech.com
+   2) In "Find Place With Google", type whatever you want a bounding box for
+   3) Select "CSV RAW" and copy.
+   
+   Copied format is as follows:
+   
+   bbox = minLongitude , minLatitude , maxLongitude , maxLatitude
+   
+   Don't like the spans? Feel free to change them at the site above
+   
+   */
+  
+  case asia = "25.5886467,-12.2118513,-168.97788,81.9661865"
+  case africa = "-25.383911,-47.1313489,63.8085939,37.5359"
+  case northAmerica = "-172.66113495,5.4961,-15.51269745,83.6655766261"
+  case southAmerica = "-110.0281,-56.1455,-28.650543,17.6606999"
+  case antarctica = "-180.0,-85.0511287798,180.0,-60.1086999"
+  case europe = "-25.48824365,32.5960451596,74.3555001,73.1927977675"
+  case australia = "110.9510339,-54.8337658,159.2872223,-9.1870264"
+  
+  case pacificOcean = "128.576489,-77.8225785,-66.5190814,59.4822293"
+  case atlanticOcean = "-83.2160952,-83.0204773,20.0000002,68.6187516"
+  case indianOcean = "13.0882271,-61.8516375745,146.9166667,25.9666428755"
+  case antarcticOcean = "-160.2500533,-68.4421138,-160.2180385,-68.4339125"
+  case arcticOcean = "-68.9751267,62.8298713,-55.6975281,67.708443"
+}
+
+
+class RegionUtility: NSObject {
+  
+  public func region(for region: GeographicRegion) -> MKCoordinateRegion {
     return MKCoordinateRegion(coordinates: bboxCoordinates(from: region.rawValue))!
   }
   
