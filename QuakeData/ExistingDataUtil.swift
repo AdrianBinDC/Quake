@@ -23,10 +23,15 @@ class ExistingDataUtil: NSObject {
   // Initialized when program starts
   private override init() {
     super.init()
-    fetchDates()
+    fetchDates(nil)
+    configureObservers()
   }
   
-  private func fetchDates() {
+  private func configureObservers() {
+    NotificationCenter.default.addObserver(self, selector: #selector(fetchDates), name: NSNotification.Name.NSManagedObjectContextDidSave, object: moc)
+  }
+  
+  @objc public func fetchDates(_ notification: Notification?) {
     // FIXME: experiment with refactoring to fetching one property
     self.moc = appDelegate.persistentContainer.viewContext
 

@@ -50,6 +50,8 @@ class CalendarViewController: UIViewController {
   @IBOutlet weak var closeButton: UIButton!
   @IBOutlet weak var calendarView: FSCalendar!
   
+  let existingDates = ExistingDataUtil.sharedInstance.retrievedDates
+  
   // MARK: Lifecycle Methods
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -58,6 +60,7 @@ class CalendarViewController: UIViewController {
     calendarContainer.clipsToBounds = true
     
     calendarView.delegate = self
+    calendarView.dataSource = self
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -135,6 +138,7 @@ class CalendarViewController: UIViewController {
       updateDateLabel()
     }
   } // end updateSelection(date: Date)
+  
 }
 
 // MARK: FSCalendarDelegate
@@ -154,5 +158,21 @@ extension CalendarViewController: FSCalendarDelegate {
     print("date DEselected is:", date.asDate())
     updateDateLabel()
     updateDeselection(date)
+  }
+  
+}
+
+extension CalendarViewController: FSCalendarDataSource {
+  
+  func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+    // My array (this is actually a set, but same concept) of dates I want to mark as having an event
+    if let existingDates = ExistingDataUtil.sharedInstance.retrievedDates {
+      // if the date specified in the method's parameter is contained within existing dates, I return 1 event.
+      if existingDates.contains(date) {
+        return 1
+      }
+    }
+    // otherwise, return zero events
+    return 0
   }
 }
