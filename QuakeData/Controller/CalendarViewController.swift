@@ -54,7 +54,6 @@ class CalendarViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    
     calendarContainer.layer.cornerRadius = 10.0
     calendarContainer.clipsToBounds = true
     

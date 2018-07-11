@@ -20,12 +20,13 @@ class ExistingDataUtil: NSObject {
   private let appDelegate = UIApplication.shared.delegate as! AppDelegate
   private var moc: NSManagedObjectContext!
   
+  // Initialized when program starts
   private override init() {
     super.init()
     fetchDates()
   }
   
-  func fetchDates() {
+  private func fetchDates() {
     // FIXME: experiment with refactoring to fetching one property
     self.moc = appDelegate.persistentContainer.viewContext
 
@@ -46,5 +47,26 @@ class ExistingDataUtil: NSObject {
     let dates = results.map{$0.time?.startOfDay}.compactMap{$0}
 
     retrievedDates = Set(dates)
+  }
+  
+  public func insertDate(_ date: Date) {
+    retrievedDates?.insert(date)
+  }
+  
+  func datesNeeded(startDate: Date, endDate: Date) -> [Date] {
+    var date = startDate.startOfDay
+    var datesRequested: [Date] = []
+    
+    while date.startOfDay <= endDate.startOfDay {
+      datesRequested.append(date)
+      date = date.dateByAdding(days: 1)!
+    }
+    
+    let requestedSet = Set(datesRequested)
+    guard let retrievedDates = retrievedDates else { return Array(requestedSet) }
+    let neededSet = requestedSet.subtracting(retrievedDates)
+    
+    return Array(neededSet)
+    
   }
 }
