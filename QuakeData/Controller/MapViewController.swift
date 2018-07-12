@@ -58,7 +58,7 @@ class MapViewController: UIViewController {
    */
   
   @IBAction func continentButtonAction(_ sender: UIBarButtonItem) {
-    let regionUtility = RegionUtility()
+    let regionUtility = MapRegionUtility()
     
     let actionSheet = UIAlertController(title: "Select Region", message: "Please select a region", preferredStyle: .alert)
     // continents
@@ -93,7 +93,7 @@ class MapViewController: UIViewController {
   }
   
   @IBAction func oceanButtonAction(_ sender: UIBarButtonItem) {
-    let regionUtility = RegionUtility()
+    let regionUtility = MapRegionUtility()
     
     let actionSheet = UIAlertController(title: "Oceans", message: "Select an ocean", preferredStyle: .alert)
     let pacific = UIAlertAction(title: "Pacific", style: .default) { (action) in

@@ -21,6 +21,8 @@
 		55562C5E20C070C70016B718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55562C5C20C070C70016B718 /* LaunchScreen.storyboard */; };
 		55562C6920C070C80016B718 /* CanvasQuakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55562C6820C070C80016B718 /* CanvasQuakeTests.swift */; };
 		55562C7420C070C80016B718 /* CanvasQuakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */; };
+		5564C13620F6F37800555A6A /* BoundingBoxes.json in Resources */ = {isa = PBXBuildFile; fileRef = 5564C13520F6F37800555A6A /* BoundingBoxes.json */; };
+		5564C13820F6F3D800555A6A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564C13720F6F3D800555A6A /* FilterViewController.swift */; };
 		5571559F20F3E511001BFE71 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5571559E20F3E511001BFE71 /* MapViewController.swift */; };
 		557155A120F3F42E001BFE71 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557155A020F3F42E001BFE71 /* MapPin.swift */; };
 		557155A320F403E1001BFE71 /* MapRegionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557155A220F403E1001BFE71 /* MapRegionUtility.swift */; };
@@ -28,7 +30,7 @@
 		5580D78420C30ED7004E692F /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580D78320C30ED7004E692F /* Double+Extension.swift */; };
 		55874D8B20C3A9DB00666793 /* Formatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */; };
 		558FA7F720C11970004A16C0 /* QuakeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7F620C11970004A16C0 /* QuakeDataManager.swift */; };
-		558FA7F920C119A5004A16C0 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7F820C119A5004A16C0 /* Structs.swift */; };
+		558FA7F920C119A5004A16C0 /* SeismicStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7F820C119A5004A16C0 /* SeismicStructs.swift */; };
 		558FA7FD20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7FC20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift */; };
 		55940CBB20C778B700C5D38B /* MapPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55940CBA20C778B700C5D38B /* MapPredicate.swift */; };
 		55AC767220C89F03003940C3 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC767120C89F03003940C3 /* UITableView+Extension.swift */; };
@@ -94,6 +96,8 @@
 		55562C6F20C070C80016B718 /* QuakeDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuakeDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasQuakeUITests.swift; sourceTree = "<group>"; };
 		55562C7520C070C80016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5564C13520F6F37800555A6A /* BoundingBoxes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BoundingBoxes.json; sourceTree = "<group>"; };
+		5564C13720F6F3D800555A6A /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		5571559E20F3E511001BFE71 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		557155A020F3F42E001BFE71 /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		557155A220F403E1001BFE71 /* MapRegionUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRegionUtility.swift; sourceTree = "<group>"; };
@@ -101,7 +105,7 @@
 		5580D78320C30ED7004E692F /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extension.swift"; sourceTree = "<group>"; };
 		558FA7F620C11970004A16C0 /* QuakeDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeDataManager.swift; sourceTree = "<group>"; };
-		558FA7F820C119A5004A16C0 /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		558FA7F820C119A5004A16C0 /* SeismicStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeismicStructs.swift; sourceTree = "<group>"; };
 		558FA7FC20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EarthquakeEntity+Extension.swift"; sourceTree = "<group>"; };
 		55940CBA20C778B700C5D38B /* MapPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPredicate.swift; sourceTree = "<group>"; };
 		55AC767120C89F03003940C3 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
@@ -238,9 +242,10 @@
 		55AE124D20C074E300DB7F6C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				552E78AA20C07C01002C4AE2 /* QuakeViewController.swift */,
 				554BE12E20C09BF900C07248 /* CalendarViewController.swift */,
+				5564C13720F6F3D800555A6A /* FilterViewController.swift */,
 				5571559E20F3E511001BFE71 /* MapViewController.swift */,
+				552E78AA20C07C01002C4AE2 /* QuakeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,11 +266,12 @@
 		55AE124F20C074F100DB7F6C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5564C13520F6F37800555A6A /* BoundingBoxes.json */,
 				55940CBA20C778B700C5D38B /* MapPredicate.swift */,
 				557155A220F403E1001BFE71 /* MapRegionUtility.swift */,
 				558FA7F620C11970004A16C0 /* QuakeDataManager.swift */,
 				55E70A4420F5C1AC008EE313 /* ExistingDataUtil.swift */,
-				558FA7F820C119A5004A16C0 /* Structs.swift */,
+				558FA7F820C119A5004A16C0 /* SeismicStructs.swift */,
 				55AE125120C0751C00DB7F6C /* Core Data */,
 				55AE125D20C0765D00DB7F6C /* Extensions */,
 				554BE13620C0F8CA00C07248 /* IBDesignable Base Classes */,
@@ -466,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55AE125A20C0756100DB7F6C /* Master.png in Resources */,
+				5564C13620F6F37800555A6A /* BoundingBoxes.json in Resources */,
 				55AE125820C0756100DB7F6C /* Complementary.png in Resources */,
 				55B75BD620C1C868007B1602 /* ABWebView.xib in Resources */,
 				55562C5E20C070C70016B718 /* LaunchScreen.storyboard in Resources */,
@@ -581,7 +588,7 @@
 				55AE125F20C0767300DB7F6C /* UIViewController+Extension.swift in Sources */,
 				558FA7F720C11970004A16C0 /* QuakeDataManager.swift in Sources */,
 				5580D78420C30ED7004E692F /* Double+Extension.swift in Sources */,
-				558FA7F920C119A5004A16C0 /* Structs.swift in Sources */,
+				558FA7F920C119A5004A16C0 /* SeismicStructs.swift in Sources */,
 				552E78A920C07BCB002C4AE2 /* QuakeTableViewCell.swift in Sources */,
 				55562C5120C070C60016B718 /* AppDelegate.swift in Sources */,
 				55E70A4520F5C1AC008EE313 /* ExistingDataUtil.swift in Sources */,
@@ -598,6 +605,7 @@
 				55FFBCE720C2E02500A64B5A /* FilterView.swift in Sources */,
 				554BE12F20C09BF900C07248 /* CalendarViewController.swift in Sources */,
 				55AE125320C0752D00DB7F6C /* Constants.swift in Sources */,
+				5564C13820F6F3D800555A6A /* FilterViewController.swift in Sources */,
 				55874D8B20C3A9DB00666793 /* Formatter+Extension.swift in Sources */,
 				554BE13820C0F91500C07248 /* UIViewCanvas.swift in Sources */,
 				554BE13320C0AA0700C07248 /* Date+Extension.swift in Sources */,

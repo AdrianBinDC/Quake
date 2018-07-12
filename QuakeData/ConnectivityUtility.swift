@@ -21,7 +21,7 @@ import Reachability
  
  * Implement delegate methods
  
- * In viewWillAppear, instantiate it:
+ * In viewDidLoad/viewWillAppear, instantiate it:
  
  override func viewWillAppear(_ animated: Bool) {
    super.viewWillAppear(animated)
@@ -48,7 +48,6 @@ class ConnectivityUtil: NSObject {
   }
   
   deinit {
-    guard let delegate = delegate else { return }
     NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability)
   }
   

@@ -15,7 +15,8 @@
 
   import UIKit
   import MapKit
-
+  
+  /// Utility class to create MKMapRegions
   class BoundingBox: NSObject {
     let min: CLLocationCoordinate2D
     let max: CLLocationCoordinate2D
@@ -34,9 +35,61 @@
       min = CLLocationCoordinate2D(latitude: coordinateArray[3], longitude: coordinateArray[2])
       max = CLLocationCoordinate2D(latitude: coordinateArray[1], longitude: coordinateArray[0])
       super.init()
-    }    
+    }
+    
+    init(minLong: Double, minLat: Double,
+         maxLong:  Double, maxLat: Double) {
+      
+      self.min = CLLocationCoordinate2D(latitude: minLat,
+                                        longitude: minLong)
+      self.max = CLLocationCoordinate2D(latitude: maxLat,
+                                        longitude: maxLong)
+    }
   }
-
+  
+  /// Creates objects to populate a UITableview on FilterViewController
+  // data to populate struct comes from BoundingBoxes.json
+  class CountryDataSection {
+    let region: String
+    let countries: [CountryData]
+    
+    init(region: String, countries: [CountryData]) {
+      self.region = region
+      self.countries = countries
+    }
+  }
+  
+  class CountryData: Codable {
+    let name: String
+    let isoCode: String?
+    var region: String?
+    var intermediateRegion: String?
+    let minLong: Double
+    let minLat: Double
+    let maxLong: Double
+    let maxLat: Double
+    var boundingBox: BoundingBox {
+      return BoundingBox(minLong: minLong, minLat: minLat,
+                         maxLong: maxLong, maxLat: maxLat)
+    }
+    
+    init(name: String, isoCode: String,
+         region: String?, intermediateRegion: String,
+         minLong: Double, minLat: Double,
+         maxLong: Double, maxLat: Double) {
+      
+      self.name = name
+      self.isoCode = isoCode
+      self.region = region ?? ""
+      self.intermediateRegion = intermediateRegion ?? ""
+      self.minLong = minLong
+      self.minLat = minLat
+      self.maxLong = maxLong
+      self.maxLat = maxLat
+    }
+  }
+  
+  
   enum GeographicRegion: String {
     
     /*
@@ -69,7 +122,7 @@
   }
 
 
-  class RegionUtility: NSObject {
+  class MapRegionUtility: NSObject {
     
     public func region(for region: GeographicRegion) -> MKCoordinateRegion {
       return MKCoordinateRegion(coordinates: bboxCoordinates(from: region.rawValue))!
@@ -85,6 +138,29 @@
       
       return coordinateArray
     }
+    
+    func countryTableViewDataSource() -> [CountryDataSection] {
+      var dataSource: [CountryDataSection] = []
+      var countries: [CountryData] = []
+      var sections: [String] = []
+      if let path = Bundle.main.path(forResource: "BoundingBoxes", ofType: "json") {
+        do {
+          let data = try Data(contentsOf: URL(fileURLWithPath: path))
+          countries = try JSONDecoder().decode([CountryData].self, from: data)
+          sections  = Array(Set(countries.map{$0.region!})).sorted(by: {$0 < $1})
+          for sectionName in sections {
+            let sectionData = countries.filter{$0.region! == sectionName}.sorted(by: {$0.name < $1.name})
+            let section = CountryDataSection(region: sectionName, countries: sectionData)
+            dataSource.append(section)
+          }
+        } catch {
+          print(error.localizedDescription)
+        }
+      }
+      
+      return dataSource
+    }
+    
   }
 
   extension MKCoordinateRegion {

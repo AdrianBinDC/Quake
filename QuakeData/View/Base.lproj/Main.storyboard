@@ -339,20 +339,21 @@
                                     <action selector="mapButtonAction:" destination="I8l-Rh-bkI" id="H8X-oQ-4YG"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="map" id="KaA-Rj-UUm">
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <barButtonItem image="filter" id="Zc8-ci-pG0">
                                 <connections>
-                                    <action selector="mapButtonAction:" destination="I8l-Rh-bkI" id="fr5-CG-2AS"/>
+                                    <action selector="filterButtonAction:" destination="I8l-Rh-bkI" id="p6J-c8-w5b"/>
+                                    <segue destination="chl-A8-9BM" kind="presentation" id="aC5-xn-yYp"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="qM4-Nb-LJJ" id="ksQ-nj-lhd"/>
+                        <outlet property="filterButton" destination="Zc8-ci-pG0" id="3mp-zI-Nz8"/>
                         <outlet property="gradientView" destination="yIG-N6-Ihl" id="jQI-m4-JMg"/>
                         <outlet property="magLabel" destination="Bl5-ew-WL0" id="Wid-YV-eMS"/>
                         <outlet property="magSlider" destination="LNO-nK-1gl" id="l0L-Hb-mLu"/>
-                        <outlet property="mapButton" destination="KaA-Rj-UUm" id="8UV-Om-LhM"/>
+                        <outlet property="mapButton" destination="hpP-jk-FYD" id="dKA-LX-LB2"/>
                         <outlet property="resetButton" destination="xfj-uO-8Sh" id="Mdo-O1-QZp"/>
                         <outlet property="segmentedControl" destination="0Up-gl-7vS" id="mud-YW-kJQ"/>
                         <outlet property="tableView" destination="OmJ-Na-E9N" id="MFU-SJ-zMM"/>
@@ -363,6 +364,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZe-6B-vhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1349.5999999999999" y="-314.03940886699507"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="cYP-zX-1uV">
+            <objects>
+                <viewController id="chl-A8-9BM" customClass="FilterViewController" customModule="QuakeData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rP2-ER-0PK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A0r-H4-yGB">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="VOp-Bh-o9V">
+                                        <barButtonItem key="rightBarButtonItem" image="close" id="ffw-yV-lom">
+                                            <connections>
+                                                <action selector="closeButtonAction:" destination="chl-A8-9BM" id="XEV-TR-zGj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aYj-wg-Ucg"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="ffw-yV-lom" id="cQh-mx-yOq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNC-rt-YkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="404"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="QHd-4u-Sct">
@@ -567,6 +601,7 @@
         <image name="calendar" width="38" height="38"/>
         <image name="close" width="38" height="38"/>
         <image name="earthquake" width="38" height="38"/>
+        <image name="filter" width="38" height="38"/>
         <image name="map" width="38" height="38"/>
         <image name="mapPin" width="38" height="38"/>
         <image name="ocean" width="38" height="38"/>

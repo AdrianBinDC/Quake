@@ -21,6 +21,7 @@ class QuakeViewController: UIViewController {
   
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var resetButton: UIBarButtonItem!
+  @IBOutlet weak var filterButton: UIBarButtonItem!
   @IBOutlet weak var mapButton: UIBarButtonItem!
   @IBOutlet weak var segmentedControl: UISegmentedControl!
   @IBOutlet weak var magSlider: UISlider!
@@ -347,6 +348,10 @@ class QuakeViewController: UIViewController {
     case day
     case week
     case month
+  }
+  
+  @IBAction func filterButtonAction(_ sender: UIBarButtonItem) {
+    
   }
   
   
