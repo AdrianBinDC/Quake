@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1C6B339EE4E95F46B12F96FC /* Pods_QuakeData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15D9E9A402B6E853B58D491 /* Pods_QuakeData.framework */; };
 		443C5C3572B3FFA1C0863890 /* Pods_CanvasQuakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B090BCB0BF8E22EAF5450E9 /* Pods_CanvasQuakeTests.framework */; };
+		550A8BF520F7A32600BBF37E /* FilterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 550A8BF420F7A32600BBF37E /* FilterHeaderView.xib */; };
+		550A8BF720F7A33400BBF37E /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550A8BF620F7A33400BBF37E /* FilterHeaderView.swift */; };
 		552E78A920C07BCB002C4AE2 /* QuakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */; };
 		552E78AB20C07C01002C4AE2 /* QuakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E78AA20C07C01002C4AE2 /* QuakeViewController.swift */; };
 		554BE12F20C09BF900C07248 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554BE12E20C09BF900C07248 /* CalendarViewController.swift */; };
@@ -77,6 +79,8 @@
 		2DEBFBC97CC0145DD33AFD3C /* Pods_CanvasQuake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CanvasQuake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E2B2BB8E9604B801392ADB7 /* Pods_QuakeDataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuakeDataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4731C9D708D90D9FFBEF0C35 /* Pods-CanvasQuakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeTests/Pods-CanvasQuakeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		550A8BF420F7A32600BBF37E /* FilterHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterHeaderView.xib; sourceTree = "<group>"; };
+		550A8BF620F7A33400BBF37E /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeTableViewCell.swift; sourceTree = "<group>"; };
 		552E78AA20C07C01002C4AE2 /* QuakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeViewController.swift; sourceTree = "<group>"; };
 		553CEBFC20C1B61F00980569 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -173,6 +177,15 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		550A8BF320F7A31300BBF37E /* FilterHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				550A8BF420F7A32600BBF37E /* FilterHeaderView.xib */,
+				550A8BF620F7A33400BBF37E /* FilterHeaderView.swift */,
+			);
+			path = FilterHeaderView;
+			sourceTree = "<group>";
+		};
 		554BE13620C0F8CA00C07248 /* IBDesignable Base Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +266,7 @@
 		55AE124E20C074EC00DB7F6C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				550A8BF320F7A31300BBF37E /* FilterHeaderView */,
 				55FFBCE320C2E00200A64B5A /* FilterView */,
 				5500001920C3326D00BB8211 /* ABWebView */,
 				55562C5420C070C60016B718 /* Main.storyboard */,
@@ -478,6 +492,7 @@
 				55562C5E20C070C70016B718 /* LaunchScreen.storyboard in Resources */,
 				55562C5B20C070C70016B718 /* Assets.xcassets in Resources */,
 				55FFBCE520C2E01000A64B5A /* FilterView.xib in Resources */,
+				550A8BF520F7A32600BBF37E /* FilterHeaderView.xib in Resources */,
 				55562C5620C070C60016B718 /* Main.storyboard in Resources */,
 				55AE125920C0756100DB7F6C /* GradientShades.png in Resources */,
 			);
@@ -601,6 +616,7 @@
 				55AC767220C89F03003940C3 /* UITableView+Extension.swift in Sources */,
 				552E78AB20C07C01002C4AE2 /* QuakeViewController.swift in Sources */,
 				557155A120F3F42E001BFE71 /* MapPin.swift in Sources */,
+				550A8BF720F7A33400BBF37E /* FilterHeaderView.swift in Sources */,
 				558FA7FD20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift in Sources */,
 				55FFBCE720C2E02500A64B5A /* FilterView.swift in Sources */,
 				554BE12F20C09BF900C07248 /* CalendarViewController.swift in Sources */,

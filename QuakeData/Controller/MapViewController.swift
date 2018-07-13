@@ -64,24 +64,31 @@ class MapViewController: UIViewController {
     // continents
     let asia = UIAlertAction(title: "Asia", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.region(for: .asia), animated: true)
+      self.navigationItem.title = "Asia"
     }
     let africa = UIAlertAction(title: "Africa", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.region(for: .africa), animated: true)
+      self.navigationItem.title = "Africa"
     }
     let northAmerica = UIAlertAction(title: "North America", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.region(for: .northAmerica), animated: true)
+      self.navigationItem.title = "North America"
     }
     let southAmerica = UIAlertAction(title: "South America", style: .default) { (action) in
-      self.mapView.setRegion(regionUtility.region(for: .northAmerica), animated: true)
+      self.mapView.setRegion(regionUtility.region(for: .southAmerica), animated: true)
+      self.navigationItem.title = "South America"
     }
     let antarctica = UIAlertAction(title: "Antarctica", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.region(for: .antarctica), animated: true)
+      self.navigationItem.title = "Antarctica"
     }
     let europe = UIAlertAction(title: "Europe", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.region(for: .europe), animated: true)
+      self.navigationItem.title = "Europe"
     }
     let australia = UIAlertAction(title: "Australia", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.region(for: .australia), animated: true)
+      self.navigationItem.title = "Australia"
     }
     let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
 
@@ -95,21 +102,30 @@ class MapViewController: UIViewController {
   @IBAction func oceanButtonAction(_ sender: UIBarButtonItem) {
     let regionUtility = MapRegionUtility()
     
+    // TODO: Add a geography type key to Bounding Boxes
+    // land
+    // ocean
+    
     let actionSheet = UIAlertController(title: "Oceans", message: "Select an ocean", preferredStyle: .alert)
-    let pacific = UIAlertAction(title: "Pacific", style: .default) { (action) in
+    let pacific = UIAlertAction(title: "Pacific Ocean", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.region(for: .pacificOcean), animated: true)
+      self.navigationItem.title = "Pacific Ocean"
     }
-    let atlantic = UIAlertAction(title: "Atlantic", style: .default) { (action) in
+    let atlantic = UIAlertAction(title: "Atlantic Ocean", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.region(for: .atlanticOcean), animated: true)
+      self.navigationItem.title = "Atlantic Ocean"
     }
     let indian = UIAlertAction(title: "Indian Ocean", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.region(for: .indianOcean), animated: true)
+      self.navigationItem.title = "Indian Ocean"
     }
     let antarctic = UIAlertAction(title: "Antarctic Ocean", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.region(for: .antarcticOcean), animated: true)
+      self.navigationItem.title = "Antarctic Ocean"
     }
-    let arctic = UIAlertAction(title: "Arctic", style: .default) { (action) in
+    let arctic = UIAlertAction(title: "Arctic Ocean", style: .default) { (action) in
       self.mapView.setRegion(regionUtility.region(for: .arcticOcean), animated: true)
+      self.navigationItem.title = "Arctic Ocean"
     }
     let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
     

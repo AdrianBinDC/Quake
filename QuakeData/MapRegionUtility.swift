@@ -51,6 +51,7 @@
   // data to populate struct comes from BoundingBoxes.json
   class CountryDataSection {
     let region: String
+    var isExpanded: Bool = false
     let countries: [CountryData]
     
     init(region: String, countries: [CountryData]) {
@@ -59,7 +60,11 @@
     }
   }
   
-  class CountryData: Codable {
+  class CountryData: Codable, Equatable {
+    static func == (lhs: CountryData, rhs: CountryData) -> Bool {
+      return lhs.name == rhs.name
+    }
+    
     let name: String
     let isoCode: String?
     var region: String?
@@ -108,7 +113,7 @@
     
     case asia = "25.5886467,-12.2118513,-168.97788,81.9661865"
     case africa = "-25.383911,-47.1313489,63.8085939,37.5359"
-    case northAmerica = "-172.66113495,5.4961,-15.51269745,83.6655766261"
+    case northAmerica = "-172.30957245,5.4961,-30.98144745,72.4176703568"
     case southAmerica = "-110.0281,-56.1455,-28.650543,17.6606999"
     case antarctica = "-180.0,-85.0511287798,180.0,-60.1086999"
     case europe = "-25.48824365,32.5960451596,74.3555001,73.1927977675"
@@ -159,6 +164,20 @@
       }
       
       return dataSource
+    }
+    
+    func boundingBox(from countryData: [CountryData]) -> BoundingBox? {
+      
+      let minLat = countryData.map{$0.minLat}.min()
+      let minLong = countryData.map{$0.minLong}.min()
+      let maxLat = countryData.map{$0.maxLat}.max()
+      let maxLong = countryData.map{$0.maxLong}.max()
+      
+      if let minLat = minLat, let minLong = minLong, let maxLat = maxLat, let maxLong = maxLong {
+        return BoundingBox(minLong: minLong, minLat: minLat, maxLong: maxLong, maxLat: maxLat)
+      }
+      
+      return nil
     }
     
   }
