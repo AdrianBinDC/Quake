@@ -442,10 +442,10 @@
                                         <rect key="frame" x="0.0" y="170" width="375" height="137.33333333333337"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8ax-tV-4ms">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter by Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roz-AO-HDQ">
-                                                        <rect key="frame" x="8" y="37" width="309" height="25"/>
+                                                        <rect key="frame" x="8" y="34" width="309" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="qEb-fK-0We"/>
                                                         </constraints>
@@ -454,7 +454,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-2e-G2W">
-                                                        <rect key="frame" x="317" y="34.666666666666657" width="50" height="30"/>
+                                                        <rect key="frame" x="317" y="31.666666666666657" width="50" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="pwf-DF-uDC"/>
                                                         </constraints>
@@ -467,11 +467,11 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8WM-vY-87P">
-                                                <rect key="frame" x="0.0" y="107" width="375" height="30.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="101" width="375" height="36.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJT-JU-FYR">
-                                                        <rect key="frame" x="8" y="8" width="359" height="14.333333333333336"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                        <rect key="frame" x="8" y="7.9999999999999982" width="359" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>

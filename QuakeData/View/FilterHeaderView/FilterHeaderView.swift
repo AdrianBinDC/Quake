@@ -2,21 +2,20 @@
 //  FilterHeaderView.swift
 //  QuakeData
 //
-//  Created by Adrian Bolinger on 7/12/18.
+//  Created by Adrian Bolinger on 7/14/18.
 //  Copyright © 2018 Adrian Bolinger. All rights reserved.
 //
 
 import UIKit
 
 @IBDesignable class FilterHeaderView: UIView {
-  
-  // TODO: update UI, add animations where appropriate
-  
-  var view: UIView!
 
-  @IBOutlet weak var sectionTitle: UILabel!
-  @IBOutlet weak var selectAllButton: UIButton!
-  @IBOutlet weak var expandButton: UIButton!
+  var view: UIView!
+  // TODO: Add IBInspectable properties
+  @IBOutlet weak var headerLabel: UILabel!
+  @IBOutlet weak var clearButton: UIButton!
+  @IBOutlet weak var textViewStack: UIStackView!
+  @IBOutlet weak var textView: UITextView!
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -45,21 +44,23 @@ import UIKit
     updateAppearance()
   }
   
-  private func updateAppearance() {
-    selectAllButton.setTitle("All", for: .normal)
-    selectAllButton.setTitle("None", for: .selected)
-    
-    expandButton.setImage(UIImage(named: "add"), for: .normal)
-    expandButton.setImage(UIImage(named: "subtract"), for: .selected)
+  func updateAppearance() {
+    // TODO: Implement as needed
   }
   
-  @IBAction func selectAllAction(_ sender: UIButton) {
-    selectAllButton.isSelected = !selectAllButton.isSelected
+  // MARK: Helpers
+  public func updateTextView(with text: String?) {
+    UIView.animate(withDuration: 0.3) {
+      if let textViewText = text {
+        self.textView.text = textViewText
+        self.textViewStack.isHidden = false
+      } else {
+        self.textView.text = ""
+        self.textViewStack.isHidden = true
+      }
+      self.textView.sizeToFit()
+    }
+    self.layoutIfNeeded()
+    self.view.layoutIfNeeded()
   }
-  
-  
-  @IBAction func expandButtonAction(_ sender: UIButton) {
-    expandButton.isSelected = !expandButton.isSelected
-  }
-  
 }

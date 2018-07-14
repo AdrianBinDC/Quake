@@ -67,6 +67,7 @@ class FilterViewController: UIViewController {
       tableView.beginUpdates()
       tableView.reloadRows(at: tableView.indexPathsForVisibleRows!, with: .automatic)
       tableView.endUpdates()
+      self.view.layoutIfNeeded()
     }
   }
   
@@ -129,23 +130,33 @@ class FilterViewController: UIViewController {
      Use Set to test the array of countries against continents
      */
     
-    let countryNames = selectedCountries.map{$0.name}.sorted().compactMap{$0}.joined(separator: ", ")
+    var newString = ""
+    
+    let countryDict: [String : [CountryData]] = Dictionary(grouping: selectedCountries, by: {$0.region! })
+    let countryDictKeys = countryDict.keys.sorted()
+    
+    countryDictKeys.forEach { key in
+      newString = newString + key + ": "
+      let countryNames =  (countryDict[key]?.compactMap{$0}.map{  $0.isoCode!.flag()}.compactMap{$0}.joined())! + "\n"
+      
+      newString = newString + countryNames
+    }
+    
     
     UIView.animate(withDuration: 0.3) {
-      self.selectedCountriesLabel.text = countryNames
+      self.selectedCountriesLabel.text = newString
 
       if self.selectedCountries.isEmpty {
         self.clearCountryButton.isEnabled = false
         self.selectedCountriesStack.isHidden = true
-        self.view.setNeedsLayout()
+        self.view.layoutIfNeeded()
       } else {
         self.clearCountryButton.isEnabled = true
         self.selectedCountriesStack.isHidden = false
-        self.view.setNeedsLayout()
+        self.view.layoutIfNeeded()
       }
     }
-  }
-  
+  } // end updateCountryLabel()
 }
 
 // MARK: UITableViewDelegate methods
@@ -179,7 +190,7 @@ extension FilterViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let headerView = FilterHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 36))
+    let headerView = FilterSectionHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 36))
     headerView.sectionTitle.text = dataSource[section].region
     headerView.selectAllButton.tag = section
     headerView.selectAllButton.addTarget(self, action: #selector(handle(selectButton:)), for: .touchUpInside)
@@ -204,7 +215,7 @@ extension FilterViewController: UITableViewDataSource {
         selectedCountries = selectedCountries.filter{ $0 != country }
       }
     }
-    // TODO: finish
+    self.view.layoutIfNeeded()
   }
   
   @objc func handle(expandButton: UIButton) {
@@ -226,6 +237,8 @@ extension FilterViewController: UITableViewDataSource {
     } else {
       tableView.insertRows(at: indexPaths, with: .automatic)
     }
+    
+    self.view.layoutIfNeeded()
   } // end handle(expandButton: UIButton)
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -248,7 +261,7 @@ extension FilterViewController: UITableViewDataSource {
     }
     cell.textLabel?.numberOfLines = 0
     cell.textLabel?.lineBreakMode = .byWordWrapping
-    cell.detailTextLabel?.text = countryDataAtIndexPath.intermediateRegion
+    cell.detailTextLabel?.text = countryDataAtIndexPath.subRegion
 
     if selectedCountries.contains(countryDataAtIndexPath) {
       cell.accessoryType = .checkmark
