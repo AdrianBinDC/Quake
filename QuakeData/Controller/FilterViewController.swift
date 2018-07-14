@@ -106,7 +106,7 @@ class FilterViewController: UIViewController {
   @IBAction func closeButtonAction(_ sender: UIBarButtonItem) {
     self.dismiss(animated: true, completion: nil)
   }
-    
+  
   @IBAction func clearButtonAction(_ sender: UIButton) {
     selectedCountries.removeAll()
   }
@@ -123,10 +123,17 @@ class FilterViewController: UIViewController {
   
   func updateCountryLabel() {
     
+    // FIXME: Condense label
+    /*
+     Refactor to condense output for larger quantities of countries.
+     Use Set to test the array of countries against continents
+     */
+    
     let countryNames = selectedCountries.map{$0.name}.sorted().compactMap{$0}.joined(separator: ", ")
-    selectedCountriesLabel.text = countryNames
-
+    
     UIView.animate(withDuration: 0.3) {
+      self.selectedCountriesLabel.text = countryNames
+
       if self.selectedCountries.isEmpty {
         self.clearCountryButton.isEnabled = false
         self.selectedCountriesStack.isHidden = true
@@ -174,13 +181,34 @@ extension FilterViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let headerView = FilterHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 36))
     headerView.sectionTitle.text = dataSource[section].region
-    headerView.toggleButton.tag = section
-    headerView.toggleButton.addTarget(self, action: #selector(handle(headerButton:)), for: .touchUpInside)
+    headerView.selectAllButton.tag = section
+    headerView.selectAllButton.addTarget(self, action: #selector(handle(selectButton:)), for: .touchUpInside)
+    headerView.expandButton.tag = section
+    headerView.expandButton.addTarget(self, action: #selector(handle(expandButton:)), for: .touchUpInside)
     return headerView
   }
   
-  @objc func handle(headerButton: UIButton) {
-    let section = headerButton.tag
+  @objc func handle(selectButton: UIButton) {
+    let section = selectButton.tag
+    
+    let sectionCountries = dataSource[section].countries
+    
+    if selectButton.isSelected {
+      sectionCountries.forEach{ country in
+        if !selectedCountries.contains(country) {
+          selectedCountries.append(country)
+        }
+      }
+    } else {
+      sectionCountries.forEach{ country in
+        selectedCountries = selectedCountries.filter{ $0 != country }
+      }
+    }
+    // TODO: finish
+  }
+  
+  @objc func handle(expandButton: UIButton) {
+    let section = expandButton.tag
     
     // TODO: close other expanded sections
     
@@ -198,7 +226,7 @@ extension FilterViewController: UITableViewDataSource {
     } else {
       tableView.insertRows(at: indexPaths, with: .automatic)
     }
-  } // end handle(headerButton: UIButton)
+  } // end handle(expandButton: UIButton)
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if dataSource[section].isExpanded {

@@ -14,8 +14,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterHeaderView" customModule="QuakeData" customModuleProvider="target">
             <connections>
+                <outlet property="expandButton" destination="SPL-9B-qrA" id="Hs0-Ci-sTP"/>
                 <outlet property="sectionTitle" destination="KM2-lR-mbU" id="mPP-8y-sy5"/>
-                <outlet property="toggleButton" destination="SPL-9B-qrA" id="Hs0-Ci-sTP"/>
+                <outlet property="selectAllButton" destination="B3v-nn-Jme" id="O9e-QN-fxB"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -27,11 +28,21 @@
                     <rect key="frame" x="16" y="0.0" width="343" height="36"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM2-lR-mbU">
-                            <rect key="frame" x="0.0" y="8" width="307" height="20.5"/>
+                            <rect key="frame" x="0.0" y="8" width="259" height="20.5"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3v-nn-Jme">
+                            <rect key="frame" x="267" y="3" width="40" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="uKy-IE-yJU"/>
+                            </constraints>
+                            <state key="normal" title="All"/>
+                            <connections>
+                                <action selector="selectAllAction:" destination="-1" eventType="touchUpInside" id="svP-yg-bgV"/>
+                            </connections>
+                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPL-9B-qrA">
                             <rect key="frame" x="315" y="4" width="28" height="28"/>
                             <constraints>
@@ -40,7 +51,7 @@
                             </constraints>
                             <state key="normal" image="add"/>
                             <connections>
-                                <action selector="toggleButtonAction:" destination="-1" eventType="touchUpInside" id="Spx-1E-rIg"/>
+                                <action selector="expandButtonAction:" destination="-1" eventType="touchUpInside" id="Spx-1E-rIg"/>
                             </connections>
                         </button>
                     </subviews>

@@ -15,7 +15,8 @@ import UIKit
   var view: UIView!
 
   @IBOutlet weak var sectionTitle: UILabel!
-  @IBOutlet weak var toggleButton: UIButton!
+  @IBOutlet weak var selectAllButton: UIButton!
+  @IBOutlet weak var expandButton: UIButton!
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -45,12 +46,20 @@ import UIKit
   }
   
   private func updateAppearance() {
-    toggleButton.setImage(UIImage(named: "subtract"), for: .selected)
-    toggleButton.setImage(UIImage(named: "add"), for: .normal)
+    selectAllButton.setTitle("All", for: .normal)
+    selectAllButton.setTitle("None", for: .selected)
+    
+    expandButton.setImage(UIImage(named: "add"), for: .normal)
+    expandButton.setImage(UIImage(named: "subtract"), for: .selected)
   }
   
-  @IBAction func toggleButtonAction(_ sender: UIButton) {
-    toggleButton.isSelected = !toggleButton.isSelected
+  @IBAction func selectAllAction(_ sender: UIButton) {
+    selectAllButton.isSelected = !selectAllButton.isSelected
+  }
+  
+  
+  @IBAction func expandButtonAction(_ sender: UIButton) {
+    expandButton.isSelected = !expandButton.isSelected
   }
   
 }
