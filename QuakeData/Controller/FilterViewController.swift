@@ -20,6 +20,11 @@ class FilterViewController: UIViewController {
   let dataSource = MapRegionUtility().countryTableViewDataSource()
   
   @IBOutlet weak var closeButton: UIBarButtonItem!
+  @IBOutlet weak var clearCountryButton: UIButton!
+  
+  @IBOutlet weak var selectedCoutriesStack: UIStackView!
+  @IBOutlet weak var selectedCountriesLabel: UILabel!
+  
   @IBOutlet weak var tableView: UITableView!
   
   weak var delegate: FilterViewControllerDelegate?
@@ -31,7 +36,7 @@ class FilterViewController: UIViewController {
   
   var selectedCountries: [CountryData] = [] {
     didSet {
-      print(selectedCountries.map{$0.name})
+      updateCountryLabel()
       let boundingBox = mapRegionUtility.boundingBox(from: selectedCountries)
       if let boundingBox = boundingBox {
         mapPredicate.setLatitude(minLat: boundingBox.min.latitude,
@@ -39,12 +44,22 @@ class FilterViewController: UIViewController {
         mapPredicate.setLongitude(minLong: boundingBox.min.longitude,
                                   maxLong: boundingBox.max.longitude)
       }
+      tableView.beginUpdates()
+      tableView.reloadRows(at: tableView.indexPathsForVisibleRows!, with: .automatic)
+      tableView.endUpdates()
     }
   }
   
   // MARK: Lifecycle Methods
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    selectedCoutriesStack.isHidden = true
+    clearCountryButton.isEnabled = false
+    
+    selectedCountriesLabel.numberOfLines = 0
+    selectedCountriesLabel.lineBreakMode = .byWordWrapping
+    
     tableView.delegate = self
     tableView.dataSource = self
   }
@@ -59,6 +74,30 @@ class FilterViewController: UIViewController {
   @IBAction func closeButtonAction(_ sender: UIBarButtonItem) {
     self.dismiss(animated: true, completion: nil)
   }
+  
+  @IBAction func clearButtonAction(_ sender: UIButton) {
+    selectedCountries.removeAll()
+  }
+  
+  
+  func updateCountryLabel() {
+    
+    let countryNames = selectedCountries.map{$0.name}.sorted().compactMap{$0}.joined(separator: ", ")
+    selectedCountriesLabel.text = countryNames
+
+    
+    UIView.animate(withDuration: 0.3) {
+      if self.selectedCountries.isEmpty {
+        self.clearCountryButton.isEnabled = false
+        self.selectedCoutriesStack.isHidden = true
+        self.view.setNeedsLayout()
+      } else {
+        self.clearCountryButton.isEnabled = true
+        self.selectedCoutriesStack.isHidden = false
+        self.view.setNeedsLayout()
+      }
+    }
+  }
 }
 
 // MARK: UITableViewDelegate methods
@@ -72,9 +111,10 @@ extension FilterViewController: UITableViewDelegate {
     if let cell = tableView.cellForRow(at: indexPath) {
       if selectedCountries.contains(countryAtIndexPath) {
         cell.accessoryType = .none
-        let indexPathOfElement = selectedCountries.index(of: countryAtIndexPath)
-        guard let index = indexPathOfElement else { return }
+        let indexOfElement = selectedCountries.index(of: countryAtIndexPath)
+        guard let index = indexOfElement else { return }
         selectedCountries.remove(at: index)
+
       } else {
         cell.accessoryType = .checkmark
         selectedCountries.append(countryAtIndexPath)
@@ -83,11 +123,12 @@ extension FilterViewController: UITableViewDelegate {
   }
 }
 
+
 // MARK: UITableViewDataSource methods
 
 extension FilterViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 56
+    return 36
   }
   
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -130,19 +171,25 @@ extension FilterViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let countryDataAtIndexPath = dataSource[indexPath.section].countries[indexPath.row]
-    
+
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    cell.textLabel?.text = dataSource[indexPath.section].countries[indexPath.row].name
+//    cell.textLabel?.text = dataSource[indexPath.section].countries[indexPath.row].name
+    let flagEmoji = countryDataAtIndexPath.isoCode?.flag()
+    if let flagEmoji = flagEmoji {
+      cell.textLabel?.text = "\(flagEmoji) \(countryDataAtIndexPath.name)"
+    } else {
+      cell.textLabel?.text = countryDataAtIndexPath.name
+    }
     cell.textLabel?.numberOfLines = 0
     cell.textLabel?.lineBreakMode = .byWordWrapping
-    cell.detailTextLabel?.text = dataSource[indexPath.section].countries[indexPath.row].intermediateRegion
+    cell.detailTextLabel?.text = countryDataAtIndexPath.intermediateRegion
 
     if selectedCountries.contains(countryDataAtIndexPath) {
       cell.accessoryType = .checkmark
     } else {
       cell.accessoryType = .none
     }
-    
+
     return cell
   }
   

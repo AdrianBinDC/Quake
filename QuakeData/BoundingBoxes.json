@@ -1,7 +1,7 @@
  [
   {
   "name": "Afghanistan",
-  "isoCode2": "AF",
+  "isoCode": "AF",
   "isoCode3": "AFG",
   "country-code": 4,
   "iso_3166-2": "ISO 3166-2:AF",
@@ -18,7 +18,7 @@
   },
   {
   "name": "Åland Islands",
-  "isoCode2": "AX",
+  "isoCode": "AX",
   "isoCode3": "ALA",
   "country-code": 248,
   "iso_3166-2": "ISO 3166-2:AX",
@@ -35,7 +35,7 @@
   },
   {
   "name": "Albania",
-  "isoCode2": "AL",
+  "isoCode": "AL",
   "isoCode3": "ALB",
   "country-code": 8,
   "iso_3166-2": "ISO 3166-2:AL",
@@ -52,7 +52,7 @@
   },
   {
   "name": "Algeria",
-  "isoCode2": "DZ",
+  "isoCode": "DZ",
   "isoCode3": "DZA",
   "country-code": 12,
   "iso_3166-2": "ISO 3166-2:DZ",
@@ -69,7 +69,7 @@
   },
   {
   "name": "American Samoa",
-  "isoCode2": "AS",
+  "isoCode": "AS",
   "isoCode3": "ASM",
   "country-code": 16,
   "iso_3166-2": "ISO 3166-2:AS",
@@ -86,7 +86,7 @@
   },
   {
   "name": "Andorra",
-  "isoCode2": "AD",
+  "isoCode": "AD",
   "isoCode3": "AND",
   "country-code": 20,
   "iso_3166-2": "ISO 3166-2:AD",
@@ -103,7 +103,7 @@
   },
   {
   "name": "Angola",
-  "isoCode2": "AO",
+  "isoCode": "AO",
   "isoCode3": "AGO",
   "country-code": 24,
   "iso_3166-2": "ISO 3166-2:AO",
@@ -120,7 +120,7 @@
   },
   {
   "name": "Anguilla",
-  "isoCode2": "AI",
+  "isoCode": "AI",
   "isoCode3": "AIA",
   "country-code": 660,
   "iso_3166-2": "ISO 3166-2:AI",
@@ -137,7 +137,7 @@
   },
   {
   "name": "Antarctica",
-  "isoCode2": "AQ",
+  "isoCode": "AQ",
   "isoCode3": "ATA",
   "country-code": 10,
   "iso_3166-2": "ISO 3166-2:AQ",
@@ -154,7 +154,7 @@
   },
   {
   "name": "Antigua and Barbuda",
-  "isoCode2": "AG",
+  "isoCode": "AG",
   "isoCode3": "ATG",
   "country-code": 28,
   "iso_3166-2": "ISO 3166-2:AG",
@@ -171,7 +171,7 @@
   },
   {
   "name": "Argentina",
-  "isoCode2": "AR",
+  "isoCode": "AR",
   "isoCode3": "ARG",
   "country-code": 32,
   "iso_3166-2": "ISO 3166-2:AR",
@@ -188,7 +188,7 @@
   },
   {
   "name": "Armenia",
-  "isoCode2": "AM",
+  "isoCode": "AM",
   "isoCode3": "ARM",
   "country-code": 51,
   "iso_3166-2": "ISO 3166-2:AM",
@@ -205,7 +205,7 @@
   },
   {
   "name": "Aruba",
-  "isoCode2": "AW",
+  "isoCode": "AW",
   "isoCode3": "ABW",
   "country-code": 533,
   "iso_3166-2": "ISO 3166-2:AW",
@@ -222,7 +222,7 @@
   },
   {
   "name": "Australia",
-  "isoCode2": "AU",
+  "isoCode": "AU",
   "isoCode3": "AUS",
   "country-code": 36,
   "iso_3166-2": "ISO 3166-2:AU",
@@ -239,7 +239,7 @@
   },
   {
   "name": "Austria",
-  "isoCode2": "AT",
+  "isoCode": "AT",
   "isoCode3": "AUT",
   "country-code": 40,
   "iso_3166-2": "ISO 3166-2:AT",
@@ -256,7 +256,7 @@
   },
   {
   "name": "Azerbaijan",
-  "isoCode2": "AZ",
+  "isoCode": "AZ",
   "isoCode3": "AZE",
   "country-code": 31,
   "iso_3166-2": "ISO 3166-2:AZ",
@@ -273,7 +273,7 @@
   },
   {
   "name": "Bahamas",
-  "isoCode2": "BS",
+  "isoCode": "BS",
   "isoCode3": "BHS",
   "country-code": 44,
   "iso_3166-2": "ISO 3166-2:BS",
@@ -290,7 +290,7 @@
   },
   {
   "name": "Bahrain",
-  "isoCode2": "BH",
+  "isoCode": "BH",
   "isoCode3": "BHR",
   "country-code": 48,
   "iso_3166-2": "ISO 3166-2:BH",
@@ -307,7 +307,7 @@
   },
   {
   "name": "Bangladesh",
-  "isoCode2": "BD",
+  "isoCode": "BD",
   "isoCode3": "BGD",
   "country-code": 50,
   "iso_3166-2": "ISO 3166-2:BD",
@@ -324,7 +324,7 @@
   },
   {
   "name": "Barbados",
-  "isoCode2": "BB",
+  "isoCode": "BB",
   "isoCode3": "BRB",
   "country-code": 52,
   "iso_3166-2": "ISO 3166-2:BB",
@@ -341,7 +341,7 @@
   },
   {
   "name": "Belarus",
-  "isoCode2": "BY",
+  "isoCode": "BY",
   "isoCode3": "BLR",
   "country-code": 112,
   "iso_3166-2": "ISO 3166-2:BY",
@@ -358,7 +358,7 @@
   },
   {
   "name": "Belgium",
-  "isoCode2": "BE",
+  "isoCode": "BE",
   "isoCode3": "BEL",
   "country-code": 56,
   "iso_3166-2": "ISO 3166-2:BE",
@@ -375,7 +375,7 @@
   },
   {
   "name": "Belize",
-  "isoCode2": "BZ",
+  "isoCode": "BZ",
   "isoCode3": "BLZ",
   "country-code": 84,
   "iso_3166-2": "ISO 3166-2:BZ",
@@ -392,7 +392,7 @@
   },
   {
   "name": "Benin",
-  "isoCode2": "BJ",
+  "isoCode": "BJ",
   "isoCode3": "BEN",
   "country-code": 204,
   "iso_3166-2": "ISO 3166-2:BJ",
@@ -409,7 +409,7 @@
   },
   {
   "name": "Bermuda",
-  "isoCode2": "BM",
+  "isoCode": "BM",
   "isoCode3": "BMU",
   "country-code": 60,
   "iso_3166-2": "ISO 3166-2:BM",
@@ -426,7 +426,7 @@
   },
   {
   "name": "Bhutan",
-  "isoCode2": "BT",
+  "isoCode": "BT",
   "isoCode3": "BTN",
   "country-code": 64,
   "iso_3166-2": "ISO 3166-2:BT",
@@ -443,7 +443,7 @@
   },
   {
   "name": "Bolivia (Plurinational State of)",
-  "isoCode2": "BO",
+  "isoCode": "BO",
   "isoCode3": "BOL",
   "country-code": 68,
   "iso_3166-2": "ISO 3166-2:BO",
@@ -460,7 +460,7 @@
   },
   {
   "name": "Bonaire, Sint Eustatius and Saba",
-  "isoCode2": "BQ",
+  "isoCode": "BQ",
   "isoCode3": "BES",
   "country-code": 535,
   "iso_3166-2": "ISO 3166-2:BQ",
@@ -477,7 +477,7 @@
   },
   {
   "name": "Bosnia and Herzegovina",
-  "isoCode2": "BA",
+  "isoCode": "BA",
   "isoCode3": "BIH",
   "country-code": 70,
   "iso_3166-2": "ISO 3166-2:BA",
@@ -494,7 +494,7 @@
   },
   {
   "name": "Botswana",
-  "isoCode2": "BW",
+  "isoCode": "BW",
   "isoCode3": "BWA",
   "country-code": 72,
   "iso_3166-2": "ISO 3166-2:BW",
@@ -511,7 +511,7 @@
   },
   {
   "name": "Bouvet Island",
-  "isoCode2": "BV",
+  "isoCode": "BV",
   "isoCode3": "BVT",
   "country-code": 74,
   "iso_3166-2": "ISO 3166-2:BV",
@@ -528,7 +528,7 @@
   },
   {
   "name": "Brazil",
-  "isoCode2": "BR",
+  "isoCode": "BR",
   "isoCode3": "BRA",
   "country-code": 76,
   "iso_3166-2": "ISO 3166-2:BR",
@@ -545,7 +545,7 @@
   },
   {
   "name": "British Indian Ocean Territory",
-  "isoCode2": "IO",
+  "isoCode": "IO",
   "isoCode3": "IOT",
   "country-code": 86,
   "iso_3166-2": "ISO 3166-2:IO",
@@ -562,7 +562,7 @@
   },
   {
   "name": "Brunei Darussalam",
-  "isoCode2": "BN",
+  "isoCode": "BN",
   "isoCode3": "BRN",
   "country-code": 96,
   "iso_3166-2": "ISO 3166-2:BN",
@@ -579,7 +579,7 @@
   },
   {
   "name": "Bulgaria",
-  "isoCode2": "BG",
+  "isoCode": "BG",
   "isoCode3": "BGR",
   "country-code": 100,
   "iso_3166-2": "ISO 3166-2:BG",
@@ -596,7 +596,7 @@
   },
   {
   "name": "Burkina Faso",
-  "isoCode2": "BF",
+  "isoCode": "BF",
   "isoCode3": "BFA",
   "country-code": 854,
   "iso_3166-2": "ISO 3166-2:BF",
@@ -613,7 +613,7 @@
   },
   {
   "name": "Burundi",
-  "isoCode2": "BI",
+  "isoCode": "BI",
   "isoCode3": "BDI",
   "country-code": 108,
   "iso_3166-2": "ISO 3166-2:BI",
@@ -630,7 +630,7 @@
   },
   {
   "name": "Cabo Verde",
-  "isoCode2": "CV",
+  "isoCode": "CV",
   "isoCode3": "CPV",
   "country-code": 132,
   "iso_3166-2": "ISO 3166-2:CV",
@@ -647,7 +647,7 @@
   },
   {
   "name": "Cambodia",
-  "isoCode2": "KH",
+  "isoCode": "KH",
   "isoCode3": "KHM",
   "country-code": 116,
   "iso_3166-2": "ISO 3166-2:KH",
@@ -664,7 +664,7 @@
   },
   {
   "name": "Cameroon",
-  "isoCode2": "CM",
+  "isoCode": "CM",
   "isoCode3": "CMR",
   "country-code": 120,
   "iso_3166-2": "ISO 3166-2:CM",
@@ -681,7 +681,7 @@
   },
   {
   "name": "Canada",
-  "isoCode2": "CA",
+  "isoCode": "CA",
   "isoCode3": "CAN",
   "country-code": 124,
   "iso_3166-2": "ISO 3166-2:CA",
@@ -698,7 +698,7 @@
   },
   {
   "name": "Cayman Islands",
-  "isoCode2": "KY",
+  "isoCode": "KY",
   "isoCode3": "CYM",
   "country-code": 136,
   "iso_3166-2": "ISO 3166-2:KY",
@@ -715,7 +715,7 @@
   },
   {
   "name": "Central African Republic",
-  "isoCode2": "CF",
+  "isoCode": "CF",
   "isoCode3": "CAF",
   "country-code": 140,
   "iso_3166-2": "ISO 3166-2:CF",
@@ -732,7 +732,7 @@
   },
   {
   "name": "Chad",
-  "isoCode2": "TD",
+  "isoCode": "TD",
   "isoCode3": "TCD",
   "country-code": 148,
   "iso_3166-2": "ISO 3166-2:TD",
@@ -749,7 +749,7 @@
   },
   {
   "name": "Chile",
-  "isoCode2": "CL",
+  "isoCode": "CL",
   "isoCode3": "CHL",
   "country-code": 152,
   "iso_3166-2": "ISO 3166-2:CL",
@@ -766,7 +766,7 @@
   },
   {
   "name": "China",
-  "isoCode2": "CN",
+  "isoCode": "CN",
   "isoCode3": "CHN",
   "country-code": 156,
   "iso_3166-2": "ISO 3166-2:CN",
@@ -783,7 +783,7 @@
   },
   {
   "name": "Christmas Island",
-  "isoCode2": "CX",
+  "isoCode": "CX",
   "isoCode3": "CXR",
   "country-code": 162,
   "iso_3166-2": "ISO 3166-2:CX",
@@ -800,7 +800,7 @@
   },
   {
   "name": "Cocos (Keeling) Islands",
-  "isoCode2": "CC",
+  "isoCode": "CC",
   "isoCode3": "CCK",
   "country-code": 166,
   "iso_3166-2": "ISO 3166-2:CC",
@@ -817,7 +817,7 @@
   },
   {
   "name": "Colombia",
-  "isoCode2": "CO",
+  "isoCode": "CO",
   "isoCode3": "COL",
   "country-code": 170,
   "iso_3166-2": "ISO 3166-2:CO",
@@ -834,7 +834,7 @@
   },
   {
   "name": "Comoros",
-  "isoCode2": "KM",
+  "isoCode": "KM",
   "isoCode3": "COM",
   "country-code": 174,
   "iso_3166-2": "ISO 3166-2:KM",
@@ -851,7 +851,7 @@
   },
   {
   "name": "Congo",
-  "isoCode2": "CG",
+  "isoCode": "CG",
   "isoCode3": "COG",
   "country-code": 178,
   "iso_3166-2": "ISO 3166-2:CG",
@@ -868,7 +868,7 @@
   },
   {
   "name": "Congo (Democratic Republic of the)",
-  "isoCode2": "CD",
+  "isoCode": "CD",
   "isoCode3": "COD",
   "country-code": 180,
   "iso_3166-2": "ISO 3166-2:CD",
@@ -885,7 +885,7 @@
   },
   {
   "name": "Cook Islands",
-  "isoCode2": "CK",
+  "isoCode": "CK",
   "isoCode3": "COK",
   "country-code": 184,
   "iso_3166-2": "ISO 3166-2:CK",
@@ -902,7 +902,7 @@
   },
   {
   "name": "Costa Rica",
-  "isoCode2": "CR",
+  "isoCode": "CR",
   "isoCode3": "CRI",
   "country-code": 188,
   "iso_3166-2": "ISO 3166-2:CR",
@@ -919,7 +919,7 @@
   },
   {
   "name": "Côte d'Ivoire",
-  "isoCode2": "CI",
+  "isoCode": "CI",
   "isoCode3": "CIV",
   "country-code": 384,
   "iso_3166-2": "ISO 3166-2:CI",
@@ -936,7 +936,7 @@
   },
   {
   "name": "Croatia",
-  "isoCode2": "HR",
+  "isoCode": "HR",
   "isoCode3": "HRV",
   "country-code": 191,
   "iso_3166-2": "ISO 3166-2:HR",
@@ -953,7 +953,7 @@
   },
   {
   "name": "Cuba",
-  "isoCode2": "CU",
+  "isoCode": "CU",
   "isoCode3": "CUB",
   "country-code": 192,
   "iso_3166-2": "ISO 3166-2:CU",
@@ -970,7 +970,7 @@
   },
   {
   "name": "Curaçao",
-  "isoCode2": "CW",
+  "isoCode": "CW",
   "isoCode3": "CUW",
   "country-code": 531,
   "iso_3166-2": "ISO 3166-2:CW",
@@ -987,7 +987,7 @@
   },
   {
   "name": "Cyprus",
-  "isoCode2": "CY",
+  "isoCode": "CY",
   "isoCode3": "CYP",
   "country-code": 196,
   "iso_3166-2": "ISO 3166-2:CY",
@@ -1004,7 +1004,7 @@
   },
   {
   "name": "Czechia",
-  "isoCode2": "CZ",
+  "isoCode": "CZ",
   "isoCode3": "CZE",
   "country-code": 203,
   "iso_3166-2": "ISO 3166-2:CZ",
@@ -1021,7 +1021,7 @@
   },
   {
   "name": "Denmark",
-  "isoCode2": "DK",
+  "isoCode": "DK",
   "isoCode3": "DNK",
   "country-code": 208,
   "iso_3166-2": "ISO 3166-2:DK",
@@ -1038,7 +1038,7 @@
   },
   {
   "name": "Djibouti",
-  "isoCode2": "DJ",
+  "isoCode": "DJ",
   "isoCode3": "DJI",
   "country-code": 262,
   "iso_3166-2": "ISO 3166-2:DJ",
@@ -1055,7 +1055,7 @@
   },
   {
   "name": "Dominica",
-  "isoCode2": "DM",
+  "isoCode": "DM",
   "isoCode3": "DMA",
   "country-code": 212,
   "iso_3166-2": "ISO 3166-2:DM",
@@ -1072,7 +1072,7 @@
   },
   {
   "name": "Dominican Republic",
-  "isoCode2": "DO",
+  "isoCode": "DO",
   "isoCode3": "DOM",
   "country-code": 214,
   "iso_3166-2": "ISO 3166-2:DO",
@@ -1089,7 +1089,7 @@
   },
   {
   "name": "Ecuador",
-  "isoCode2": "EC",
+  "isoCode": "EC",
   "isoCode3": "ECU",
   "country-code": 218,
   "iso_3166-2": "ISO 3166-2:EC",
@@ -1106,7 +1106,7 @@
   },
   {
   "name": "Egypt",
-  "isoCode2": "EG",
+  "isoCode": "EG",
   "isoCode3": "EGY",
   "country-code": 818,
   "iso_3166-2": "ISO 3166-2:EG",
@@ -1123,7 +1123,7 @@
   },
   {
   "name": "El Salvador",
-  "isoCode2": "SV",
+  "isoCode": "SV",
   "isoCode3": "SLV",
   "country-code": 222,
   "iso_3166-2": "ISO 3166-2:SV",
@@ -1140,7 +1140,7 @@
   },
   {
   "name": "Equatorial Guinea",
-  "isoCode2": "GQ",
+  "isoCode": "GQ",
   "isoCode3": "GNQ",
   "country-code": 226,
   "iso_3166-2": "ISO 3166-2:GQ",
@@ -1157,7 +1157,7 @@
   },
   {
   "name": "Eritrea",
-  "isoCode2": "ER",
+  "isoCode": "ER",
   "isoCode3": "ERI",
   "country-code": 232,
   "iso_3166-2": "ISO 3166-2:ER",
@@ -1174,7 +1174,7 @@
   },
   {
   "name": "Estonia",
-  "isoCode2": "EE",
+  "isoCode": "EE",
   "isoCode3": "EST",
   "country-code": 233,
   "iso_3166-2": "ISO 3166-2:EE",
@@ -1191,7 +1191,7 @@
   },
   {
   "name": "Ethiopia",
-  "isoCode2": "ET",
+  "isoCode": "ET",
   "isoCode3": "ETH",
   "country-code": 231,
   "iso_3166-2": "ISO 3166-2:ET",
@@ -1208,7 +1208,7 @@
   },
   {
   "name": "Falkland Islands (Malvinas)",
-  "isoCode2": "FK",
+  "isoCode": "FK",
   "isoCode3": "FLK",
   "country-code": 238,
   "iso_3166-2": "ISO 3166-2:FK",
@@ -1225,7 +1225,7 @@
   },
   {
   "name": "Faroe Islands",
-  "isoCode2": "FO",
+  "isoCode": "FO",
   "isoCode3": "FRO",
   "country-code": 234,
   "iso_3166-2": "ISO 3166-2:FO",
@@ -1242,7 +1242,7 @@
   },
   {
   "name": "Fiji",
-  "isoCode2": "FJ",
+  "isoCode": "FJ",
   "isoCode3": "FJI",
   "country-code": 242,
   "iso_3166-2": "ISO 3166-2:FJ",
@@ -1259,7 +1259,7 @@
   },
   {
   "name": "Finland",
-  "isoCode2": "FI",
+  "isoCode": "FI",
   "isoCode3": "FIN",
   "country-code": 246,
   "iso_3166-2": "ISO 3166-2:FI",
@@ -1276,7 +1276,7 @@
   },
   {
   "name": "France",
-  "isoCode2": "FR",
+  "isoCode": "FR",
   "isoCode3": "FRA",
   "country-code": 250,
   "iso_3166-2": "ISO 3166-2:FR",
@@ -1293,7 +1293,7 @@
   },
   {
   "name": "French Guiana",
-  "isoCode2": "GF",
+  "isoCode": "GF",
   "isoCode3": "GUF",
   "country-code": 254,
   "iso_3166-2": "ISO 3166-2:GF",
@@ -1310,7 +1310,7 @@
   },
   {
   "name": "French Polynesia",
-  "isoCode2": "PF",
+  "isoCode": "PF",
   "isoCode3": "PYF",
   "country-code": 258,
   "iso_3166-2": "ISO 3166-2:PF",
@@ -1327,7 +1327,7 @@
   },
   {
   "name": "French Southern Territories",
-  "isoCode2": "TF",
+  "isoCode": "TF",
   "isoCode3": "ATF",
   "country-code": 260,
   "iso_3166-2": "ISO 3166-2:TF",
@@ -1344,7 +1344,7 @@
   },
   {
   "name": "Gabon",
-  "isoCode2": "GA",
+  "isoCode": "GA",
   "isoCode3": "GAB",
   "country-code": 266,
   "iso_3166-2": "ISO 3166-2:GA",
@@ -1361,7 +1361,7 @@
   },
   {
   "name": "Gambia",
-  "isoCode2": "GM",
+  "isoCode": "GM",
   "isoCode3": "GMB",
   "country-code": 270,
   "iso_3166-2": "ISO 3166-2:GM",
@@ -1378,7 +1378,7 @@
   },
   {
   "name": "Georgia",
-  "isoCode2": "GE",
+  "isoCode": "GE",
   "isoCode3": "GEO",
   "country-code": 268,
   "iso_3166-2": "ISO 3166-2:GE",
@@ -1395,7 +1395,7 @@
   },
   {
   "name": "Germany",
-  "isoCode2": "DE",
+  "isoCode": "DE",
   "isoCode3": "DEU",
   "country-code": 276,
   "iso_3166-2": "ISO 3166-2:DE",
@@ -1412,7 +1412,7 @@
   },
   {
   "name": "Ghana",
-  "isoCode2": "GH",
+  "isoCode": "GH",
   "isoCode3": "GHA",
   "country-code": 288,
   "iso_3166-2": "ISO 3166-2:GH",
@@ -1429,7 +1429,7 @@
   },
   {
   "name": "Gibraltar",
-  "isoCode2": "GI",
+  "isoCode": "GI",
   "isoCode3": "GIB",
   "country-code": 292,
   "iso_3166-2": "ISO 3166-2:GI",
@@ -1446,7 +1446,7 @@
   },
   {
   "name": "Greece",
-  "isoCode2": "GR",
+  "isoCode": "GR",
   "isoCode3": "GRC",
   "country-code": 300,
   "iso_3166-2": "ISO 3166-2:GR",
@@ -1463,7 +1463,7 @@
   },
   {
   "name": "Greenland",
-  "isoCode2": "GL",
+  "isoCode": "GL",
   "isoCode3": "GRL",
   "country-code": 304,
   "iso_3166-2": "ISO 3166-2:GL",
@@ -1480,7 +1480,7 @@
   },
   {
   "name": "Grenada",
-  "isoCode2": "GD",
+  "isoCode": "GD",
   "isoCode3": "GRD",
   "country-code": 308,
   "iso_3166-2": "ISO 3166-2:GD",
@@ -1497,7 +1497,7 @@
   },
   {
   "name": "Guadeloupe",
-  "isoCode2": "GP",
+  "isoCode": "GP",
   "isoCode3": "GLP",
   "country-code": 312,
   "iso_3166-2": "ISO 3166-2:GP",
@@ -1514,7 +1514,7 @@
   },
   {
   "name": "Guam",
-  "isoCode2": "GU",
+  "isoCode": "GU",
   "isoCode3": "GUM",
   "country-code": 316,
   "iso_3166-2": "ISO 3166-2:GU",
@@ -1531,7 +1531,7 @@
   },
   {
   "name": "Guatemala",
-  "isoCode2": "GT",
+  "isoCode": "GT",
   "isoCode3": "GTM",
   "country-code": 320,
   "iso_3166-2": "ISO 3166-2:GT",
@@ -1548,7 +1548,7 @@
   },
   {
   "name": "Guernsey",
-  "isoCode2": "GG",
+  "isoCode": "GG",
   "isoCode3": "GGY",
   "country-code": 831,
   "iso_3166-2": "ISO 3166-2:GG",
@@ -1565,7 +1565,7 @@
   },
   {
   "name": "Guinea",
-  "isoCode2": "GN",
+  "isoCode": "GN",
   "isoCode3": "GIN",
   "country-code": 324,
   "iso_3166-2": "ISO 3166-2:GN",
@@ -1582,7 +1582,7 @@
   },
   {
   "name": "Guinea-Bissau",
-  "isoCode2": "GW",
+  "isoCode": "GW",
   "isoCode3": "GNB",
   "country-code": 624,
   "iso_3166-2": "ISO 3166-2:GW",
@@ -1599,7 +1599,7 @@
   },
   {
   "name": "Guyana",
-  "isoCode2": "GY",
+  "isoCode": "GY",
   "isoCode3": "GUY",
   "country-code": 328,
   "iso_3166-2": "ISO 3166-2:GY",
@@ -1616,7 +1616,7 @@
   },
   {
   "name": "Haiti",
-  "isoCode2": "HT",
+  "isoCode": "HT",
   "isoCode3": "HTI",
   "country-code": 332,
   "iso_3166-2": "ISO 3166-2:HT",
@@ -1633,7 +1633,7 @@
   },
   {
   "name": "Heard Island and McDonald Islands",
-  "isoCode2": "HM",
+  "isoCode": "HM",
   "isoCode3": "HMD",
   "country-code": 334,
   "iso_3166-2": "ISO 3166-2:HM",
@@ -1650,7 +1650,7 @@
   },
   {
   "name": "Holy See",
-  "isoCode2": "VA",
+  "isoCode": "VA",
   "isoCode3": "VAT",
   "country-code": 336,
   "iso_3166-2": "ISO 3166-2:VA",
@@ -1667,7 +1667,7 @@
   },
   {
   "name": "Honduras",
-  "isoCode2": "HN",
+  "isoCode": "HN",
   "isoCode3": "HND",
   "country-code": 340,
   "iso_3166-2": "ISO 3166-2:HN",
@@ -1684,7 +1684,7 @@
   },
   {
   "name": "Hong Kong",
-  "isoCode2": "HK",
+  "isoCode": "HK",
   "isoCode3": "HKG",
   "country-code": 344,
   "iso_3166-2": "ISO 3166-2:HK",
@@ -1701,7 +1701,7 @@
   },
   {
   "name": "Hungary",
-  "isoCode2": "HU",
+  "isoCode": "HU",
   "isoCode3": "HUN",
   "country-code": 348,
   "iso_3166-2": "ISO 3166-2:HU",
@@ -1718,7 +1718,7 @@
   },
   {
   "name": "Iceland",
-  "isoCode2": "IS",
+  "isoCode": "IS",
   "isoCode3": "ISL",
   "country-code": 352,
   "iso_3166-2": "ISO 3166-2:IS",
@@ -1735,7 +1735,7 @@
   },
   {
   "name": "India",
-  "isoCode2": "IN",
+  "isoCode": "IN",
   "isoCode3": "IND",
   "country-code": 356,
   "iso_3166-2": "ISO 3166-2:IN",
@@ -1752,7 +1752,7 @@
   },
   {
   "name": "Indonesia",
-  "isoCode2": "ID",
+  "isoCode": "ID",
   "isoCode3": "IDN",
   "country-code": 360,
   "iso_3166-2": "ISO 3166-2:ID",
@@ -1769,7 +1769,7 @@
   },
   {
   "name": "Iran (Islamic Republic of)",
-  "isoCode2": "IR",
+  "isoCode": "IR",
   "isoCode3": "IRN",
   "country-code": 364,
   "iso_3166-2": "ISO 3166-2:IR",
@@ -1786,7 +1786,7 @@
   },
   {
   "name": "Iraq",
-  "isoCode2": "IQ",
+  "isoCode": "IQ",
   "isoCode3": "IRQ",
   "country-code": 368,
   "iso_3166-2": "ISO 3166-2:IQ",
@@ -1803,7 +1803,7 @@
   },
   {
   "name": "Ireland",
-  "isoCode2": "IE",
+  "isoCode": "IE",
   "isoCode3": "IRL",
   "country-code": 372,
   "iso_3166-2": "ISO 3166-2:IE",
@@ -1820,7 +1820,7 @@
   },
   {
   "name": "Isle of Man",
-  "isoCode2": "IM",
+  "isoCode": "IM",
   "isoCode3": "IMN",
   "country-code": 833,
   "iso_3166-2": "ISO 3166-2:IM",
@@ -1837,7 +1837,7 @@
   },
   {
   "name": "Israel",
-  "isoCode2": "IL",
+  "isoCode": "IL",
   "isoCode3": "ISR",
   "country-code": 376,
   "iso_3166-2": "ISO 3166-2:IL",
@@ -1854,7 +1854,7 @@
   },
   {
   "name": "Italy",
-  "isoCode2": "IT",
+  "isoCode": "IT",
   "isoCode3": "ITA",
   "country-code": 380,
   "iso_3166-2": "ISO 3166-2:IT",
@@ -1871,7 +1871,7 @@
   },
   {
   "name": "Jamaica",
-  "isoCode2": "JM",
+  "isoCode": "JM",
   "isoCode3": "JAM",
   "country-code": 388,
   "iso_3166-2": "ISO 3166-2:JM",
@@ -1888,7 +1888,7 @@
   },
   {
   "name": "Japan",
-  "isoCode2": "JP",
+  "isoCode": "JP",
   "isoCode3": "JPN",
   "country-code": 392,
   "iso_3166-2": "ISO 3166-2:JP",
@@ -1905,7 +1905,7 @@
   },
   {
   "name": "Jersey",
-  "isoCode2": "JE",
+  "isoCode": "JE",
   "isoCode3": "JEY",
   "country-code": 832,
   "iso_3166-2": "ISO 3166-2:JE",
@@ -1922,7 +1922,7 @@
   },
   {
   "name": "Jordan",
-  "isoCode2": "JO",
+  "isoCode": "JO",
   "isoCode3": "JOR",
   "country-code": 400,
   "iso_3166-2": "ISO 3166-2:JO",
@@ -1939,7 +1939,7 @@
   },
   {
   "name": "Kazakhstan",
-  "isoCode2": "KZ",
+  "isoCode": "KZ",
   "isoCode3": "KAZ",
   "country-code": 398,
   "iso_3166-2": "ISO 3166-2:KZ",
@@ -1956,7 +1956,7 @@
   },
   {
   "name": "Kenya",
-  "isoCode2": "KE",
+  "isoCode": "KE",
   "isoCode3": "KEN",
   "country-code": 404,
   "iso_3166-2": "ISO 3166-2:KE",
@@ -1973,7 +1973,7 @@
   },
   {
   "name": "Kiribati",
-  "isoCode2": "KI",
+  "isoCode": "KI",
   "isoCode3": "KIR",
   "country-code": 296,
   "iso_3166-2": "ISO 3166-2:KI",
@@ -1990,7 +1990,7 @@
   },
   {
   "name": "Korea (Democratic People's Republic of)",
-  "isoCode2": "KP",
+  "isoCode": "KP",
   "isoCode3": "PRK",
   "country-code": 408,
   "iso_3166-2": "ISO 3166-2:KP",
@@ -2007,7 +2007,7 @@
   },
   {
   "name": "Korea (Republic of)",
-  "isoCode2": "KR",
+  "isoCode": "KR",
   "isoCode3": "KOR",
   "country-code": 410,
   "iso_3166-2": "ISO 3166-2:KR",
@@ -2024,7 +2024,7 @@
   },
   {
   "name": "Kuwait",
-  "isoCode2": "KW",
+  "isoCode": "KW",
   "isoCode3": "KWT",
   "country-code": 414,
   "iso_3166-2": "ISO 3166-2:KW",
@@ -2041,7 +2041,7 @@
   },
   {
   "name": "Kyrgyzstan",
-  "isoCode2": "KG",
+  "isoCode": "KG",
   "isoCode3": "KGZ",
   "country-code": 417,
   "iso_3166-2": "ISO 3166-2:KG",
@@ -2058,7 +2058,7 @@
   },
   {
   "name": "Lao People's Democratic Republic",
-  "isoCode2": "LA",
+  "isoCode": "LA",
   "isoCode3": "LAO",
   "country-code": 418,
   "iso_3166-2": "ISO 3166-2:LA",
@@ -2075,7 +2075,7 @@
   },
   {
   "name": "Latvia",
-  "isoCode2": "LV",
+  "isoCode": "LV",
   "isoCode3": "LVA",
   "country-code": 428,
   "iso_3166-2": "ISO 3166-2:LV",
@@ -2092,7 +2092,7 @@
   },
   {
   "name": "Lebanon",
-  "isoCode2": "LB",
+  "isoCode": "LB",
   "isoCode3": "LBN",
   "country-code": 422,
   "iso_3166-2": "ISO 3166-2:LB",
@@ -2109,7 +2109,7 @@
   },
   {
   "name": "Lesotho",
-  "isoCode2": "LS",
+  "isoCode": "LS",
   "isoCode3": "LSO",
   "country-code": 426,
   "iso_3166-2": "ISO 3166-2:LS",
@@ -2126,7 +2126,7 @@
   },
   {
   "name": "Liberia",
-  "isoCode2": "LR",
+  "isoCode": "LR",
   "isoCode3": "LBR",
   "country-code": 430,
   "iso_3166-2": "ISO 3166-2:LR",
@@ -2143,7 +2143,7 @@
   },
   {
   "name": "Libya",
-  "isoCode2": "LY",
+  "isoCode": "LY",
   "isoCode3": "LBY",
   "country-code": 434,
   "iso_3166-2": "ISO 3166-2:LY",
@@ -2160,7 +2160,7 @@
   },
   {
   "name": "Liechtenstein",
-  "isoCode2": "LI",
+  "isoCode": "LI",
   "isoCode3": "LIE",
   "country-code": 438,
   "iso_3166-2": "ISO 3166-2:LI",
@@ -2177,7 +2177,7 @@
   },
   {
   "name": "Lithuania",
-  "isoCode2": "LT",
+  "isoCode": "LT",
   "isoCode3": "LTU",
   "country-code": 440,
   "iso_3166-2": "ISO 3166-2:LT",
@@ -2194,7 +2194,7 @@
   },
   {
   "name": "Luxembourg",
-  "isoCode2": "LU",
+  "isoCode": "LU",
   "isoCode3": "LUX",
   "country-code": 442,
   "iso_3166-2": "ISO 3166-2:LU",
@@ -2211,7 +2211,7 @@
   },
   {
   "name": "Macao",
-  "isoCode2": "MO",
+  "isoCode": "MO",
   "isoCode3": "MAC",
   "country-code": 446,
   "iso_3166-2": "ISO 3166-2:MO",
@@ -2228,7 +2228,7 @@
   },
   {
   "name": "Macedonia (the former Yugoslav Republic of)",
-  "isoCode2": "MK",
+  "isoCode": "MK",
   "isoCode3": "MKD",
   "country-code": 807,
   "iso_3166-2": "ISO 3166-2:MK",
@@ -2245,7 +2245,7 @@
   },
   {
   "name": "Madagascar",
-  "isoCode2": "MG",
+  "isoCode": "MG",
   "isoCode3": "MDG",
   "country-code": 450,
   "iso_3166-2": "ISO 3166-2:MG",
@@ -2262,7 +2262,7 @@
   },
   {
   "name": "Malawi",
-  "isoCode2": "MW",
+  "isoCode": "MW",
   "isoCode3": "MWI",
   "country-code": 454,
   "iso_3166-2": "ISO 3166-2:MW",
@@ -2279,7 +2279,7 @@
   },
   {
   "name": "Malaysia",
-  "isoCode2": "MY",
+  "isoCode": "MY",
   "isoCode3": "MYS",
   "country-code": 458,
   "iso_3166-2": "ISO 3166-2:MY",
@@ -2296,7 +2296,7 @@
   },
   {
   "name": "Maldives",
-  "isoCode2": "MV",
+  "isoCode": "MV",
   "isoCode3": "MDV",
   "country-code": 462,
   "iso_3166-2": "ISO 3166-2:MV",
@@ -2313,7 +2313,7 @@
   },
   {
   "name": "Mali",
-  "isoCode2": "ML",
+  "isoCode": "ML",
   "isoCode3": "MLI",
   "country-code": 466,
   "iso_3166-2": "ISO 3166-2:ML",
@@ -2330,7 +2330,7 @@
   },
   {
   "name": "Malta",
-  "isoCode2": "MT",
+  "isoCode": "MT",
   "isoCode3": "MLT",
   "country-code": 470,
   "iso_3166-2": "ISO 3166-2:MT",
@@ -2347,7 +2347,7 @@
   },
   {
   "name": "Marshall Islands",
-  "isoCode2": "MH",
+  "isoCode": "MH",
   "isoCode3": "MHL",
   "country-code": 584,
   "iso_3166-2": "ISO 3166-2:MH",
@@ -2364,7 +2364,7 @@
   },
   {
   "name": "Martinique",
-  "isoCode2": "MQ",
+  "isoCode": "MQ",
   "isoCode3": "MTQ",
   "country-code": 474,
   "iso_3166-2": "ISO 3166-2:MQ",
@@ -2381,7 +2381,7 @@
   },
   {
   "name": "Mauritania",
-  "isoCode2": "MR",
+  "isoCode": "MR",
   "isoCode3": "MRT",
   "country-code": 478,
   "iso_3166-2": "ISO 3166-2:MR",
@@ -2398,7 +2398,7 @@
   },
   {
   "name": "Mauritius",
-  "isoCode2": "MU",
+  "isoCode": "MU",
   "isoCode3": "MUS",
   "country-code": 480,
   "iso_3166-2": "ISO 3166-2:MU",
@@ -2415,7 +2415,7 @@
   },
   {
   "name": "Mayotte",
-  "isoCode2": "YT",
+  "isoCode": "YT",
   "isoCode3": "MYT",
   "country-code": 175,
   "iso_3166-2": "ISO 3166-2:YT",
@@ -2432,7 +2432,7 @@
   },
   {
   "name": "Mexico",
-  "isoCode2": "MX",
+  "isoCode": "MX",
   "isoCode3": "MEX",
   "country-code": 484,
   "iso_3166-2": "ISO 3166-2:MX",
@@ -2449,7 +2449,7 @@
   },
   {
   "name": "Micronesia (Federated States of)",
-  "isoCode2": "FM",
+  "isoCode": "FM",
   "isoCode3": "FSM",
   "country-code": 583,
   "iso_3166-2": "ISO 3166-2:FM",
@@ -2466,7 +2466,7 @@
   },
   {
   "name": "Moldova (Republic of)",
-  "isoCode2": "MD",
+  "isoCode": "MD",
   "isoCode3": "MDA",
   "country-code": 498,
   "iso_3166-2": "ISO 3166-2:MD",
@@ -2483,7 +2483,7 @@
   },
   {
   "name": "Monaco",
-  "isoCode2": "MC",
+  "isoCode": "MC",
   "isoCode3": "MCO",
   "country-code": 492,
   "iso_3166-2": "ISO 3166-2:MC",
@@ -2500,7 +2500,7 @@
   },
   {
   "name": "Mongolia",
-  "isoCode2": "MN",
+  "isoCode": "MN",
   "isoCode3": "MNG",
   "country-code": 496,
   "iso_3166-2": "ISO 3166-2:MN",
@@ -2517,7 +2517,7 @@
   },
   {
   "name": "Montenegro",
-  "isoCode2": "ME",
+  "isoCode": "ME",
   "isoCode3": "MNE",
   "country-code": 499,
   "iso_3166-2": "ISO 3166-2:ME",
@@ -2534,7 +2534,7 @@
   },
   {
   "name": "Montserrat",
-  "isoCode2": "MS",
+  "isoCode": "MS",
   "isoCode3": "MSR",
   "country-code": 500,
   "iso_3166-2": "ISO 3166-2:MS",
@@ -2551,7 +2551,7 @@
   },
   {
   "name": "Morocco",
-  "isoCode2": "MA",
+  "isoCode": "MA",
   "isoCode3": "MAR",
   "country-code": 504,
   "iso_3166-2": "ISO 3166-2:MA",
@@ -2568,7 +2568,7 @@
   },
   {
   "name": "Mozambique",
-  "isoCode2": "MZ",
+  "isoCode": "MZ",
   "isoCode3": "MOZ",
   "country-code": 508,
   "iso_3166-2": "ISO 3166-2:MZ",
@@ -2585,7 +2585,7 @@
   },
   {
   "name": "Myanmar",
-  "isoCode2": "MM",
+  "isoCode": "MM",
   "isoCode3": "MMR",
   "country-code": 104,
   "iso_3166-2": "ISO 3166-2:MM",
@@ -2602,7 +2602,7 @@
   },
   {
   "name": "Namibia",
-  "isoCode2": "NA",
+  "isoCode": "NA",
   "isoCode3": "NAM",
   "country-code": 516,
   "iso_3166-2": "ISO 3166-2:NA",
@@ -2619,7 +2619,7 @@
   },
   {
   "name": "Nauru",
-  "isoCode2": "NR",
+  "isoCode": "NR",
   "isoCode3": "NRU",
   "country-code": 520,
   "iso_3166-2": "ISO 3166-2:NR",
@@ -2636,7 +2636,7 @@
   },
   {
   "name": "Nepal",
-  "isoCode2": "NP",
+  "isoCode": "NP",
   "isoCode3": "NPL",
   "country-code": 524,
   "iso_3166-2": "ISO 3166-2:NP",
@@ -2653,7 +2653,7 @@
   },
   {
   "name": "Netherlands",
-  "isoCode2": "NL",
+  "isoCode": "NL",
   "isoCode3": "NLD",
   "country-code": 528,
   "iso_3166-2": "ISO 3166-2:NL",
@@ -2670,7 +2670,7 @@
   },
   {
   "name": "New Caledonia",
-  "isoCode2": "NC",
+  "isoCode": "NC",
   "isoCode3": "NCL",
   "country-code": 540,
   "iso_3166-2": "ISO 3166-2:NC",
@@ -2687,7 +2687,7 @@
   },
   {
   "name": "New Zealand",
-  "isoCode2": "NZ",
+  "isoCode": "NZ",
   "isoCode3": "NZL",
   "country-code": 554,
   "iso_3166-2": "ISO 3166-2:NZ",
@@ -2704,7 +2704,7 @@
   },
   {
   "name": "Nicaragua",
-  "isoCode2": "NI",
+  "isoCode": "NI",
   "isoCode3": "NIC",
   "country-code": 558,
   "iso_3166-2": "ISO 3166-2:NI",
@@ -2721,7 +2721,7 @@
   },
   {
   "name": "Niger",
-  "isoCode2": "NE",
+  "isoCode": "NE",
   "isoCode3": "NER",
   "country-code": 562,
   "iso_3166-2": "ISO 3166-2:NE",
@@ -2738,7 +2738,7 @@
   },
   {
   "name": "Nigeria",
-  "isoCode2": "NG",
+  "isoCode": "NG",
   "isoCode3": "NGA",
   "country-code": 566,
   "iso_3166-2": "ISO 3166-2:NG",
@@ -2755,7 +2755,7 @@
   },
   {
   "name": "Niue",
-  "isoCode2": "NU",
+  "isoCode": "NU",
   "isoCode3": "NIU",
   "country-code": 570,
   "iso_3166-2": "ISO 3166-2:NU",
@@ -2772,7 +2772,7 @@
   },
   {
   "name": "Norfolk Island",
-  "isoCode2": "NF",
+  "isoCode": "NF",
   "isoCode3": "NFK",
   "country-code": 574,
   "iso_3166-2": "ISO 3166-2:NF",
@@ -2789,7 +2789,7 @@
   },
   {
   "name": "Northern Mariana Islands",
-  "isoCode2": "MP",
+  "isoCode": "MP",
   "isoCode3": "MNP",
   "country-code": 580,
   "iso_3166-2": "ISO 3166-2:MP",
@@ -2806,7 +2806,7 @@
   },
   {
   "name": "Norway",
-  "isoCode2": "NO",
+  "isoCode": "NO",
   "isoCode3": "NOR",
   "country-code": 578,
   "iso_3166-2": "ISO 3166-2:NO",
@@ -2823,7 +2823,7 @@
   },
   {
   "name": "Oman",
-  "isoCode2": "OM",
+  "isoCode": "OM",
   "isoCode3": "OMN",
   "country-code": 512,
   "iso_3166-2": "ISO 3166-2:OM",
@@ -2840,7 +2840,7 @@
   },
   {
   "name": "Pakistan",
-  "isoCode2": "PK",
+  "isoCode": "PK",
   "isoCode3": "PAK",
   "country-code": 586,
   "iso_3166-2": "ISO 3166-2:PK",
@@ -2857,7 +2857,7 @@
   },
   {
   "name": "Palau",
-  "isoCode2": "PW",
+  "isoCode": "PW",
   "isoCode3": "PLW",
   "country-code": 585,
   "iso_3166-2": "ISO 3166-2:PW",
@@ -2874,7 +2874,7 @@
   },
   {
   "name": "Palestine, State of",
-  "isoCode2": "PS",
+  "isoCode": "PS",
   "isoCode3": "PSE",
   "country-code": 275,
   "iso_3166-2": "ISO 3166-2:PS",
@@ -2891,7 +2891,7 @@
   },
   {
   "name": "Panama",
-  "isoCode2": "PA",
+  "isoCode": "PA",
   "isoCode3": "PAN",
   "country-code": 591,
   "iso_3166-2": "ISO 3166-2:PA",
@@ -2908,7 +2908,7 @@
   },
   {
   "name": "Papua New Guinea",
-  "isoCode2": "PG",
+  "isoCode": "PG",
   "isoCode3": "PNG",
   "country-code": 598,
   "iso_3166-2": "ISO 3166-2:PG",
@@ -2925,7 +2925,7 @@
   },
   {
   "name": "Paraguay",
-  "isoCode2": "PY",
+  "isoCode": "PY",
   "isoCode3": "PRY",
   "country-code": 600,
   "iso_3166-2": "ISO 3166-2:PY",
@@ -2942,7 +2942,7 @@
   },
   {
   "name": "Peru",
-  "isoCode2": "PE",
+  "isoCode": "PE",
   "isoCode3": "PER",
   "country-code": 604,
   "iso_3166-2": "ISO 3166-2:PE",
@@ -2959,7 +2959,7 @@
   },
   {
   "name": "Philippines",
-  "isoCode2": "PH",
+  "isoCode": "PH",
   "isoCode3": "PHL",
   "country-code": 608,
   "iso_3166-2": "ISO 3166-2:PH",
@@ -2976,7 +2976,7 @@
   },
   {
   "name": "Pitcairn",
-  "isoCode2": "PN",
+  "isoCode": "PN",
   "isoCode3": "PCN",
   "country-code": 612,
   "iso_3166-2": "ISO 3166-2:PN",
@@ -2993,7 +2993,7 @@
   },
   {
   "name": "Poland",
-  "isoCode2": "PL",
+  "isoCode": "PL",
   "isoCode3": "POL",
   "country-code": 616,
   "iso_3166-2": "ISO 3166-2:PL",
@@ -3010,7 +3010,7 @@
   },
   {
   "name": "Portugal",
-  "isoCode2": "PT",
+  "isoCode": "PT",
   "isoCode3": "PRT",
   "country-code": 620,
   "iso_3166-2": "ISO 3166-2:PT",
@@ -3027,7 +3027,7 @@
   },
   {
   "name": "Puerto Rico",
-  "isoCode2": "PR",
+  "isoCode": "PR",
   "isoCode3": "PRI",
   "country-code": 630,
   "iso_3166-2": "ISO 3166-2:PR",
@@ -3044,7 +3044,7 @@
   },
   {
   "name": "Qatar",
-  "isoCode2": "QA",
+  "isoCode": "QA",
   "isoCode3": "QAT",
   "country-code": 634,
   "iso_3166-2": "ISO 3166-2:QA",
@@ -3061,7 +3061,7 @@
   },
   {
   "name": "Réunion",
-  "isoCode2": "RE",
+  "isoCode": "RE",
   "isoCode3": "REU",
   "country-code": 638,
   "iso_3166-2": "ISO 3166-2:RE",
@@ -3078,7 +3078,7 @@
   },
   {
   "name": "Romania",
-  "isoCode2": "RO",
+  "isoCode": "RO",
   "isoCode3": "ROU",
   "country-code": 642,
   "iso_3166-2": "ISO 3166-2:RO",
@@ -3095,7 +3095,7 @@
   },
   {
   "name": "Russian Federation",
-  "isoCode2": "RU",
+  "isoCode": "RU",
   "isoCode3": "RUS",
   "country-code": 643,
   "iso_3166-2": "ISO 3166-2:RU",
@@ -3112,7 +3112,7 @@
   },
   {
   "name": "Rwanda",
-  "isoCode2": "RW",
+  "isoCode": "RW",
   "isoCode3": "RWA",
   "country-code": 646,
   "iso_3166-2": "ISO 3166-2:RW",
@@ -3129,7 +3129,7 @@
   },
   {
   "name": "Saint Barthélemy",
-  "isoCode2": "BL",
+  "isoCode": "BL",
   "isoCode3": "BLM",
   "country-code": 652,
   "iso_3166-2": "ISO 3166-2:BL",
@@ -3146,7 +3146,7 @@
   },
   {
   "name": "Saint Helena, Ascension and Tristan da Cunha",
-  "isoCode2": "SH",
+  "isoCode": "SH",
   "isoCode3": "SHN",
   "country-code": 654,
   "iso_3166-2": "ISO 3166-2:SH",
@@ -3163,7 +3163,7 @@
   },
   {
   "name": "Saint Kitts and Nevis",
-  "isoCode2": "KN",
+  "isoCode": "KN",
   "isoCode3": "KNA",
   "country-code": 659,
   "iso_3166-2": "ISO 3166-2:KN",
@@ -3180,7 +3180,7 @@
   },
   {
   "name": "Saint Lucia",
-  "isoCode2": "LC",
+  "isoCode": "LC",
   "isoCode3": "LCA",
   "country-code": 662,
   "iso_3166-2": "ISO 3166-2:LC",
@@ -3197,7 +3197,7 @@
   },
   {
   "name": "Saint Martin (French part)",
-  "isoCode2": "MF",
+  "isoCode": "MF",
   "isoCode3": "MAF",
   "country-code": 663,
   "iso_3166-2": "ISO 3166-2:MF",
@@ -3214,7 +3214,7 @@
   },
   {
   "name": "Saint Pierre and Miquelon",
-  "isoCode2": "PM",
+  "isoCode": "PM",
   "isoCode3": "SPM",
   "country-code": 666,
   "iso_3166-2": "ISO 3166-2:PM",
@@ -3231,7 +3231,7 @@
   },
   {
   "name": "Saint Vincent and the Grenadines",
-  "isoCode2": "VC",
+  "isoCode": "VC",
   "isoCode3": "VCT",
   "country-code": 670,
   "iso_3166-2": "ISO 3166-2:VC",
@@ -3248,7 +3248,7 @@
   },
   {
   "name": "Samoa",
-  "isoCode2": "WS",
+  "isoCode": "WS",
   "isoCode3": "WSM",
   "country-code": 882,
   "iso_3166-2": "ISO 3166-2:WS",
@@ -3265,7 +3265,7 @@
   },
   {
   "name": "San Marino",
-  "isoCode2": "SM",
+  "isoCode": "SM",
   "isoCode3": "SMR",
   "country-code": 674,
   "iso_3166-2": "ISO 3166-2:SM",
@@ -3282,7 +3282,7 @@
   },
   {
   "name": "Sao Tome and Principe",
-  "isoCode2": "ST",
+  "isoCode": "ST",
   "isoCode3": "STP",
   "country-code": 678,
   "iso_3166-2": "ISO 3166-2:ST",
@@ -3299,7 +3299,7 @@
   },
   {
   "name": "Saudi Arabia",
-  "isoCode2": "SA",
+  "isoCode": "SA",
   "isoCode3": "SAU",
   "country-code": 682,
   "iso_3166-2": "ISO 3166-2:SA",
@@ -3316,7 +3316,7 @@
   },
   {
   "name": "Senegal",
-  "isoCode2": "SN",
+  "isoCode": "SN",
   "isoCode3": "SEN",
   "country-code": 686,
   "iso_3166-2": "ISO 3166-2:SN",
@@ -3333,7 +3333,7 @@
   },
   {
   "name": "Serbia",
-  "isoCode2": "RS",
+  "isoCode": "RS",
   "isoCode3": "SRB",
   "country-code": 688,
   "iso_3166-2": "ISO 3166-2:RS",
@@ -3350,7 +3350,7 @@
   },
   {
   "name": "Seychelles",
-  "isoCode2": "SC",
+  "isoCode": "SC",
   "isoCode3": "SYC",
   "country-code": 690,
   "iso_3166-2": "ISO 3166-2:SC",
@@ -3367,7 +3367,7 @@
   },
   {
   "name": "Sierra Leone",
-  "isoCode2": "SL",
+  "isoCode": "SL",
   "isoCode3": "SLE",
   "country-code": 694,
   "iso_3166-2": "ISO 3166-2:SL",
@@ -3384,7 +3384,7 @@
   },
   {
   "name": "Singapore",
-  "isoCode2": "SG",
+  "isoCode": "SG",
   "isoCode3": "SGP",
   "country-code": 702,
   "iso_3166-2": "ISO 3166-2:SG",
@@ -3401,7 +3401,7 @@
   },
   {
   "name": "Sint Maarten (Dutch part)",
-  "isoCode2": "SX",
+  "isoCode": "SX",
   "isoCode3": "SXM",
   "country-code": 534,
   "iso_3166-2": "ISO 3166-2:SX",
@@ -3418,7 +3418,7 @@
   },
   {
   "name": "Slovakia",
-  "isoCode2": "SK",
+  "isoCode": "SK",
   "isoCode3": "SVK",
   "country-code": 703,
   "iso_3166-2": "ISO 3166-2:SK",
@@ -3435,7 +3435,7 @@
   },
   {
   "name": "Slovenia",
-  "isoCode2": "SI",
+  "isoCode": "SI",
   "isoCode3": "SVN",
   "country-code": 705,
   "iso_3166-2": "ISO 3166-2:SI",
@@ -3452,7 +3452,7 @@
   },
   {
   "name": "Solomon Islands",
-  "isoCode2": "SB",
+  "isoCode": "SB",
   "isoCode3": "SLB",
   "country-code": 90,
   "iso_3166-2": "ISO 3166-2:SB",
@@ -3469,7 +3469,7 @@
   },
   {
   "name": "Somalia",
-  "isoCode2": "SO",
+  "isoCode": "SO",
   "isoCode3": "SOM",
   "country-code": 706,
   "iso_3166-2": "ISO 3166-2:SO",
@@ -3486,7 +3486,7 @@
   },
   {
   "name": "South Africa",
-  "isoCode2": "ZA",
+  "isoCode": "ZA",
   "isoCode3": "ZAF",
   "country-code": 710,
   "iso_3166-2": "ISO 3166-2:ZA",
@@ -3503,7 +3503,7 @@
   },
   {
   "name": "South Georgia and the South Sandwich Islands",
-  "isoCode2": "GS",
+  "isoCode": "GS",
   "isoCode3": "SGS",
   "country-code": 239,
   "iso_3166-2": "ISO 3166-2:GS",
@@ -3520,7 +3520,7 @@
   },
   {
   "name": "South Sudan",
-  "isoCode2": "SS",
+  "isoCode": "SS",
   "isoCode3": "SSD",
   "country-code": 728,
   "iso_3166-2": "ISO 3166-2:SS",
@@ -3537,7 +3537,7 @@
   },
   {
   "name": "Spain",
-  "isoCode2": "ES",
+  "isoCode": "ES",
   "isoCode3": "ESP",
   "country-code": 724,
   "iso_3166-2": "ISO 3166-2:ES",
@@ -3554,7 +3554,7 @@
   },
   {
   "name": "Sri Lanka",
-  "isoCode2": "LK",
+  "isoCode": "LK",
   "isoCode3": "LKA",
   "country-code": 144,
   "iso_3166-2": "ISO 3166-2:LK",
@@ -3571,7 +3571,7 @@
   },
   {
   "name": "Sudan",
-  "isoCode2": "SD",
+  "isoCode": "SD",
   "isoCode3": "SDN",
   "country-code": 729,
   "iso_3166-2": "ISO 3166-2:SD",
@@ -3588,7 +3588,7 @@
   },
   {
   "name": "Suriname",
-  "isoCode2": "SR",
+  "isoCode": "SR",
   "isoCode3": "SUR",
   "country-code": 740,
   "iso_3166-2": "ISO 3166-2:SR",
@@ -3605,7 +3605,7 @@
   },
   {
   "name": "Svalbard and Jan Mayen",
-  "isoCode2": "SJ",
+  "isoCode": "SJ",
   "isoCode3": "SJM",
   "country-code": 744,
   "iso_3166-2": "ISO 3166-2:SJ",
@@ -3622,7 +3622,7 @@
   },
   {
   "name": "Swaziland",
-  "isoCode2": "SZ",
+  "isoCode": "SZ",
   "isoCode3": "SWZ",
   "country-code": 748,
   "iso_3166-2": "ISO 3166-2:SZ",
@@ -3639,7 +3639,7 @@
   },
   {
   "name": "Sweden",
-  "isoCode2": "SE",
+  "isoCode": "SE",
   "isoCode3": "SWE",
   "country-code": 752,
   "iso_3166-2": "ISO 3166-2:SE",
@@ -3656,7 +3656,7 @@
   },
   {
   "name": "Switzerland",
-  "isoCode2": "CH",
+  "isoCode": "CH",
   "isoCode3": "CHE",
   "country-code": 756,
   "iso_3166-2": "ISO 3166-2:CH",
@@ -3673,7 +3673,7 @@
   },
   {
   "name": "Syrian Arab Republic",
-  "isoCode2": "SY",
+  "isoCode": "SY",
   "isoCode3": "SYR",
   "country-code": 760,
   "iso_3166-2": "ISO 3166-2:SY",
@@ -3690,7 +3690,7 @@
   },
   {
   "name": "Taiwan, Province of China",
-  "isoCode2": "TW",
+  "isoCode": "TW",
   "isoCode3": "TWN",
   "country-code": 158,
   "iso_3166-2": "ISO 3166-2:TW",
@@ -3707,7 +3707,7 @@
   },
   {
   "name": "Tajikistan",
-  "isoCode2": "TJ",
+  "isoCode": "TJ",
   "isoCode3": "TJK",
   "country-code": 762,
   "iso_3166-2": "ISO 3166-2:TJ",
@@ -3724,7 +3724,7 @@
   },
   {
   "name": "Tanzania, United Republic of",
-  "isoCode2": "TZ",
+  "isoCode": "TZ",
   "isoCode3": "TZA",
   "country-code": 834,
   "iso_3166-2": "ISO 3166-2:TZ",
@@ -3741,7 +3741,7 @@
   },
   {
   "name": "Thailand",
-  "isoCode2": "TH",
+  "isoCode": "TH",
   "isoCode3": "THA",
   "country-code": 764,
   "iso_3166-2": "ISO 3166-2:TH",
@@ -3758,7 +3758,7 @@
   },
   {
   "name": "Timor-Leste",
-  "isoCode2": "TL",
+  "isoCode": "TL",
   "isoCode3": "TLS",
   "country-code": 626,
   "iso_3166-2": "ISO 3166-2:TL",
@@ -3775,7 +3775,7 @@
   },
   {
   "name": "Togo",
-  "isoCode2": "TG",
+  "isoCode": "TG",
   "isoCode3": "TGO",
   "country-code": 768,
   "iso_3166-2": "ISO 3166-2:TG",
@@ -3792,7 +3792,7 @@
   },
   {
   "name": "Tokelau",
-  "isoCode2": "TK",
+  "isoCode": "TK",
   "isoCode3": "TKL",
   "country-code": 772,
   "iso_3166-2": "ISO 3166-2:TK",
@@ -3809,7 +3809,7 @@
   },
   {
   "name": "Tonga",
-  "isoCode2": "TO",
+  "isoCode": "TO",
   "isoCode3": "TON",
   "country-code": 776,
   "iso_3166-2": "ISO 3166-2:TO",
@@ -3826,7 +3826,7 @@
   },
   {
   "name": "Trinidad and Tobago",
-  "isoCode2": "TT",
+  "isoCode": "TT",
   "isoCode3": "TTO",
   "country-code": 780,
   "iso_3166-2": "ISO 3166-2:TT",
@@ -3843,7 +3843,7 @@
   },
   {
   "name": "Tunisia",
-  "isoCode2": "TN",
+  "isoCode": "TN",
   "isoCode3": "TUN",
   "country-code": 788,
   "iso_3166-2": "ISO 3166-2:TN",
@@ -3860,7 +3860,7 @@
   },
   {
   "name": "Turkey",
-  "isoCode2": "TR",
+  "isoCode": "TR",
   "isoCode3": "TUR",
   "country-code": 792,
   "iso_3166-2": "ISO 3166-2:TR",
@@ -3877,7 +3877,7 @@
   },
   {
   "name": "Turkmenistan",
-  "isoCode2": "TM",
+  "isoCode": "TM",
   "isoCode3": "TKM",
   "country-code": 795,
   "iso_3166-2": "ISO 3166-2:TM",
@@ -3894,7 +3894,7 @@
   },
   {
   "name": "Turks and Caicos Islands",
-  "isoCode2": "TC",
+  "isoCode": "TC",
   "isoCode3": "TCA",
   "country-code": 796,
   "iso_3166-2": "ISO 3166-2:TC",
@@ -3911,7 +3911,7 @@
   },
   {
   "name": "Tuvalu",
-  "isoCode2": "TV",
+  "isoCode": "TV",
   "isoCode3": "TUV",
   "country-code": 798,
   "iso_3166-2": "ISO 3166-2:TV",
@@ -3928,7 +3928,7 @@
   },
   {
   "name": "Uganda",
-  "isoCode2": "UG",
+  "isoCode": "UG",
   "isoCode3": "UGA",
   "country-code": 800,
   "iso_3166-2": "ISO 3166-2:UG",
@@ -3945,7 +3945,7 @@
   },
   {
   "name": "Ukraine",
-  "isoCode2": "UA",
+  "isoCode": "UA",
   "isoCode3": "UKR",
   "country-code": 804,
   "iso_3166-2": "ISO 3166-2:UA",
@@ -3962,7 +3962,7 @@
   },
   {
   "name": "United Arab Emirates",
-  "isoCode2": "AE",
+  "isoCode": "AE",
   "isoCode3": "ARE",
   "country-code": 784,
   "iso_3166-2": "ISO 3166-2:AE",
@@ -3979,7 +3979,7 @@
   },
   {
   "name": "United Kingdom of Great Britain and Northern Ireland",
-  "isoCode2": "GB",
+  "isoCode": "GB",
   "isoCode3": "GBR",
   "country-code": 826,
   "iso_3166-2": "ISO 3166-2:GB",
@@ -3996,7 +3996,7 @@
   },
   {
   "name": "United States of America",
-  "isoCode2": "US",
+  "isoCode": "US",
   "isoCode3": "USA",
   "country-code": 840,
   "iso_3166-2": "ISO 3166-2:US",
@@ -4013,7 +4013,7 @@
   },
   {
   "name": "United States Minor Outlying Islands",
-  "isoCode2": "UM",
+  "isoCode": "UM",
   "isoCode3": "UMI",
   "country-code": 581,
   "iso_3166-2": "ISO 3166-2:UM",
@@ -4030,7 +4030,7 @@
   },
   {
   "name": "Uruguay",
-  "isoCode2": "UY",
+  "isoCode": "UY",
   "isoCode3": "URY",
   "country-code": 858,
   "iso_3166-2": "ISO 3166-2:UY",
@@ -4047,7 +4047,7 @@
   },
   {
   "name": "Uzbekistan",
-  "isoCode2": "UZ",
+  "isoCode": "UZ",
   "isoCode3": "UZB",
   "country-code": 860,
   "iso_3166-2": "ISO 3166-2:UZ",
@@ -4064,7 +4064,7 @@
   },
   {
   "name": "Vanuatu",
-  "isoCode2": "VU",
+  "isoCode": "VU",
   "isoCode3": "VUT",
   "country-code": 548,
   "iso_3166-2": "ISO 3166-2:VU",
@@ -4081,7 +4081,7 @@
   },
   {
   "name": "Venezuela (Bolivarian Republic of)",
-  "isoCode2": "VE",
+  "isoCode": "VE",
   "isoCode3": "VEN",
   "country-code": 862,
   "iso_3166-2": "ISO 3166-2:VE",
@@ -4098,7 +4098,7 @@
   },
   {
   "name": "Viet Nam",
-  "isoCode2": "VN",
+  "isoCode": "VN",
   "isoCode3": "VNM",
   "country-code": 704,
   "iso_3166-2": "ISO 3166-2:VN",
@@ -4115,7 +4115,7 @@
   },
   {
   "name": "Virgin Islands (British)",
-  "isoCode2": "VG",
+  "isoCode": "VG",
   "isoCode3": "VGB",
   "country-code": 92,
   "iso_3166-2": "ISO 3166-2:VG",
@@ -4132,7 +4132,7 @@
   },
   {
   "name": "Virgin Islands (U.S.)",
-  "isoCode2": "VI",
+  "isoCode": "VI",
   "isoCode3": "VIR",
   "country-code": 850,
   "iso_3166-2": "ISO 3166-2:VI",
@@ -4149,7 +4149,7 @@
   },
   {
   "name": "Wallis and Futuna",
-  "isoCode2": "WF",
+  "isoCode": "WF",
   "isoCode3": "WLF",
   "country-code": 876,
   "iso_3166-2": "ISO 3166-2:WF",
@@ -4166,7 +4166,7 @@
   },
   {
   "name": "Western Sahara",
-  "isoCode2": "EH",
+  "isoCode": "EH",
   "isoCode3": "ESH",
   "country-code": 732,
   "iso_3166-2": "ISO 3166-2:EH",
@@ -4183,7 +4183,7 @@
   },
   {
   "name": "Yemen",
-  "isoCode2": "YE",
+  "isoCode": "YE",
   "isoCode3": "YEM",
   "country-code": 887,
   "iso_3166-2": "ISO 3166-2:YE",
@@ -4200,7 +4200,7 @@
   },
   {
   "name": "Zambia",
-  "isoCode2": "ZM",
+  "isoCode": "ZM",
   "isoCode3": "ZMB",
   "country-code": 894,
   "iso_3166-2": "ISO 3166-2:ZM",
@@ -4217,7 +4217,7 @@
   },
   {
   "name": "Zimbabwe",
-  "isoCode2": "ZW",
+  "isoCode": "ZW",
   "isoCode3": "ZWE",
   "country-code": 716,
   "iso_3166-2": "ISO 3166-2:ZW",

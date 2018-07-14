@@ -30,6 +30,7 @@
 		557155A320F403E1001BFE71 /* MapRegionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557155A220F403E1001BFE71 /* MapRegionUtility.swift */; };
 		557155A520F4D888001BFE71 /* ConnectivityUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557155A420F4D888001BFE71 /* ConnectivityUtility.swift */; };
 		5580D78420C30ED7004E692F /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580D78320C30ED7004E692F /* Double+Extension.swift */; };
+		5583361020F9688000A2D1C5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5583360F20F9688000A2D1C5 /* String+Extension.swift */; };
 		55874D8B20C3A9DB00666793 /* Formatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */; };
 		558FA7F720C11970004A16C0 /* QuakeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7F620C11970004A16C0 /* QuakeDataManager.swift */; };
 		558FA7F920C119A5004A16C0 /* SeismicStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558FA7F820C119A5004A16C0 /* SeismicStructs.swift */; };
@@ -107,6 +108,7 @@
 		557155A220F403E1001BFE71 /* MapRegionUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRegionUtility.swift; sourceTree = "<group>"; };
 		557155A420F4D888001BFE71 /* ConnectivityUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityUtility.swift; sourceTree = "<group>"; };
 		5580D78320C30ED7004E692F /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		5583360F20F9688000A2D1C5 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extension.swift"; sourceTree = "<group>"; };
 		558FA7F620C11970004A16C0 /* QuakeDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeDataManager.swift; sourceTree = "<group>"; };
 		558FA7F820C119A5004A16C0 /* SeismicStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeismicStructs.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				55874D8A20C3A9DB00666793 /* Formatter+Extension.swift */,
 				55AC767120C89F03003940C3 /* UITableView+Extension.swift */,
 				55DAB9C520CAAD36006D289D /* FloatingPoint+Extension.swift */,
+				5583360F20F9688000A2D1C5 /* String+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				55562C5120C070C60016B718 /* AppDelegate.swift in Sources */,
 				55E70A4520F5C1AC008EE313 /* ExistingDataUtil.swift in Sources */,
 				55DAB9C620CAAD36006D289D /* FloatingPoint+Extension.swift in Sources */,
+				5583361020F9688000A2D1C5 /* String+Extension.swift in Sources */,
 				557155A520F4D888001BFE71 /* ConnectivityUtility.swift in Sources */,
 				55940CBB20C778B700C5D38B /* MapPredicate.swift in Sources */,
 				55AE125C20C0763800DB7F6C /* CanvasQuake.xcdatamodel in Sources */,
