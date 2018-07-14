@@ -14,8 +14,8 @@ import UIKit
   // TODO: Add IBInspectable properties
   @IBOutlet weak var headerLabel: UILabel!
   @IBOutlet weak var clearButton: UIButton!
-  @IBOutlet weak var textViewStack: UIStackView!
-  @IBOutlet weak var textView: UITextView!
+  @IBOutlet weak var labelStack: UIStackView!
+  @IBOutlet weak var label: UILabel!
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -46,21 +46,22 @@ import UIKit
   
   func updateAppearance() {
     // TODO: Implement as needed
+    labelStack.isHidden = true
+    label.numberOfLines = 0
+    label.lineBreakMode = .byWordWrapping
   }
   
   // MARK: Helpers
   public func updateTextView(with text: String?) {
     UIView.animate(withDuration: 0.3) {
       if let textViewText = text {
-        self.textView.text = textViewText
-        self.textViewStack.isHidden = false
+        self.label.text = textViewText
+        self.label.fadeTransition(0.3)
+        self.labelStack.isHidden = false
       } else {
-        self.textView.text = ""
-        self.textViewStack.isHidden = true
+        self.label.text = ""
+        self.labelStack.isHidden = true
       }
-      self.textView.sizeToFit()
     }
-    self.layoutIfNeeded()
-    self.view.layoutIfNeeded()
   }
 }

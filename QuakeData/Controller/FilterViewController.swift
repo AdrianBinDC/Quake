@@ -11,6 +11,7 @@ import RangeSeekSlider
 
 // TODO: configure UI, add animations where appropriate
 // TODO: add backgrounds to sections
+// FIXME: fix section header on scroll.
 
 protocol FilterViewControllerDelegate: class {
   func updatePredicate(_ predicate: NSPredicate)
@@ -23,18 +24,14 @@ class FilterViewController: UIViewController {
   
   @IBOutlet weak var searchButton: UIBarButtonItem!
   @IBOutlet weak var closeButton: UIBarButtonItem!
-  @IBOutlet weak var clearCountryButton: UIButton!
-  
   
   // StackViews
   @IBOutlet weak var searchBarStack: UIStackView!
   @IBOutlet weak var sliderStack: UIStackView!
-  @IBOutlet weak var filterByCountryStack: UIStackView!
-  @IBOutlet weak var selectedCountriesStack: UIStackView!
-  
   
   @IBOutlet weak var slider: RangeSeekSlider!
-  @IBOutlet weak var selectedCountriesLabel: UILabel!
+  
+  @IBOutlet weak var tableHeader: FilterHeaderView!
   @IBOutlet weak var tableView: UITableView!
   
   // filtering vars
@@ -50,7 +47,6 @@ class FilterViewController: UIViewController {
   private let mapPredicate = MapPredicate()
   
   // TODO: Add text search
-  // TODO: Finish configuring this
   
   var selectedCountries: [CountryData] = [] {
     didSet {
@@ -75,21 +71,10 @@ class FilterViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    slider.numberFormatter.numberStyle = .decimal
-    slider.numberFormatter.maximumFractionDigits = 1
-    slider.numberFormatter.roundingMode = .down
-    slider.numberFormatter.positiveFormat = "0.0"
-    slider.delegate = self
-    
-    selectedCountriesStack.isHidden = true
     searchBarStack.isHidden = true
-    clearCountryButton.isEnabled = false
-    
-    selectedCountriesLabel.numberOfLines = 0
-    selectedCountriesLabel.lineBreakMode = .byWordWrapping
-    
-    tableView.delegate = self
-    tableView.dataSource = self
+    tableHeader.clearButton.addTarget(self, action: #selector(clearButtonAction(_:)), for: .touchUpInside)
+    configureSlider()
+    configureTableView()
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -108,27 +93,36 @@ class FilterViewController: UIViewController {
     self.dismiss(animated: true, completion: nil)
   }
   
-  @IBAction func clearButtonAction(_ sender: UIButton) {
+  @objc func clearButtonAction(_ sender: UIButton) {
     selectedCountries.removeAll()
   }
+  
+  // MARK: Initial Config
+  
+  fileprivate func configureTableView() {
+    tableView.delegate = self
+    tableView.dataSource = self
+  }
+
+  fileprivate func configureSlider() {
+    slider.numberFormatter.numberStyle = .decimal
+    slider.numberFormatter.maximumFractionDigits = 1
+    slider.numberFormatter.roundingMode = .down
+    slider.numberFormatter.positiveFormat = "0.0"
+    slider.delegate = self
+  }
+
   
   // MARK: Helpers
   
   func updateFiltering(for isFiltering: Bool) {
     UIView.animate(withDuration: 0.3) {
       self.searchBarStack.isHidden = isFiltering ? false : true
-      self.filterByCountryStack.isHidden = isFiltering ? true : false
       self.sliderStack.isHidden = isFiltering ? true : false
     }
   } // end updateFiltering
   
   func updateCountryLabel() {
-    
-    // FIXME: Condense label
-    /*
-     Refactor to condense output for larger quantities of countries.
-     Use Set to test the array of countries against continents
-     */
     
     var newString = ""
     
@@ -142,20 +136,8 @@ class FilterViewController: UIViewController {
       newString = newString + countryNames
     }
     
-    
-    UIView.animate(withDuration: 0.3) {
-      self.selectedCountriesLabel.text = newString
-
-      if self.selectedCountries.isEmpty {
-        self.clearCountryButton.isEnabled = false
-        self.selectedCountriesStack.isHidden = true
-        self.view.layoutIfNeeded()
-      } else {
-        self.clearCountryButton.isEnabled = true
-        self.selectedCountriesStack.isHidden = false
-        self.view.layoutIfNeeded()
-      }
-    }
+    tableHeader.updateTextView(with: newString)
+    self.view.layoutIfNeeded()
   } // end updateCountryLabel()
 }
 
