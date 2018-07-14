@@ -47,8 +47,6 @@
 		55B75BD720C1C868007B1602 /* ABWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B75BD520C1C868007B1602 /* ABWebView.swift */; };
 		55DAB9C620CAAD36006D289D /* FloatingPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAB9C520CAAD36006D289D /* FloatingPoint+Extension.swift */; };
 		55E70A4520F5C1AC008EE313 /* ExistingDataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E70A4420F5C1AC008EE313 /* ExistingDataUtil.swift */; };
-		55FFBCE520C2E01000A64B5A /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FFBCE420C2E01000A64B5A /* FilterView.xib */; };
-		55FFBCE720C2E02500A64B5A /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FFBCE620C2E02500A64B5A /* FilterView.swift */; };
 		568B28EE85EB68E60B6FCB86 /* Pods_QuakeDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2B2BB8E9604B801392ADB7 /* Pods_QuakeDataUITests.framework */; };
 		9ABC520EF973C3B9C07ABAF5 /* Pods_CanvasQuakeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C536091BC35D8235C3BCD28 /* Pods_CanvasQuakeUITests.framework */; };
 		9C7D7926AA26EBEC49DAD157 /* Pods_QuakeDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32CCF824DC32CCE7D9725A0 /* Pods_QuakeDataTests.framework */; };
@@ -125,8 +123,6 @@
 		55B75BD520C1C868007B1602 /* ABWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABWebView.swift; sourceTree = "<group>"; };
 		55DAB9C520CAAD36006D289D /* FloatingPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Extension.swift"; sourceTree = "<group>"; };
 		55E70A4420F5C1AC008EE313 /* ExistingDataUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistingDataUtil.swift; sourceTree = "<group>"; };
-		55FFBCE420C2E01000A64B5A /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
-		55FFBCE620C2E02500A64B5A /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		5F2EE53817012E50BDC1511D /* Pods-CanvasQuakeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeUITests/Pods-CanvasQuakeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		62F101E207F20B9BEDB95311 /* Pods-QuakeDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuakeDataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuakeDataTests/Pods-QuakeDataTests.release.xcconfig"; sourceTree = "<group>"; };
 		6A847F5A8FFA806D63672A7D /* Pods-CanvasQuakeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeUITests/Pods-CanvasQuakeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -269,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				550A8BF320F7A31300BBF37E /* FilterHeaderView */,
-				55FFBCE320C2E00200A64B5A /* FilterView */,
 				5500001920C3326D00BB8211 /* ABWebView */,
 				55562C5420C070C60016B718 /* Main.storyboard */,
 				55562C5C20C070C70016B718 /* LaunchScreen.storyboard */,
@@ -337,15 +332,6 @@
 				5583360F20F9688000A2D1C5 /* String+Extension.swift */,
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		55FFBCE320C2E00200A64B5A /* FilterView */ = {
-			isa = PBXGroup;
-			children = (
-				55FFBCE420C2E01000A64B5A /* FilterView.xib */,
-				55FFBCE620C2E02500A64B5A /* FilterView.swift */,
-			);
-			path = FilterView;
 			sourceTree = "<group>";
 		};
 		71A5A26AE86A78E7AD3C48FF /* Frameworks */ = {
@@ -494,7 +480,6 @@
 				55B75BD620C1C868007B1602 /* ABWebView.xib in Resources */,
 				55562C5E20C070C70016B718 /* LaunchScreen.storyboard in Resources */,
 				55562C5B20C070C70016B718 /* Assets.xcassets in Resources */,
-				55FFBCE520C2E01000A64B5A /* FilterView.xib in Resources */,
 				550A8BF520F7A32600BBF37E /* FilterHeaderView.xib in Resources */,
 				55562C5620C070C60016B718 /* Main.storyboard in Resources */,
 				55AE125920C0756100DB7F6C /* GradientShades.png in Resources */,
@@ -545,15 +530,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-QuakeData/Pods-QuakeData-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/WARangeSlider/WARangeSlider.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeSeekSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WARangeSlider.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -622,7 +607,6 @@
 				557155A120F3F42E001BFE71 /* MapPin.swift in Sources */,
 				550A8BF720F7A33400BBF37E /* FilterHeaderView.swift in Sources */,
 				558FA7FD20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift in Sources */,
-				55FFBCE720C2E02500A64B5A /* FilterView.swift in Sources */,
 				554BE12F20C09BF900C07248 /* CalendarViewController.swift in Sources */,
 				55AE125320C0752D00DB7F6C /* Constants.swift in Sources */,
 				5564C13820F6F3D800555A6A /* FilterViewController.swift in Sources */,

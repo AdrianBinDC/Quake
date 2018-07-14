@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double WARangeSliderVersionNumber;
-FOUNDATION_EXPORT const unsigned char WARangeSliderVersionString[];
+FOUNDATION_EXPORT double RangeSeekSliderVersionNumber;
+FOUNDATION_EXPORT const unsigned char RangeSeekSliderVersionString[];
 

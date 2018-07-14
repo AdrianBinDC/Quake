@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     configuration.timeoutIntervalForResource = 5 //seconds
     AFManager = Alamofire.SessionManager(configuration: configuration)
     
-    print("On launch, there are now \(objectsInCoreData) EarthQuakeEntities in CD")
+//    print("On launch, there are now \(objectsInCoreData) EarthQuakeEntities in CD")
     return true
   }
   
@@ -102,7 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   // FIXME: delete thisi when you're done
   // MARK: generate sample data...nuke for production
-  var objectsInCoreData: Int {
+//  var objectsInCoreData: Int {
 //    let moc = persistentContainer.viewContext
 //    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "EarthquakeEntity")
 //    var results: [EarthquakeEntity] = []
@@ -112,8 +112,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //      print("SOMETHING WENT HORRIBLY WRONG!")
 //    }
 //    return results.count
-    return 42
-  }
+//    return 42
+//  }
   
 }
 

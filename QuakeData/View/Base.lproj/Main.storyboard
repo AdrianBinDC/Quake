@@ -380,6 +380,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <items>
                                             <navigationItem title="Filter" id="VOp-Bh-o9V">
+                                                <barButtonItem key="leftBarButtonItem" systemItem="search" id="0hV-BT-KZT">
+                                                    <connections>
+                                                        <action selector="searchButtonAction:" destination="chl-A8-9BM" id="GLE-K4-nMR"/>
+                                                    </connections>
+                                                </barButtonItem>
                                                 <barButtonItem key="rightBarButtonItem" image="close" id="ffw-yV-lom">
                                                     <connections>
                                                         <action selector="closeButtonAction:" destination="chl-A8-9BM" id="XEV-TR-zGj"/>
@@ -388,14 +393,50 @@
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OsC-Wv-W1j">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="56"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="K7z-1R-5NC">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </searchBar>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="btv-9I-LJS">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="70"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HE-mg-yWe" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
+                                                <rect key="frame" x="8" y="16" width="359" height="54"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideLabels" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="labelsFixed" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableStep" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="step">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="3n4-iE-Ote"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="16" left="8" bottom="0.0" right="8"/>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YoR-P3-Oyv">
-                                        <rect key="frame" x="0.0" y="43.999999999999993" width="375" height="79.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="170" width="375" height="137.33333333333337"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8ax-tV-4ms">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter by Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roz-AO-HDQ">
-                                                        <rect key="frame" x="8" y="8" width="309" height="25"/>
+                                                        <rect key="frame" x="8" y="37" width="309" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="qEb-fK-0We"/>
                                                         </constraints>
@@ -404,7 +445,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-2e-G2W">
-                                                        <rect key="frame" x="317" y="8" width="50" height="25"/>
+                                                        <rect key="frame" x="317" y="34.666666666666657" width="50" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="pwf-DF-uDC"/>
                                                         </constraints>
@@ -417,7 +458,7 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8WM-vY-87P">
-                                                <rect key="frame" x="0.0" y="49.000000000000007" width="375" height="30.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="107" width="375" height="30.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJT-JU-FYR">
                                                         <rect key="frame" x="8" y="8" width="359" height="14.333333333333336"/>
@@ -429,9 +470,12 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="6VL-cf-fnE"/>
+                                        </constraints>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A5p-wD-3Uw">
-                                        <rect key="frame" x="0.0" y="123.33333333333331" width="375" height="644.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="307.33333333333326" width="375" height="460.66666666666674"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="0Zb-vu-xOZ" detailTextLabel="F3h-Hd-LKx" style="IBUITableViewCellStyleSubtitle" id="PRs-E8-s1m">
@@ -479,12 +523,26 @@
                     <connections>
                         <outlet property="clearCountryButton" destination="Esr-2e-G2W" id="6cN-br-hfe"/>
                         <outlet property="closeButton" destination="ffw-yV-lom" id="cQh-mx-yOq"/>
+                        <outlet property="filterByCountryStack" destination="YoR-P3-Oyv" id="Dmx-Vh-iGz"/>
+                        <outlet property="searchBarStack" destination="OsC-Wv-W1j" id="kvm-Nm-jQE"/>
+                        <outlet property="searchButton" destination="0hV-BT-KZT" id="Uns-yE-Gwk"/>
+                        <outlet property="searchDisplayController" destination="WEo-bx-4YQ" id="V4M-e5-eFm"/>
                         <outlet property="selectedCountriesLabel" destination="bJT-JU-FYR" id="Yr2-zh-33l"/>
-                        <outlet property="selectedCoutriesStack" destination="8WM-vY-87P" id="t1q-U2-Sho"/>
+                        <outlet property="selectedCountriesStack" destination="8WM-vY-87P" id="t1q-U2-Sho"/>
+                        <outlet property="slider" destination="6HE-mg-yWe" id="tuV-Hs-Zl7"/>
+                        <outlet property="sliderStack" destination="btv-9I-LJS" id="m0s-Ni-WL9"/>
                         <outlet property="tableView" destination="A5p-wD-3Uw" id="c7G-ld-f4j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNC-rt-YkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="WEo-bx-4YQ">
+                    <connections>
+                        <outlet property="delegate" destination="chl-A8-9BM" id="csI-yD-6sJ"/>
+                        <outlet property="searchContentsController" destination="chl-A8-9BM" id="df3-HB-xyu"/>
+                        <outlet property="searchResultsDataSource" destination="chl-A8-9BM" id="byd-g5-bYq"/>
+                        <outlet property="searchResultsDelegate" destination="chl-A8-9BM" id="2wv-27-gpI"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1349.5999999999999" y="403.44827586206901"/>
         </scene>

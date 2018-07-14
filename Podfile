@@ -8,7 +8,8 @@ target 'QuakeData' do
   # Pods for CanvasQuake
   pod 'Alamofire', '~> 4.7'
   pod 'FSCalendar'
-  pod 'WARangeSlider'
+#  pod 'WARangeSlider'
+  pod 'RangeSeekSlider'
   pod 'ReachabilitySwift'
 
   
