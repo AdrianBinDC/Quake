@@ -9,9 +9,8 @@
 import UIKit
 import RangeSeekSlider
 
-// TODO: configure UI, add animations where appropriate
 // TODO: add backgrounds to sections
-// FIXME: fix section header on scroll.
+// TODO: Add scrollview for larger selections
 
 protocol FilterViewControllerDelegate: class {
   func updatePredicate(_ predicate: NSPredicate)
@@ -95,6 +94,8 @@ class FilterViewController: UIViewController {
   
   @objc func clearButtonAction(_ sender: UIButton) {
     selectedCountries.removeAll()
+    tableView.reloadData()
+    tableView.setContentOffset(.zero, animated: true)
   }
   
   // MARK: Initial Config
@@ -176,9 +177,19 @@ extension FilterViewController: UITableViewDataSource {
     headerView.sectionTitle.text = dataSource[section].region
     headerView.selectAllButton.tag = section
     headerView.selectAllButton.addTarget(self, action: #selector(handle(selectButton:)), for: .touchUpInside)
+    headerView.selectAllButton.isSelected = filterContains(dataSource[section].region) ? true : false
     headerView.expandButton.tag = section
+    headerView.expandButton.isSelected = isExpandButtonSelected(in: section)
     headerView.expandButton.addTarget(self, action: #selector(handle(expandButton:)), for: .touchUpInside)
     return headerView
+  }
+  
+  private func isExpandButtonSelected(in section: Int) -> Bool {
+    return tableView.numberOfRows(inSection: section) > 0
+  }
+  
+  private func filterContains(_ region: String) -> Bool {
+    return selectedCountries.filter{$0.region == region}.count > 0
   }
   
   @objc func handle(selectButton: UIButton) {

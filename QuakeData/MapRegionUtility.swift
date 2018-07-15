@@ -6,13 +6,13 @@
   //  Copyright © 2018 Adrian Bolinger.
   //
   /*
-  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+   
+   The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
    */
-
+  
   import UIKit
   import MapKit
   
@@ -69,7 +69,6 @@
     let isoCode: String?
     var region: String?
     var subRegion: String
-//    var intermediateRegion: String?
     let minLong: Double
     let minLat: Double
     let maxLong: Double
@@ -80,15 +79,13 @@
     }
     
     init(name: String, isoCode: String,
-//         region: String?, intermediateRegion: String,
       region: String?, subRegion: String,
-         minLong: Double, minLat: Double,
-         maxLong: Double, maxLat: Double) {
+      minLong: Double, minLat: Double,
+      maxLong: Double, maxLat: Double) {
       
       self.name = name
       self.isoCode = isoCode
       self.region = region ?? ""
-//      self.intermediateRegion = intermediateRegion ?? ""
       self.subRegion = subRegion
       self.minLong = minLong
       self.minLat = minLat
@@ -128,8 +125,8 @@
     case antarcticOcean = "-160.2500533,-68.4421138,-160.2180385,-68.4339125"
     case arcticOcean = "-68.9751267,62.8298713,-55.6975281,67.708443"
   }
-
-
+  
+  
   class MapRegionUtility: NSObject {
     
     public func region(for region: GeographicRegion) -> MKCoordinateRegion {
@@ -155,10 +152,8 @@
         do {
           let data = try Data(contentsOf: URL(fileURLWithPath: path))
           countries = try JSONDecoder().decode([CountryData].self, from: data)
-//          sections  = Array(Set(countries.map{$0.region!})).sorted(by: {$0 < $1})
           sections  = Array(Set(countries.map{$0.subRegion})).sorted(by: {$0 < $1})
           for sectionName in sections {
-//            let sectionData = countries.filter{$0.region! == sectionName}.sorted(by: {$0.name < $1.name})
             let sectionData = countries.filter{$0.subRegion == sectionName}.sorted(by: {$0.name < $1.name})
             let section = CountryDataSection(region: sectionName, countries: sectionData)
             dataSource.append(section)
@@ -186,7 +181,7 @@
     }
     
   }
-
+  
   extension MKCoordinateRegion {
     
     // From: https://gist.github.com/dionc/46f7e7ee9db7dbd7bddec56bd5418ca6
@@ -257,60 +252,60 @@
       return MKCoordinateRegionMake(center, span)
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -53,15 +53,16 @@ import UIKit
   
   // MARK: Helpers
   public func updateTextView(with text: String?) {
-    UIView.animate(withDuration: 0.3) {
-      if let textViewText = text {
-        self.label.text = textViewText
-        self.label.fadeTransition(0.3)
-        self.labelStack.isHidden = false
-      } else {
-        self.label.text = ""
-        self.labelStack.isHidden = true
-      }
+    self.label.fadeTransition(0.3)
+    
+    if let textViewText = text {
+      self.label.text = textViewText
+      self.labelStack.isHidden = false
+    } else {
+      self.label.text = ""
+      self.labelStack.isHidden = true
     }
+
+    self.layoutIfNeeded()
   }
 }
