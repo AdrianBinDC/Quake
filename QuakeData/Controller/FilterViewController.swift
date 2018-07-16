@@ -28,7 +28,6 @@ class FilterViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var filterFooter: FilterFooter!
   
-  
   // filtering vars
   var isFiltering: Bool {
     return searchController.isActive && !searchIsEmpty
@@ -223,11 +222,13 @@ extension FilterViewController: UITableViewDataSource {
     
     if isExpanded {
       tableView.deleteRows(at: indexPaths, with: .fade)
+      tableView.setContentOffset(.zero, animated: true)
     } else {
       tableView.insertRows(at: indexPaths, with: .automatic)
     }
     
-    self.view.layoutIfNeeded()
+//    tableView.setContentOffset(.zero, animated: true)
+//    self.view.layoutIfNeeded()
   } // end handle(expandButton: UIButton)
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -278,6 +279,8 @@ extension FilterViewController: UITableViewDataSource {
     }
   }
 }
+
+// MARK: FilterFooterDelegate
 
 extension FilterViewController: FilterFooterDelegate {
   func updateMagnitude(minMag: Double, maxMag: Double) {
