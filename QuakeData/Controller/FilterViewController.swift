@@ -10,8 +10,6 @@ import UIKit
 import RangeSeekSlider
 
 // TODO: add backgrounds to sections?
-// TODO: Add scrollview for larger selections
-// TODO: Strip out stuff at top, refactor as a footer view
 
 protocol FilterViewControllerDelegate: class {
   func updatePredicate(_ predicate: NSPredicate)
@@ -65,12 +63,10 @@ class FilterViewController: UIViewController {
   // MARK: Lifecycle Methods
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     updateTitle(countryCount: selectedCountries.count)
-    
     configureTableView()
-    
     configureSearchController()
+    filterFooter.delegate = self
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -85,8 +81,7 @@ class FilterViewController: UIViewController {
     tableView.reloadData()
     tableView.setContentOffset(.zero, animated: true)
   }
-  
-  
+
   @IBAction func closeButtonAction(_ sender: UIBarButtonItem) {
     self.dismiss(animated: true, completion: nil)
   }
@@ -137,10 +132,16 @@ class FilterViewController: UIViewController {
 
 extension FilterViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+    
+    let countryAtIndexPath: CountryData
+    
     tableView.deselectRow(at: indexPath, animated: true)
-    let countryAtIndexPath = dataSource[indexPath.section].countries[indexPath.row]
-
+    if isFiltering {
+      countryAtIndexPath = filteredCountries[indexPath.row]
+    } else {
+      countryAtIndexPath = dataSource[indexPath.section].countries[indexPath.row]
+    }
+    
     if let cell = tableView.cellForRow(at: indexPath) {
       if selectedCountries.contains(countryAtIndexPath) {
         cell.accessoryType = .none
@@ -284,8 +285,14 @@ extension FilterViewController: FilterFooterDelegate {
   }
 }
 
+// MARK: UISearchBarDelegate
+
 extension FilterViewController: UISearchBarDelegate {
   // TODO: implement as needed
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    searchController.searchBar.resignFirstResponder()
+    tableView.setContentOffset(.zero, animated: true)
+  }
   
 }
 
