@@ -11,6 +11,8 @@
 		443C5C3572B3FFA1C0863890 /* Pods_CanvasQuakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B090BCB0BF8E22EAF5450E9 /* Pods_CanvasQuakeTests.framework */; };
 		550A8BF520F7A32600BBF37E /* FilterSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 550A8BF420F7A32600BBF37E /* FilterSectionHeaderView.xib */; };
 		550A8BF720F7A33400BBF37E /* FilterSectionHeaderView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550A8BF620F7A33400BBF37E /* FilterSectionHeaderView.swift.swift */; };
+		551F537720FC32F1003E22D3 /* FilterFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551F537620FC32F1003E22D3 /* FilterFooter.swift */; };
+		551F537920FC3303003E22D3 /* FilterFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 551F537820FC3303003E22D3 /* FilterFooter.xib */; };
 		552E78A920C07BCB002C4AE2 /* QuakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */; };
 		552E78AB20C07C01002C4AE2 /* QuakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E78AA20C07C01002C4AE2 /* QuakeViewController.swift */; };
 		554BE12F20C09BF900C07248 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554BE12E20C09BF900C07248 /* CalendarViewController.swift */; };
@@ -43,8 +45,6 @@
 		55AE125A20C0756100DB7F6C /* Master.png in Resources */ = {isa = PBXBuildFile; fileRef = 55AE125720C0756100DB7F6C /* Master.png */; };
 		55AE125C20C0763800DB7F6C /* CanvasQuake.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 55AE125B20C0763800DB7F6C /* CanvasQuake.xcdatamodel */; };
 		55AE125F20C0767300DB7F6C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE125E20C0767300DB7F6C /* UIViewController+Extension.swift */; };
-		55B6479820FA846A003FEDE3 /* FilterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B6479720FA846A003FEDE3 /* FilterHeaderView.xib */; };
-		55B6479A20FA8475003FEDE3 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B6479920FA8475003FEDE3 /* FilterHeaderView.swift */; };
 		55B6479C20FAA569003FEDE3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B6479B20FAA569003FEDE3 /* UIView+Extension.swift */; };
 		55B75BD620C1C868007B1602 /* ABWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B75BD420C1C867007B1602 /* ABWebView.xib */; };
 		55B75BD720C1C868007B1602 /* ABWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B75BD520C1C868007B1602 /* ABWebView.swift */; };
@@ -83,6 +83,8 @@
 		4731C9D708D90D9FFBEF0C35 /* Pods-CanvasQuakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CanvasQuakeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CanvasQuakeTests/Pods-CanvasQuakeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		550A8BF420F7A32600BBF37E /* FilterSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterSectionHeaderView.xib; sourceTree = "<group>"; };
 		550A8BF620F7A33400BBF37E /* FilterSectionHeaderView.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSectionHeaderView.swift.swift; sourceTree = "<group>"; };
+		551F537620FC32F1003E22D3 /* FilterFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFooter.swift; sourceTree = "<group>"; };
+		551F537820FC3303003E22D3 /* FilterFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterFooter.xib; sourceTree = "<group>"; };
 		552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeTableViewCell.swift; sourceTree = "<group>"; };
 		552E78AA20C07C01002C4AE2 /* QuakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeViewController.swift; sourceTree = "<group>"; };
 		553CEBFC20C1B61F00980569 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -122,8 +124,6 @@
 		55AE125720C0756100DB7F6C /* Master.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Master.png; sourceTree = "<group>"; };
 		55AE125B20C0763800DB7F6C /* CanvasQuake.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CanvasQuake.xcdatamodel; sourceTree = "<group>"; };
 		55AE125E20C0767300DB7F6C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		55B6479720FA846A003FEDE3 /* FilterHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterHeaderView.xib; sourceTree = "<group>"; };
-		55B6479920FA8475003FEDE3 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		55B6479B20FAA569003FEDE3 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		55B75BD420C1C867007B1602 /* ABWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ABWebView.xib; sourceTree = "<group>"; };
 		55B75BD520C1C868007B1602 /* ABWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABWebView.swift; sourceTree = "<group>"; };
@@ -188,6 +188,15 @@
 				550A8BF620F7A33400BBF37E /* FilterSectionHeaderView.swift.swift */,
 			);
 			path = FilterSectionHeaderView;
+			sourceTree = "<group>";
+		};
+		551F537A20FC3317003E22D3 /* FilterFooter */ = {
+			isa = PBXGroup;
+			children = (
+				551F537820FC3303003E22D3 /* FilterFooter.xib */,
+				551F537620FC32F1003E22D3 /* FilterFooter.swift */,
+			);
+			path = FilterFooter;
 			sourceTree = "<group>";
 		};
 		554BE13620C0F8CA00C07248 /* IBDesignable Base Classes */ = {
@@ -270,7 +279,7 @@
 		55AE124E20C074EC00DB7F6C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				55B6479620FA845C003FEDE3 /* FilterHeaderView */,
+				551F537A20FC3317003E22D3 /* FilterFooter */,
 				550A8BF320F7A31300BBF37E /* FilterSectionHeaderView */,
 				5500001920C3326D00BB8211 /* ABWebView */,
 				55562C5420C070C60016B718 /* Main.storyboard */,
@@ -340,15 +349,6 @@
 				55B6479B20FAA569003FEDE3 /* UIView+Extension.swift */,
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		55B6479620FA845C003FEDE3 /* FilterHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				55B6479720FA846A003FEDE3 /* FilterHeaderView.xib */,
-				55B6479920FA8475003FEDE3 /* FilterHeaderView.swift */,
-			);
-			path = FilterHeaderView;
 			sourceTree = "<group>";
 		};
 		71A5A26AE86A78E7AD3C48FF /* Frameworks */ = {
@@ -498,9 +498,9 @@
 				55562C5E20C070C70016B718 /* LaunchScreen.storyboard in Resources */,
 				55562C5B20C070C70016B718 /* Assets.xcassets in Resources */,
 				550A8BF520F7A32600BBF37E /* FilterSectionHeaderView.xib in Resources */,
-				55B6479820FA846A003FEDE3 /* FilterHeaderView.xib in Resources */,
 				55562C5620C070C60016B718 /* Main.storyboard in Resources */,
 				55AE125920C0756100DB7F6C /* GradientShades.png in Resources */,
+				551F537920FC3303003E22D3 /* FilterFooter.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,7 +610,6 @@
 				55B6479C20FAA569003FEDE3 /* UIView+Extension.swift in Sources */,
 				558FA7F720C11970004A16C0 /* QuakeDataManager.swift in Sources */,
 				5580D78420C30ED7004E692F /* Double+Extension.swift in Sources */,
-				55B6479A20FA8475003FEDE3 /* FilterHeaderView.swift in Sources */,
 				558FA7F920C119A5004A16C0 /* SeismicStructs.swift in Sources */,
 				552E78A920C07BCB002C4AE2 /* QuakeTableViewCell.swift in Sources */,
 				55562C5120C070C60016B718 /* AppDelegate.swift in Sources */,
@@ -618,6 +617,7 @@
 				55DAB9C620CAAD36006D289D /* FloatingPoint+Extension.swift in Sources */,
 				5583361020F9688000A2D1C5 /* String+Extension.swift in Sources */,
 				557155A520F4D888001BFE71 /* ConnectivityUtility.swift in Sources */,
+				551F537720FC32F1003E22D3 /* FilterFooter.swift in Sources */,
 				55940CBB20C778B700C5D38B /* MapPredicate.swift in Sources */,
 				55AE125C20C0763800DB7F6C /* CanvasQuake.xcdatamodel in Sources */,
 				55B75BD720C1C868007B1602 /* ABWebView.swift in Sources */,

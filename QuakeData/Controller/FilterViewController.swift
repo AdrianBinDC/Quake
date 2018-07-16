@@ -25,16 +25,11 @@ class FilterViewController: UIViewController {
   }()
   var filteredCountries: [CountryData] = []
   
-  @IBOutlet weak var searchButton: UIBarButtonItem!
+  @IBOutlet weak var clearButton: UIBarButtonItem!
   @IBOutlet weak var closeButton: UIBarButtonItem!
-  
-  // StackViews
-  @IBOutlet weak var sliderStack: UIStackView!
-  
-  @IBOutlet weak var slider: RangeSeekSlider!
-  
-  @IBOutlet weak var tableHeader: FilterHeaderView!
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var filterFooter: FilterFooter!
+  
   
   // filtering vars
   var isFiltering: Bool {
@@ -47,12 +42,10 @@ class FilterViewController: UIViewController {
   
   private let mapRegionUtility = MapRegionUtility()
   private let mapPredicate = MapPredicate()
-  
-  // TODO: Add text search
-  
+    
   var selectedCountries: [CountryData] = [] {
     didSet {
-      updateCountryLabel()
+      updateTitle(countryCount: selectedCountries.count)
       let boundingBox = mapRegionUtility.boundingBox(from: selectedCountries)
       if let boundingBox = boundingBox {
         
@@ -73,16 +66,11 @@ class FilterViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    tableHeader.clearButton.addTarget(self, action: #selector(clearButtonAction(_:)), for: .touchUpInside)
-    configureSlider()
+    updateTitle(countryCount: selectedCountries.count)
+    
     configureTableView()
     
-    searchController.searchResultsUpdater = self
-    searchController.obscuresBackgroundDuringPresentation = false
-    searchController.searchBar.placeholder = "Search Countries"
-    searchController.searchBar.delegate = self
-    navigationItem.searchController = searchController
-    definesPresentationContext = true
+    configureSearchController()
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -92,19 +80,15 @@ class FilterViewController: UIViewController {
   
   // MARK: IBActions
   
-  @IBAction func searchButtonAction(_ sender: UIBarButtonItem) {
-    // TODO: leave in for now, take it out and just have searchbar slide out from navbar
+  @IBAction func clearButtonAction(_ sender: UIBarButtonItem) {
+    selectedCountries.removeAll()
+    tableView.reloadData()
+    tableView.setContentOffset(.zero, animated: true)
   }
   
   
   @IBAction func closeButtonAction(_ sender: UIBarButtonItem) {
     self.dismiss(animated: true, completion: nil)
-  }
-  
-  @objc func clearButtonAction(_ sender: UIButton) {
-    selectedCountries.removeAll()
-    tableView.reloadData()
-    tableView.setContentOffset(.zero, animated: true)
   }
   
   // MARK: Initial Config
@@ -113,41 +97,28 @@ class FilterViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
   }
-
-  fileprivate func configureSlider() {
-    slider.numberFormatter.numberStyle = .decimal
-    slider.numberFormatter.maximumFractionDigits = 1
-    slider.numberFormatter.roundingMode = .down
-    slider.numberFormatter.positiveFormat = "0.0"
-    slider.delegate = self
+  
+  fileprivate func configureSearchController() {
+    searchController.searchResultsUpdater = self
+    searchController.obscuresBackgroundDuringPresentation = false
+    searchController.searchBar.placeholder = "Search Countries"
+    searchController.searchBar.delegate = self
+    navigationItem.searchController = searchController
+    definesPresentationContext = true
   }
-
   
   // MARK: Helpers
   
-  func updateFiltering(for isFiltering: Bool) {
-    UIView.animate(withDuration: 0.3) {
-      self.sliderStack.isHidden = isFiltering ? true : false
+  func updateTitle(countryCount: Int) {
+    switch countryCount {
+    case 0:
+      navigationItem.title = "Select Countries"
+    case 1:
+      navigationItem.title = "One country selected"
+    default:
+      navigationItem.title = "\(countryCount) countries selected"
     }
-  } // end updateFiltering
-  
-  func updateCountryLabel() {
-    
-    var newString = ""
-    
-    let countryDict: [String : [CountryData]] = Dictionary(grouping: selectedCountries, by: {$0.region! })
-    let countryDictKeys = countryDict.keys.sorted()
-    
-    countryDictKeys.forEach { key in
-      newString = newString + key + ": "
-      let countryNames =  (countryDict[key]?.compactMap{$0}.map{  $0.isoCode!.flag()}.compactMap{$0}.joined())! + "\n"
-      
-      newString = newString + countryNames
-    }
-    
-    tableHeader.updateTextView(with: newString)
-    self.view.layoutIfNeeded()
-  } // end updateCountryLabel()
+  }
   
   // MARK: Search Methods
   var searchIsEmpty: Bool {
@@ -307,11 +278,9 @@ extension FilterViewController: UITableViewDataSource {
   }
 }
 
-extension FilterViewController: RangeSeekSliderDelegate {
-  func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
-    let minMag = slider.selectedMinValue
-    let maxMag = slider.selectedMaxValue
-    mapPredicate.setMagnitude(minMag: Double(minMag), maxMag: Double(maxMag))
+extension FilterViewController: FilterFooterDelegate {
+  func updateMagnitude(minMag: Double, maxMag: Double) {
+        mapPredicate.setMagnitude(minMag: Double(minMag), maxMag: Double(maxMag))
   }
 }
 
