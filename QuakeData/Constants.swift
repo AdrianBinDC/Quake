@@ -22,6 +22,7 @@ struct SegueID {
   static let calendar = "CalendarSegue"
   static let mapSegue = "MapSegue"
   static let pinSegue = "PinSegue"
+  static let filterSegue = "FilterSegue"
 }
 
 struct USGSUrlString {

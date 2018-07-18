@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+// TODO: Add a footer view which condenses mapPredicate attributes into text.
+// TODO: do that on the MapPredicate class and returns a string describing what's being searched
+
 class QuakeViewController: UIViewController {
   
   enum CellHeight: CGFloat {
@@ -17,8 +20,6 @@ class QuakeViewController: UIViewController {
   }
   
   // MARK: IBOutlets
-  
-  
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var resetButton: UIBarButtonItem!
   @IBOutlet weak var filterButton: UIBarButtonItem!
@@ -70,12 +71,9 @@ class QuakeViewController: UIViewController {
   
   var frcKeyPath: String = #keyPath(EarthquakeEntity.sectionDateString)
   
-  var currentPredicate: NSPredicate? {
+  var mapPredicate = MapPredicate() {
     didSet {
-      if let predicate = currentPredicate {
-        fetchedResultsController.fetchRequest.predicate = predicate
-        fetchedResultsController.managedObjectContext.refreshAllObjects()
-      }
+      (tableView.tableFooterView as! QuakeFooter).setLabel(text: mapPredicate.predicateDescription)
     }
   }
   
@@ -92,6 +90,7 @@ class QuakeViewController: UIViewController {
   
   func fetchResults() {
     do {
+      fetchedResultsController.fetchRequest.predicate = mapPredicate.predicate
       fetchedResultsController.fetchRequest.fetchBatchSize = 35
       fetchedResultsController.fetchRequest.fetchLimit = 1_000
       try fetchedResultsController.performFetch()
@@ -105,39 +104,39 @@ class QuakeViewController: UIViewController {
     }
   }
   
-  func updatePredicate() {
-    // you need a start date or stop executing
-    guard let startDate = startDate else { return }
-    
-    var predicateArray: [NSPredicate] = []
-    
-    if let endDate = endDate {
-      // TODO: constrain results for date spans larger than one week
-      
-      if let numberOfDays = Calendar.current.dateComponents([.day], from: startDate, to: endDate).day {
-        if numberOfDays > 7 && magSlider.value < 2 {
-          magSlider.setValue(2.0, animated: false)
-          updateMagSliderLabel()
-        }
-      }
-
-      let startEndPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [startDate, endDate])
-      predicateArray.append(startEndPredicate)
-    } else {
-      // use the startDate's end of day if endDate is nil
-      let startPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [startDate, startDate.endOfDay!])
-      predicateArray.append(startPredicate)
-    }
-    
-    
-    // FIXME: update
-    let sliderPredicate = NSPredicate(format: "magnitude >= %f", argumentArray: [magSlider.value])
-    predicateArray.append(sliderPredicate)
-    
-    currentPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicateArray)
-    
-    fetchResults()
-  }
+//  func updatePredicate() {
+//    // you need a start date or stop executing
+//    guard let startDate = startDate else { return }
+//
+//    var predicateArray: [NSPredicate] = []
+//
+//    if let endDate = endDate {
+//      // TODO: constrain results for date spans larger than one week
+//
+//      if let numberOfDays = Calendar.current.dateComponents([.day], from: startDate, to: endDate).day {
+//        if numberOfDays > 7 && magSlider.value < 2 {
+//          magSlider.setValue(2.0, animated: false)
+//          updateMagSliderLabel()
+//        }
+//      }
+//
+//      let startEndPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [startDate, endDate])
+//      predicateArray.append(startEndPredicate)
+//    } else {
+//      // use the startDate's end of day if endDate is nil
+//      let startPredicate = NSPredicate(format: "time >= %@ AND time <= %@", argumentArray: [startDate, startDate.endOfDay!])
+//      predicateArray.append(startPredicate)
+//    }
+//
+//
+//    // FIXME: update
+//    let sliderPredicate = NSPredicate(format: "magnitude >= %f", argumentArray: [magSlider.value])
+//    predicateArray.append(sliderPredicate)
+//
+//    currentPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicateArray)
+//
+//    fetchResults()
+//  }
   
   // MARK: Lifecycle Methods
   
@@ -206,9 +205,14 @@ class QuakeViewController: UIViewController {
   override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
     switch keyPath {
     case #keyPath(startDate):
-      updatePredicate()
+      if let startDate = startDate {
+        mapPredicate.setDate(for: startDate, endDate: nil) // nil for end sets endDate as startDate.endOfDay
+      }
     case #keyPath(endDate):
-      updatePredicate()
+//      updatePredicate()
+      if let startDate = startDate, let endDate = endDate {
+        mapPredicate.setDate(for: startDate, endDate: endDate)
+      }
     default:
       if let keyPath = keyPath {
         print("** undefined case for \(keyPath) **")
@@ -233,6 +237,7 @@ class QuakeViewController: UIViewController {
   
   @objc func managedObjectContextDidSave(_ notification: Notification) {
     print("managedObjectContextDidSave")
+    fetchResults()
     guard let context = notification.object as? NSManagedObjectContext else { return }
     
     if context.parent == managedObjectContext {
@@ -361,7 +366,9 @@ class QuakeViewController: UIViewController {
     
     self.hapticFeedback(style: .light)
     
-    updatePredicate()
+//    updatePredicate()
+    mapPredicate.setMagnitude(minMag: Double(magSlider.value), maxMag: 10.0)
+    fetchResults()
   }
   
   
@@ -453,6 +460,16 @@ class QuakeViewController: UIViewController {
       let destination = segue.destination as! MapViewController
       if let earthquakes = fetchedResultsController.fetchedObjects {
         destination.earthquakes = earthquakes
+      }
+    }
+    
+    if segue.identifier == SegueID.filterSegue {
+      if let start = startDate, let end = endDate {
+        let mapPredicate = MapPredicate(startDate: start, endDate: end, minMag: Double(magSlider.value), maxMag: nil, bbox: nil)!
+        let destination = segue.destination as! UINavigationController
+        let targetController = destination.topViewController as! FilterViewController
+        targetController.delegate = self
+        targetController.mapPredicate = mapPredicate
       }
     }
   }
@@ -664,6 +681,13 @@ extension QuakeViewController: CalendarViewControllerDelegate {
     dataManager = QuakeDataManager(startDate: self.startDate!, endDate: self.endDate)
     dataManager?.delegate = self
     dataManager?.getQuakeData()
+  }
+}
+
+// MARK: FilterViewControllerDelegate
+extension QuakeViewController: FilterViewControllerDelegate {
+  func updatePredicate(_ mapPredicate: MapPredicate) {
+    self.mapPredicate = mapPredicate
   }
 }
 

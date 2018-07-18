@@ -17,11 +17,17 @@ import MapKit
 
 class MapPredicate: NSObject {
   
+//  public var predicate: NSPredicate! {
+//    didSet {
+//      NotificationCenter.default.post(name: .mapPredicateUpdated, object: nil)
+//    }
+//  }
+  
   public var predicate: NSPredicate! {
-    didSet {
-      NotificationCenter.default.post(name: .mapPredicateUpdated, object: nil)
-    }
+    return updatePredicate()
   }
+  
+  var countries: [CountryData]?
   
   // these are publicly viewable, but privately settable. Set via methods
   @objc private (set) dynamic var startDate: Date?
@@ -29,25 +35,29 @@ class MapPredicate: NSObject {
   // optional doubles can't be represented in objc, so update predicate via didSet
   private var minMag: Double? {
     didSet {
-      updatePredicate()
+//      updatePredicate()
+//      NotificationCenter.default.post(name: .mapPredicateUpdated, object: nil)
     }
   }
   
   private (set) var maxMag: Double? {
     didSet {
-      updatePredicate()
+      //      updatePredicate()
+      NotificationCenter.default.post(name: .mapPredicateUpdated, object: nil)
     }
   }
   
   private (set) var minLat: Double? {
     didSet {
-      updatePredicate()
+      //      updatePredicate()
+//      NotificationCenter.default.post(name: .mapPredicateUpdated, object: nil)
     }
   }
   
   private (set) var maxLat: Double? {
     didSet {
-      updatePredicate()
+      //      updatePredicate()
+//      NotificationCenter.default.post(name: .mapPredicateUpdated, object: nil)
     }
   }
   
@@ -56,7 +66,8 @@ class MapPredicate: NSObject {
       if let minLong = minLong {
         guard minLong >= -90.0 else { self.minLong = -90.0; return }
       }
-      updatePredicate()
+      //      updatePredicate()
+//      NotificationCenter.default.post(name: .mapPredicateUpdated, object: nil)
     }
   }
   
@@ -65,7 +76,8 @@ class MapPredicate: NSObject {
       if let maxLong = maxLong {
         guard maxLong <= 90.0 else { self.maxLong = 90.0; return }
       }
-      updatePredicate()
+      //      updatePredicate()
+//      NotificationCenter.default.post(name: .mapPredicateUpdated, object: nil)
     }
   }
   
@@ -115,7 +127,7 @@ class MapPredicate: NSObject {
   }
   
   private func commonInit() {
-    updatePredicate()
+//    updatePredicate()
   }
   
   // MARK: Observers
@@ -123,7 +135,9 @@ class MapPredicate: NSObject {
   internal override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
     switch keyPath {
     case #keyPath(startDate), #keyPath(endDate):
-      self.updatePredicate()
+      //      updatePredicate()
+//      NotificationCenter.default.post(name: .mapPredicateUpdated, object: nil)
+      break
     default:
       return
     }
@@ -158,14 +172,13 @@ class MapPredicate: NSObject {
   
   // MARK: Update predicate
   // this is returned as a calculated var from the class's public-facing predicate property.
-  private func updatePredicate() {
+  private func updatePredicate() -> NSPredicate {
     
     /*
      self.minLong = minLong
      self.maxLong = maxLong
      */
     
-    DispatchQueue.global(qos: .userInteractive).async {
       var predicateArray: [NSPredicate] = []
       
       // predicates for dates
@@ -196,9 +209,65 @@ class MapPredicate: NSObject {
         predicateArray.append(longitudePredicate)
       }
       
-      self.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicateArray)
+//      self.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicateArray)
+      return NSCompoundPredicate(andPredicateWithSubpredicates: predicateArray)
+  }
+  
+  var predicateDescription: String? {
+    var magnitudeString: String?
+    var dateString: String?
+    var countryString: String?
+
+    /*
+     "Earthquakes [with minimum/between/with maximum] <minMag> and <maxMag> [magnitude/magnitudes] [between/after/before] <startDate> [and?] <endDate> in <countries>
+     */
+    
+    // unwrap magnitudes
+    if let min = minMag, let max = maxMag {
+      magnitudeString =  "Earthquakes with magnitudes between \(String(format: "%.1f", min)) and \(String(format: "%.1f", max))"
+    } else if let min = minMag {
+      magnitudeString = "Earthquakes with magnitudes greater than \(String(format: "%.1f", min))"
+    } else if let max = maxMag {
+      magnitudeString = "Earthquakes with magnitudes less than \(String(format: "%.1f", max))"
     }
-  }  
+    
+    // unwrap dates
+    if let startDate = startDate, let endDate = endDate {
+      if startDate.isSameDate(endDate) {
+        dateString = "on \(startDate.string(usingFormat: .long)) "
+      } else {
+        dateString = "between \(startDate.string(usingFormat: .long)) and \(endDate.string(usingFormat: .long)) "
+      }
+    } else if let startDate = startDate {
+      // TODO: for now, only gets start date...later, refactor to pull dates after
+      dateString = "on \(startDate.string(usingFormat: .long))"
+    } else if let endDate = endDate {
+      // TODO: refacter later to get dates before this date. For now, will never have end-date only as a parameter
+      dateString = ""
+    }
+    
+    // deal with the countries
+    if let countries = countries {
+      let countryNames = countries.map{$0.name}
+      switch countries.count {
+      case 1:
+        countryString = "in \(countryNames.first!)"
+      case 2:
+        countryString = "in \(countryNames.first!) and \(countryNames.last!)"
+      case 3...5:
+        let firstTwoElements = countryNames.prefix(countries.count - 1).compactMap{$0}
+        let lastElement = countryNames.last!
+        countryString = firstTwoElements.joined(separator: ", ")
+        // Oxford comma
+        countryString = countryString! + ", and \(lastElement)"
+      default:
+        countryString = "\(countryNames.count) countries"
+      }
+
+    }
+    
+    return magnitudeString! + dateString! + countryString!
+  }
 }
 
 

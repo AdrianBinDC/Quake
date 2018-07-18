@@ -137,6 +137,11 @@
                                         <rect key="frame" x="0.0" y="124" width="375" height="566"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="0N7-hY-aUl" customClass="QuakeFooter" customModule="QuakeData" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="137" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="109" id="ilx-37-hv1" customClass="QuakeTableViewCell" customModule="QuakeData" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="109"/>
@@ -342,7 +347,7 @@
                             <barButtonItem image="filter" id="Zc8-ci-pG0">
                                 <connections>
                                     <action selector="filterButtonAction:" destination="I8l-Rh-bkI" id="p6J-c8-w5b"/>
-                                    <segue destination="xvE-IH-QGh" kind="presentation" id="aC5-xn-yYp"/>
+                                    <segue destination="xvE-IH-QGh" kind="presentation" identifier="FilterSegue" id="aC5-xn-yYp"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>

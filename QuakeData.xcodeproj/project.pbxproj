@@ -25,6 +25,8 @@
 		55562C5E20C070C70016B718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55562C5C20C070C70016B718 /* LaunchScreen.storyboard */; };
 		55562C6920C070C80016B718 /* CanvasQuakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55562C6820C070C80016B718 /* CanvasQuakeTests.swift */; };
 		55562C7420C070C80016B718 /* CanvasQuakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */; };
+		55605D1820FD98F9008A6CCD /* QuakeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55605D1720FD98F9008A6CCD /* QuakeFooter.swift */; };
+		55605D1A20FD9901008A6CCD /* QuakeFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55605D1920FD9901008A6CCD /* QuakeFooter.xib */; };
 		5564C13620F6F37800555A6A /* BoundingBoxes.json in Resources */ = {isa = PBXBuildFile; fileRef = 5564C13520F6F37800555A6A /* BoundingBoxes.json */; };
 		5564C13820F6F3D800555A6A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564C13720F6F3D800555A6A /* FilterViewController.swift */; };
 		5571559F20F3E511001BFE71 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5571559E20F3E511001BFE71 /* MapViewController.swift */; };
@@ -104,6 +106,8 @@
 		55562C6F20C070C80016B718 /* QuakeDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuakeDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55562C7320C070C80016B718 /* CanvasQuakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasQuakeUITests.swift; sourceTree = "<group>"; };
 		55562C7520C070C80016B718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55605D1720FD98F9008A6CCD /* QuakeFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeFooter.swift; sourceTree = "<group>"; };
+		55605D1920FD9901008A6CCD /* QuakeFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuakeFooter.xib; sourceTree = "<group>"; };
 		5564C13520F6F37800555A6A /* BoundingBoxes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BoundingBoxes.json; sourceTree = "<group>"; };
 		5564C13720F6F3D800555A6A /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		5571559E20F3E511001BFE71 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +269,15 @@
 			path = QuakeDataUITests;
 			sourceTree = "<group>";
 		};
+		55605D1B20FD990E008A6CCD /* QuakeFooter */ = {
+			isa = PBXGroup;
+			children = (
+				55605D1720FD98F9008A6CCD /* QuakeFooter.swift */,
+				55605D1920FD9901008A6CCD /* QuakeFooter.xib */,
+			);
+			path = QuakeFooter;
+			sourceTree = "<group>";
+		};
 		55AE124D20C074E300DB7F6C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +295,7 @@
 				551F537A20FC3317003E22D3 /* FilterFooter */,
 				550A8BF320F7A31300BBF37E /* FilterSectionHeaderView */,
 				5500001920C3326D00BB8211 /* ABWebView */,
+				55605D1B20FD990E008A6CCD /* QuakeFooter */,
 				55562C5420C070C60016B718 /* Main.storyboard */,
 				55562C5C20C070C70016B718 /* LaunchScreen.storyboard */,
 				552E78A820C07BCB002C4AE2 /* QuakeTableViewCell.swift */,
@@ -495,6 +509,7 @@
 				5564C13620F6F37800555A6A /* BoundingBoxes.json in Resources */,
 				55AE125820C0756100DB7F6C /* Complementary.png in Resources */,
 				55B75BD620C1C868007B1602 /* ABWebView.xib in Resources */,
+				55605D1A20FD9901008A6CCD /* QuakeFooter.xib in Resources */,
 				55562C5E20C070C70016B718 /* LaunchScreen.storyboard in Resources */,
 				55562C5B20C070C70016B718 /* Assets.xcassets in Resources */,
 				550A8BF520F7A32600BBF37E /* FilterSectionHeaderView.xib in Resources */,
@@ -624,6 +639,7 @@
 				5571559F20F3E511001BFE71 /* MapViewController.swift in Sources */,
 				55AC767220C89F03003940C3 /* UITableView+Extension.swift in Sources */,
 				552E78AB20C07C01002C4AE2 /* QuakeViewController.swift in Sources */,
+				55605D1820FD98F9008A6CCD /* QuakeFooter.swift in Sources */,
 				557155A120F3F42E001BFE71 /* MapPin.swift in Sources */,
 				550A8BF720F7A33400BBF37E /* FilterSectionHeaderView.swift.swift in Sources */,
 				558FA7FD20C12FB0004A16C0 /* EarthquakeEntity+Extension.swift in Sources */,

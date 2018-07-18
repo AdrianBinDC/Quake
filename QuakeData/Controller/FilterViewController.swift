@@ -12,7 +12,8 @@ import RangeSeekSlider
 // TODO: add backgrounds to sections?
 
 protocol FilterViewControllerDelegate: class {
-  func updatePredicate(_ predicate: NSPredicate)
+//  func updatePredicate(_ predicate: NSPredicate) // FIXME: take this out
+  func updatePredicate(_ mapPredicate: MapPredicate)
 }
 
 class FilterViewController: UIViewController {
@@ -38,8 +39,8 @@ class FilterViewController: UIViewController {
   weak var delegate: FilterViewControllerDelegate?
   
   private let mapRegionUtility = MapRegionUtility()
-  private let mapPredicate = MapPredicate()
-    
+  var mapPredicate = MapPredicate()
+  
   var selectedCountries: [CountryData] = [] {
     didSet {
       updateTitle(countryCount: selectedCountries.count)
@@ -70,7 +71,8 @@ class FilterViewController: UIViewController {
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
-    delegate?.updatePredicate(mapPredicate.predicate)
+    mapPredicate.countries = selectedCountries
+    delegate?.updatePredicate(mapPredicate)
   }
   
   // MARK: IBActions
